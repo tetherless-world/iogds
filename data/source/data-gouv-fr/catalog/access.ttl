@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/data-gouv-fr/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "data-gouv-fr";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_b877a517-5f1e-4546-871e-448f88c59159;
+.
+
+:download_b877a517-5f1e-4546-871e-448f88c59159
+   a dcat:Distribution;
+   dcat:downloadURL <http://www.data.gouv.fr/content/search?SearchText=%23all&Type=data>;
+.
+
+<dataset/b877a517-5f1e-4546-871e-448f88c59159>
+   a dcat:Dataset;
+   dcat:distribution :download_b877a517-5f1e-4546-871e-448f88c59159;
+.
