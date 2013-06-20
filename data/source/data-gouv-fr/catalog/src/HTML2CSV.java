@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -8,7 +7,7 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.StringTokenizer;
 	 
-public class data_gouv_fr {
+public class HTML2CSV {
 	
 	
 	

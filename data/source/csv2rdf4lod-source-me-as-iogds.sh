@@ -13,3 +13,4 @@ export CLASSPATH=$CLASSPATH`/home/iogds/opt/prizms/bin/install/classpaths.sh`
 export CSV2RDF4LOD_HOME="/home/iogds/opt/prizms/repos/csv2rdf4lod-automation"
 export CSV2RDF4LOD_PUBLISH_VIRTUOSO="true"
 export CSV2RDF4LOD_PUBLISH_SUBSET_SAMPLES="true"
+export JENAROOT=/home/iogds/opt/apache-jena-2.10.0
