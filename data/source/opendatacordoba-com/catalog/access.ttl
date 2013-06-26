@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendatacordoba-com";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_f067959f-a6ee-45ef-be22-c1a5a0910092;
+   prov:wasDerivedFrom :download_639ea7fd-9ae1-4365-8bc7-89125ab65f5c;
 .
 
-:download_f067959f-a6ee-45ef-be22-c1a5a0910092
+:download_639ea7fd-9ae1-4365-8bc7-89125ab65f5c
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendatacordoba-com/catalog/version/2011-Dec-12/manual/opendatacordoba.com.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendatacordoba-com/catalog/version/2011-Dec-12/manual/opendatacordoba.com.csv>;
 .
 
-<dataset/f067959f-a6ee-45ef-be22-c1a5a0910092>
+<dataset/639ea7fd-9ae1-4365-8bc7-89125ab65f5c>
    a dcat:Dataset;
-   dcat:distribution :download_f067959f-a6ee-45ef-be22-c1a5a0910092;
+   dcat:distribution :download_639ea7fd-9ae1-4365-8bc7-89125ab65f5c;
 .

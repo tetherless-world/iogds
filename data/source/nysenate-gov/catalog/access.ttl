@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "nysenate-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_20ad0134-337d-46fe-98fd-fe75d27788e1;
+   prov:wasDerivedFrom :download_4f49afac-85d9-484c-a271-babdcee67764;
 .
 
-:download_20ad0134-337d-46fe-98fd-fe75d27788e1
+:download_4f49afac-85d9-484c-a271-babdcee67764
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/nysenate-gov/catalog/version/2011-Sep-13/manual/nysenate.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/nysenate-gov/catalog/version/2011-Sep-13/manual/nysenate.gov.csv>;
 .
 
-<dataset/20ad0134-337d-46fe-98fd-fe75d27788e1>
+<dataset/4f49afac-85d9-484c-a271-babdcee67764>
    a dcat:Dataset;
-   dcat:distribution :download_20ad0134-337d-46fe-98fd-fe75d27788e1;
+   dcat:distribution :download_4f49afac-85d9-484c-a271-babdcee67764;
 .

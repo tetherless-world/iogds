@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "nycopendata-socrata-com";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_e3bfdc99-8a9d-4052-ba4e-92470f74f6cc;
+   prov:wasDerivedFrom :download_03db49e1-21d5-4ff4-9777-d01bbef1edc9;
 .
 
-:download_e3bfdc99-8a9d-4052-ba4e-92470f74f6cc
+:download_03db49e1-21d5-4ff4-9777-d01bbef1edc9
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/nycopendata-socrata-com/catalog/version/2011-Oct-21/manual/nycopendata.socrata.com.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/nycopendata-socrata-com/catalog/version/2011-Oct-21/manual/nycopendata.socrata.com.csv>;
 .
 
-<dataset/e3bfdc99-8a9d-4052-ba4e-92470f74f6cc>
+<dataset/03db49e1-21d5-4ff4-9777-d01bbef1edc9>
    a dcat:Dataset;
-   dcat:distribution :download_e3bfdc99-8a9d-4052-ba4e-92470f74f6cc;
+   dcat:distribution :download_03db49e1-21d5-4ff4-9777-d01bbef1edc9;
 .

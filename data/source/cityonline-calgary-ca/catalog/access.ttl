@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "cityonline-calgary-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_a3b0dedc-606a-4318-ab1e-1ddd2bb5c68c;
+   prov:wasDerivedFrom :download_6a897d0c-e4f0-4fd9-8263-fa88e5b6fdb6;
 .
 
-:download_a3b0dedc-606a-4318-ab1e-1ddd2bb5c68c
+:download_6a897d0c-e4f0-4fd9-8263-fa88e5b6fdb6
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/cityonline-calgary-ca/catalog/version/2011-Sep-29/manual/calgaryonlinestore.com.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/cityonline-calgary-ca/catalog/version/2011-Sep-29/manual/calgaryonlinestore.com.csv>;
 .
 
-<dataset/a3b0dedc-606a-4318-ab1e-1ddd2bb5c68c>
+<dataset/6a897d0c-e4f0-4fd9-8263-fa88e5b6fdb6>
    a dcat:Dataset;
-   dcat:distribution :download_a3b0dedc-606a-4318-ab1e-1ddd2bb5c68c;
+   dcat:distribution :download_6a897d0c-e4f0-4fd9-8263-fa88e5b6fdb6;
 .

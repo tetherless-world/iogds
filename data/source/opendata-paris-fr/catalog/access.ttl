@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-paris-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_4e345b55-18b5-49d2-9088-8b3dc1ce0022;
+   prov:wasDerivedFrom :download_d44d4cda-56ba-442d-b7e3-44bead3ceed0;
 .
 
-:download_4e345b55-18b5-49d2-9088-8b3dc1ce0022
+:download_d44d4cda-56ba-442d-b7e3-44bead3ceed0
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-paris-fr/catalog/version/2011-Sep-13/manual/opendata.paris.fr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-paris-fr/catalog/version/2011-Sep-13/manual/opendata.paris.fr.csv>;
 .
 
-<dataset/4e345b55-18b5-49d2-9088-8b3dc1ce0022>
+<dataset/d44d4cda-56ba-442d-b7e3-44bead3ceed0>
    a dcat:Dataset;
-   dcat:distribution :download_4e345b55-18b5-49d2-9088-8b3dc1ce0022;
+   dcat:distribution :download_d44d4cda-56ba-442d-b7e3-44bead3ceed0;
 .

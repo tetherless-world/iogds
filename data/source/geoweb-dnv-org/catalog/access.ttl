@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "geoweb-dnv-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_054c4cda-83a7-4dc4-9f54-b4f2e509052e;
+   prov:wasDerivedFrom :download_a56d0e4e-fadd-4b38-a530-44bb57135e71;
 .
 
-:download_054c4cda-83a7-4dc4-9f54-b4f2e509052e
+:download_a56d0e4e-fadd-4b38-a530-44bb57135e71
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/geoweb-dnv-org/catalog/version/2011-Oct-25/manual/geoweb.dnv.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/geoweb-dnv-org/catalog/version/2011-Oct-25/manual/geoweb.dnv.org.csv>;
 .
 
-<dataset/054c4cda-83a7-4dc4-9f54-b4f2e509052e>
+<dataset/a56d0e4e-fadd-4b38-a530-44bb57135e71>
    a dcat:Dataset;
-   dcat:distribution :download_054c4cda-83a7-4dc4-9f54-b4f2e509052e;
+   dcat:distribution :download_a56d0e4e-fadd-4b38-a530-44bb57135e71;
 .

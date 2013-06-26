@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "dati-lombardia-it";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_49d1592e-13ab-40ec-b9fd-71a8b8ae374b;
+   prov:wasDerivedFrom :download_abe92d65-239c-424a-92c5-31901b5dc7e2;
 .
 
-:download_49d1592e-13ab-40ec-b9fd-71a8b8ae374b
+:download_abe92d65-239c-424a-92c5-31901b5dc7e2
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dati-lombardia-it/catalog/version/2012-Apr-11/manual/dati.lombardia.it.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dati-lombardia-it/catalog/version/2012-Apr-11/manual/dati.lombardia.it.csv>;
 .
 
-<dataset/49d1592e-13ab-40ec-b9fd-71a8b8ae374b>
+<dataset/abe92d65-239c-424a-92c5-31901b5dc7e2>
    a dcat:Dataset;
-   dcat:distribution :download_49d1592e-13ab-40ec-b9fd-71a8b8ae374b;
+   dcat:distribution :download_abe92d65-239c-424a-92c5-31901b5dc7e2;
 .

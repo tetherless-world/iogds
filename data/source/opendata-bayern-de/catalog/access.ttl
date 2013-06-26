@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-bayern-de";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_58091a9d-ab5a-4f90-ba01-b04af85126f6;
+   prov:wasDerivedFrom :download_d7b17302-6e14-420c-8e67-7e0fa124af9a;
 .
 
-:download_58091a9d-ab5a-4f90-ba01-b04af85126f6
+:download_d7b17302-6e14-420c-8e67-7e0fa124af9a
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-bayern-de/catalog/version/2012-Jan-12/manual/opendata.bayern.de.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-bayern-de/catalog/version/2012-Jan-12/manual/opendata.bayern.de.csv>;
 .
 
-<dataset/58091a9d-ab5a-4f90-ba01-b04af85126f6>
+<dataset/d7b17302-6e14-420c-8e67-7e0fa124af9a>
    a dcat:Dataset;
-   dcat:distribution :download_58091a9d-ab5a-4f90-ba01-b04af85126f6;
+   dcat:distribution :download_d7b17302-6e14-420c-8e67-7e0fa124af9a;
 .

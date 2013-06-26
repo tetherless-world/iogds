@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "surrey-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_47088ba4-03ca-4159-9313-c6915d958427;
+   prov:wasDerivedFrom :download_3829671a-d782-4a5b-aeb2-76e713983bc1;
 .
 
-:download_47088ba4-03ca-4159-9313-c6915d958427
+:download_3829671a-d782-4a5b-aeb2-76e713983bc1
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/surrey-ca/catalog/version/2011-Sep-22/manual/surrey.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/surrey-ca/catalog/version/2011-Sep-22/manual/surrey.ca.csv>;
 .
 
-<dataset/47088ba4-03ca-4159-9313-c6915d958427>
+<dataset/3829671a-d782-4a5b-aeb2-76e713983bc1>
    a dcat:Dataset;
-   dcat:distribution :download_47088ba4-03ca-4159-9313-c6915d958427;
+   dcat:distribution :download_3829671a-d782-4a5b-aeb2-76e713983bc1;
 .

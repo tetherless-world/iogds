@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "allerdale-gov-uk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_39f2b66a-afad-47e8-ab9b-9dce6e41b668;
+   prov:wasDerivedFrom :download_1569cce9-033a-4606-9533-f42427fb0f36;
 .
 
-:download_39f2b66a-afad-47e8-ab9b-9dce6e41b668
+:download_1569cce9-033a-4606-9533-f42427fb0f36
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/allerdale-gov-uk/catalog/version/2012-Mar-06/manual/allerdale.gov.uk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/allerdale-gov-uk/catalog/version/2012-Mar-06/manual/allerdale.gov.uk.csv>;
 .
 
-<dataset/39f2b66a-afad-47e8-ab9b-9dce6e41b668>
+<dataset/1569cce9-033a-4606-9533-f42427fb0f36>
    a dcat:Dataset;
-   dcat:distribution :download_39f2b66a-afad-47e8-ab9b-9dce6e41b668;
+   dcat:distribution :download_1569cce9-033a-4606-9533-f42427fb0f36;
 .

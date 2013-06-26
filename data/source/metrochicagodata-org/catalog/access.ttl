@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "metrochicagodata-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_c97cda29-c3eb-4117-ac32-07098190053f;
+   prov:wasDerivedFrom :download_d2d4ad02-9f50-41b7-9ab8-8cc271a6fae8;
 .
 
-:download_c97cda29-c3eb-4117-ac32-07098190053f
+:download_d2d4ad02-9f50-41b7-9ab8-8cc271a6fae8
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/metrochicagodata-org/catalog/version/2012-Sep-18/manual/metrochicagodata.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/metrochicagodata-org/catalog/version/2012-Sep-18/manual/metrochicagodata.org.csv>;
 .
 
-<dataset/c97cda29-c3eb-4117-ac32-07098190053f>
+<dataset/d2d4ad02-9f50-41b7-9ab8-8cc271a6fae8>
    a dcat:Dataset;
-   dcat:distribution :download_c97cda29-c3eb-4117-ac32-07098190053f;
+   dcat:distribution :download_d2d4ad02-9f50-41b7-9ab8-8cc271a6fae8;
 .

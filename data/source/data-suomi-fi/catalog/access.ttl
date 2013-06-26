@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-suomi-fi";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_9700139a-75e1-4e53-9064-c1558c370e4c;
+   prov:wasDerivedFrom :download_693ee3e6-f6bc-4231-a6fe-e1ca7fb7ae5e;
 .
 
-:download_9700139a-75e1-4e53-9064-c1558c370e4c
+:download_693ee3e6-f6bc-4231-a6fe-e1ca7fb7ae5e
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-suomi-fi/catalog/version/2011-Nov-02/manual/data.suomi.fi.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-suomi-fi/catalog/version/2011-Nov-02/manual/data.suomi.fi.csv>;
 .
 
-<dataset/9700139a-75e1-4e53-9064-c1558c370e4c>
+<dataset/693ee3e6-f6bc-4231-a6fe-e1ca7fb7ae5e>
    a dcat:Dataset;
-   dcat:distribution :download_9700139a-75e1-4e53-9064-c1558c370e4c;
+   dcat:distribution :download_693ee3e6-f6bc-4231-a6fe-e1ca7fb7ae5e;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "africover-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_1f4551ea-815c-4df2-8b07-10609f3c76ce;
+   prov:wasDerivedFrom :download_e1db3639-3f69-477d-ad95-ad0cd0593004;
 .
 
-:download_1f4551ea-815c-4df2-8b07-10609f3c76ce
+:download_e1db3639-3f69-477d-ad95-ad0cd0593004
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/africover-org/catalog/version/2011-May-11/manual/africover.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/africover-org/catalog/version/2011-May-11/manual/africover.org.csv>;
 .
 
-<dataset/1f4551ea-815c-4df2-8b07-10609f3c76ce>
+<dataset/e1db3639-3f69-477d-ad95-ad0cd0593004>
    a dcat:Dataset;
-   dcat:distribution :download_1f4551ea-815c-4df2-8b07-10609f3c76ce;
+   dcat:distribution :download_e1db3639-3f69-477d-ad95-ad0cd0593004;
 .

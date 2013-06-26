@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "br-ckan-net";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_63d9ded6-da9d-4749-855b-f77de9fc368b;
+   prov:wasDerivedFrom :download_f3971572-e67f-470e-aef0-40569059aa00;
 .
 
-:download_63d9ded6-da9d-4749-855b-f77de9fc368b
+:download_f3971572-e67f-470e-aef0-40569059aa00
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/br-ckan-net/catalog/version/2011-Sep-14/manual/br.ckan.net.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/br-ckan-net/catalog/version/2011-Sep-14/manual/br.ckan.net.csv>;
 .
 
-<dataset/63d9ded6-da9d-4749-855b-f77de9fc368b>
+<dataset/f3971572-e67f-470e-aef0-40569059aa00>
    a dcat:Dataset;
-   dcat:distribution :download_63d9ded6-da9d-4749-855b-f77de9fc368b;
+   dcat:distribution :download_f3971572-e67f-470e-aef0-40569059aa00;
 .

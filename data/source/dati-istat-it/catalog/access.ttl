@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "dati-istat-it";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_a8873429-84fe-4682-acec-fa06e8dddc06;
+   prov:wasDerivedFrom :download_43158d12-f36c-4480-b6dc-6172d19d470b;
 .
 
-:download_a8873429-84fe-4682-acec-fa06e8dddc06
+:download_43158d12-f36c-4480-b6dc-6172d19d470b
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dati-istat-it/catalog/version/2012-Feb-14/manual/dati.istat.it.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dati-istat-it/catalog/version/2012-Feb-14/manual/dati.istat.it.csv>;
 .
 
-<dataset/a8873429-84fe-4682-acec-fa06e8dddc06>
+<dataset/43158d12-f36c-4480-b6dc-6172d19d470b>
    a dcat:Dataset;
-   dcat:distribution :download_a8873429-84fe-4682-acec-fa06e8dddc06;
+   dcat:distribution :download_43158d12-f36c-4480-b6dc-6172d19d470b;
 .

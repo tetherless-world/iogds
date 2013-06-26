@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-fingal-ie";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_6ecb603c-0c3a-47a6-aca0-646792fca73e;
+   prov:wasDerivedFrom :download_57a8caf0-1596-435f-9564-a10283898c63;
 .
 
-:download_6ecb603c-0c3a-47a6-aca0-646792fca73e
+:download_57a8caf0-1596-435f-9564-a10283898c63
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-fingal-ie/catalog/version/2012-May-04/manual/data.fingal.ie.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-fingal-ie/catalog/version/2012-May-04/manual/data.fingal.ie.csv>;
 .
 
-<dataset/6ecb603c-0c3a-47a6-aca0-646792fca73e>
+<dataset/57a8caf0-1596-435f-9564-a10283898c63>
    a dcat:Dataset;
-   dcat:distribution :download_6ecb603c-0c3a-47a6-aca0-646792fca73e;
+   dcat:distribution :download_57a8caf0-1596-435f-9564-a10283898c63;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "governoaberto-sp-gov-br";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_1b46f57d-7b11-45c8-87df-b9a0e5b4bfd6;
+   prov:wasDerivedFrom :download_46375005-f432-4422-bf41-52d17c28d47f;
 .
 
-:download_1b46f57d-7b11-45c8-87df-b9a0e5b4bfd6
+:download_46375005-f432-4422-bf41-52d17c28d47f
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/governoaberto-sp-gov-br/catalog/version/2012-Jun-05/manual/governoaberto.sp.gov.br.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/governoaberto-sp-gov-br/catalog/version/2012-Jun-05/manual/governoaberto.sp.gov.br.csv>;
 .
 
-<dataset/1b46f57d-7b11-45c8-87df-b9a0e5b4bfd6>
+<dataset/46375005-f432-4422-bf41-52d17c28d47f>
    a dcat:Dataset;
-   dcat:distribution :download_1b46f57d-7b11-45c8-87df-b9a0e5b4bfd6;
+   dcat:distribution :download_46375005-f432-4422-bf41-52d17c28d47f;
 .

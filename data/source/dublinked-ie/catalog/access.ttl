@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "dublinked-ie";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_ba0ec571-ebf9-4c51-a8f8-f54a2fc42035;
+   prov:wasDerivedFrom :download_5face278-c1ed-4a0e-a49d-1fe9beb5251d;
 .
 
-:download_ba0ec571-ebf9-4c51-a8f8-f54a2fc42035
+:download_5face278-c1ed-4a0e-a49d-1fe9beb5251d
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dublinked-ie/catalog/version/2012-Feb-09/manual/dublinked.ie.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dublinked-ie/catalog/version/2012-Feb-09/manual/dublinked.ie.csv>;
 .
 
-<dataset/ba0ec571-ebf9-4c51-a8f8-f54a2fc42035>
+<dataset/5face278-c1ed-4a0e-a49d-1fe9beb5251d>
    a dcat:Dataset;
-   dcat:distribution :download_ba0ec571-ebf9-4c51-a8f8-f54a2fc42035;
+   dcat:distribution :download_5face278-c1ed-4a0e-a49d-1fe9beb5251d;
 .

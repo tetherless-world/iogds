@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "datakc-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_d6e06c08-af75-46fa-953d-7b4b292af2a1;
+   prov:wasDerivedFrom :download_b9fa71fb-b705-4907-8f31-4a0bc179dbe0;
 .
 
-:download_d6e06c08-af75-46fa-953d-7b4b292af2a1
+:download_b9fa71fb-b705-4907-8f31-4a0bc179dbe0
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datakc-org/catalog/version/2011-Sep-01/manual/datakc.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datakc-org/catalog/version/2011-Sep-01/manual/datakc.org.csv>;
 .
 
-<dataset/d6e06c08-af75-46fa-953d-7b4b292af2a1>
+<dataset/b9fa71fb-b705-4907-8f31-4a0bc179dbe0>
    a dcat:Dataset;
-   dcat:distribution :download_d6e06c08-af75-46fa-953d-7b4b292af2a1;
+   dcat:distribution :download_b9fa71fb-b705-4907-8f31-4a0bc179dbe0;
 .

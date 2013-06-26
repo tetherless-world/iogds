@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-provincia-roma-it";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_7eb65bd3-9219-45f6-8bf9-a2b289004da5;
+   prov:wasDerivedFrom :download_c3ace1fa-61e6-4056-bfb2-cea6e8d7f633;
 .
 
-:download_7eb65bd3-9219-45f6-8bf9-a2b289004da5
+:download_c3ace1fa-61e6-4056-bfb2-cea6e8d7f633
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-provincia-roma-it/catalog/version/2012-Apr-18/manual/opendata.provincia.roma.it.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-provincia-roma-it/catalog/version/2012-Apr-18/manual/opendata.provincia.roma.it.csv>;
 .
 
-<dataset/7eb65bd3-9219-45f6-8bf9-a2b289004da5>
+<dataset/c3ace1fa-61e6-4056-bfb2-cea6e8d7f633>
    a dcat:Dataset;
-   dcat:distribution :download_7eb65bd3-9219-45f6-8bf9-a2b289004da5;
+   dcat:distribution :download_c3ace1fa-61e6-4056-bfb2-cea6e8d7f633;
 .

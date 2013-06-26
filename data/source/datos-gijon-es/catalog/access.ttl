@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "datos-gijon-es";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_ee3e97ec-72e0-4592-9ee9-6ff351b1a303;
+   prov:wasDerivedFrom :download_9a75d824-500a-4cd9-94b3-7a52d3f413f2;
 .
 
-:download_ee3e97ec-72e0-4592-9ee9-6ff351b1a303
+:download_9a75d824-500a-4cd9-94b3-7a52d3f413f2
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datos-gijon-es/catalog/version/2011-Dec-05/manual/datos.gijon.es.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datos-gijon-es/catalog/version/2011-Dec-05/manual/datos.gijon.es.csv>;
 .
 
-<dataset/ee3e97ec-72e0-4592-9ee9-6ff351b1a303>
+<dataset/9a75d824-500a-4cd9-94b3-7a52d3f413f2>
    a dcat:Dataset;
-   dcat:distribution :download_ee3e97ec-72e0-4592-9ee9-6ff351b1a303;
+   dcat:distribution :download_9a75d824-500a-4cd9-94b3-7a52d3f413f2;
 .

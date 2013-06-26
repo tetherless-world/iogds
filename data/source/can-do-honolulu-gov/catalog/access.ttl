@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "can-do-honolulu-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_13908863-91b2-48ca-8eec-4f41570a60cb;
+   prov:wasDerivedFrom :download_e1013890-2182-488a-a7ef-61e41ee651b8;
 .
 
-:download_13908863-91b2-48ca-8eec-4f41570a60cb
+:download_e1013890-2182-488a-a7ef-61e41ee651b8
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/can-do-honolulu-gov/catalog/version/2011-Sep-21/manual/can-do.honolulu.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/can-do-honolulu-gov/catalog/version/2011-Sep-21/manual/can-do.honolulu.gov.csv>;
 .
 
-<dataset/13908863-91b2-48ca-8eec-4f41570a60cb>
+<dataset/e1013890-2182-488a-a7ef-61e41ee651b8>
    a dcat:Dataset;
-   dcat:distribution :download_13908863-91b2-48ca-8eec-4f41570a60cb;
+   dcat:distribution :download_e1013890-2182-488a-a7ef-61e41ee651b8;
 .

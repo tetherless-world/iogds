@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-enschede-nl";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_409af166-3e7a-4cf6-a02b-4e0432809c76;
+   prov:wasDerivedFrom :download_20c31113-08ba-4508-9d31-bdfb3c50d3c1;
 .
 
-:download_409af166-3e7a-4cf6-a02b-4e0432809c76
+:download_20c31113-08ba-4508-9d31-bdfb3c50d3c1
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-enschede-nl/catalog/version/2012-Apr-11/manual/opendata.enschede.nl.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-enschede-nl/catalog/version/2012-Apr-11/manual/opendata.enschede.nl.csv>;
 .
 
-<dataset/409af166-3e7a-4cf6-a02b-4e0432809c76>
+<dataset/20c31113-08ba-4508-9d31-bdfb3c50d3c1>
    a dcat:Dataset;
-   dcat:distribution :download_409af166-3e7a-4cf6-a02b-4e0432809c76;
+   dcat:distribution :download_20c31113-08ba-4508-9d31-bdfb3c50d3c1;
 .

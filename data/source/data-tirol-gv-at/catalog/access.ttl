@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-tirol-gv-at";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_e1df71bc-4836-41d7-86c8-0d7d51bd42c8;
+   prov:wasDerivedFrom :download_6b99d3ea-12b8-4656-9904-c4663eaec4d8;
 .
 
-:download_e1df71bc-4836-41d7-86c8-0d7d51bd42c8
+:download_6b99d3ea-12b8-4656-9904-c4663eaec4d8
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-tirol-gv-at/catalog/version/2012-Apr-18/manual/data.tirol.gv.at.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-tirol-gv-at/catalog/version/2012-Apr-18/manual/data.tirol.gv.at.csv>;
 .
 
-<dataset/e1df71bc-4836-41d7-86c8-0d7d51bd42c8>
+<dataset/6b99d3ea-12b8-4656-9904-c4663eaec4d8>
    a dcat:Dataset;
-   dcat:distribution :download_e1df71bc-4836-41d7-86c8-0d7d51bd42c8;
+   dcat:distribution :download_6b99d3ea-12b8-4656-9904-c4663eaec4d8;
 .

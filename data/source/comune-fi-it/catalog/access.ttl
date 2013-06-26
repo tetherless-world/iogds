@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "comune-fi-it";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_444ba9d2-e598-4482-9ab6-24ef4d5b3bce;
+   prov:wasDerivedFrom :download_a001c105-0a63-488d-be22-f9740cdb00cb;
 .
 
-:download_444ba9d2-e598-4482-9ab6-24ef4d5b3bce
+:download_a001c105-0a63-488d-be22-f9740cdb00cb
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/comune-fi-it/catalog/version/2011-Oct-19/manual/comune.fi.it.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/comune-fi-it/catalog/version/2011-Oct-19/manual/comune.fi.it.csv>;
 .
 
-<dataset/444ba9d2-e598-4482-9ab6-24ef4d5b3bce>
+<dataset/a001c105-0a63-488d-be22-f9740cdb00cb>
    a dcat:Dataset;
-   dcat:distribution :download_444ba9d2-e598-4482-9ab6-24ef4d5b3bce;
+   dcat:distribution :download_a001c105-0a63-488d-be22-f9740cdb00cb;
 .

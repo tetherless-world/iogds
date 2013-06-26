@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-gov-ma";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_756db0e8-e460-47cd-b034-96c82223f3fc;
+   prov:wasDerivedFrom :download_8f13c3ae-d4c3-4869-bf1f-bb544ed48b6b;
 .
 
-:download_756db0e8-e460-47cd-b034-96c82223f3fc
+:download_8f13c3ae-d4c3-4869-bf1f-bb544ed48b6b
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-ma/catalog/version/2012-May-15/manual/data.gov.ma.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-ma/catalog/version/2012-May-15/manual/data.gov.ma.csv>;
 .
 
-<dataset/756db0e8-e460-47cd-b034-96c82223f3fc>
+<dataset/8f13c3ae-d4c3-4869-bf1f-bb544ed48b6b>
    a dcat:Dataset;
-   dcat:distribution :download_756db0e8-e460-47cd-b034-96c82223f3fc;
+   dcat:distribution :download_8f13c3ae-d4c3-4869-bf1f-bb544ed48b6b;
 .

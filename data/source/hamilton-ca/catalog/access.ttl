@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "hamilton-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_9decd2e5-179e-41a7-9b4b-2c4b40a7e399;
+   prov:wasDerivedFrom :download_a017d20c-5b6c-4f06-8b6b-c693ab03eb8a;
 .
 
-:download_9decd2e5-179e-41a7-9b4b-2c4b40a7e399
+:download_a017d20c-5b6c-4f06-8b6b-c693ab03eb8a
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/hamilton-ca/catalog/version/2012-Jan-24/manual/hamilton.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/hamilton-ca/catalog/version/2012-Jan-24/manual/hamilton.ca.csv>;
 .
 
-<dataset/9decd2e5-179e-41a7-9b4b-2c4b40a7e399>
+<dataset/a017d20c-5b6c-4f06-8b6b-c693ab03eb8a>
    a dcat:Dataset;
-   dcat:distribution :download_9decd2e5-179e-41a7-9b4b-2c4b40a7e399;
+   dcat:distribution :download_a017d20c-5b6c-4f06-8b6b-c693ab03eb8a;
 .

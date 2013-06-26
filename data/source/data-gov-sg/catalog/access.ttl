@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-gov-sg";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_38c0e4fa-0801-426e-ba52-c5d606437981;
+   prov:wasDerivedFrom :download_1474ab43-a8d2-45c5-83fc-25cb420a9ad8;
 .
 
-:download_38c0e4fa-0801-426e-ba52-c5d606437981
+:download_1474ab43-a8d2-45c5-83fc-25cb420a9ad8
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-sg/catalog/version/2011-Sep-15/manual/data.gov.sg.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-sg/catalog/version/2011-Sep-15/manual/data.gov.sg.csv>;
 .
 
-<dataset/38c0e4fa-0801-426e-ba52-c5d606437981>
+<dataset/1474ab43-a8d2-45c5-83fc-25cb420a9ad8>
    a dcat:Dataset;
-   dcat:distribution :download_38c0e4fa-0801-426e-ba52-c5d606437981;
+   dcat:distribution :download_1474ab43-a8d2-45c5-83fc-25cb420a9ad8;
 .

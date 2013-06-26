@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-buenosaires-gob-ar";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_04a310e4-f408-4c8d-9d5c-bbbc7d1824d3;
+   prov:wasDerivedFrom :download_4d8bb9b4-a0d9-4496-bd0a-817ac318a9ab;
 .
 
-:download_04a310e4-f408-4c8d-9d5c-bbbc7d1824d3
+:download_4d8bb9b4-a0d9-4496-bd0a-817ac318a9ab
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-buenosaires-gob-ar/catalog/version/2012-Apr-06/manual/data.buenosaires.gob.ar.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-buenosaires-gob-ar/catalog/version/2012-Apr-06/manual/data.buenosaires.gob.ar.csv>;
 .
 
-<dataset/04a310e4-f408-4c8d-9d5c-bbbc7d1824d3>
+<dataset/4d8bb9b4-a0d9-4496-bd0a-817ac318a9ab>
    a dcat:Dataset;
-   dcat:distribution :download_04a310e4-f408-4c8d-9d5c-bbbc7d1824d3;
+   dcat:distribution :download_4d8bb9b4-a0d9-4496-bd0a-817ac318a9ab;
 .

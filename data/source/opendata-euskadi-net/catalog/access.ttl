@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-euskadi-net";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_36dd1be5-884d-43b1-997d-51065ccaebe3;
+   prov:wasDerivedFrom :download_51bd3f72-c4b2-4e59-804a-5fe067cdb081;
 .
 
-:download_36dd1be5-884d-43b1-997d-51065ccaebe3
+:download_51bd3f72-c4b2-4e59-804a-5fe067cdb081
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-euskadi-net/catalog/version/2012-Apr-20/manual/opendata.euskadi.net.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-euskadi-net/catalog/version/2012-Apr-20/manual/opendata.euskadi.net.csv>;
 .
 
-<dataset/36dd1be5-884d-43b1-997d-51065ccaebe3>
+<dataset/51bd3f72-c4b2-4e59-804a-5fe067cdb081>
    a dcat:Dataset;
-   dcat:distribution :download_36dd1be5-884d-43b1-997d-51065ccaebe3;
+   dcat:distribution :download_51bd3f72-c4b2-4e59-804a-5fe067cdb081;
 .

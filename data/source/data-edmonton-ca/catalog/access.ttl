@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-edmonton-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_35ba6ccf-807e-4a0d-adef-e4958101843e;
+   prov:wasDerivedFrom :download_e72413d6-769b-4af4-af0c-8d463c2f35e9;
 .
 
-:download_35ba6ccf-807e-4a0d-adef-e4958101843e
+:download_e72413d6-769b-4af4-af0c-8d463c2f35e9
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-edmonton-ca/catalog/version/2011-Oct-21/manual/data.edmonton.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-edmonton-ca/catalog/version/2011-Oct-21/manual/data.edmonton.ca.csv>;
 .
 
-<dataset/35ba6ccf-807e-4a0d-adef-e4958101843e>
+<dataset/e72413d6-769b-4af4-af0c-8d463c2f35e9>
    a dcat:Dataset;
-   dcat:distribution :download_35ba6ccf-807e-4a0d-adef-e4958101843e;
+   dcat:distribution :download_e72413d6-769b-4af4-af0c-8d463c2f35e9;
 .

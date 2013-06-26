@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "saudi-gov-sa";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_5a5a3674-36d5-4a58-81c1-f6e4f720515a;
+   prov:wasDerivedFrom :download_660b7005-bbb1-402c-8133-9a73768b7af0;
 .
 
-:download_5a5a3674-36d5-4a58-81c1-f6e4f720515a
+:download_660b7005-bbb1-402c-8133-9a73768b7af0
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/saudi-gov-sa/catalog/version/2012-Jan-24/manual/saudi.gov.sa.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/saudi-gov-sa/catalog/version/2012-Jan-24/manual/saudi.gov.sa.csv>;
 .
 
-<dataset/5a5a3674-36d5-4a58-81c1-f6e4f720515a>
+<dataset/660b7005-bbb1-402c-8133-9a73768b7af0>
    a dcat:Dataset;
-   dcat:distribution :download_5a5a3674-36d5-4a58-81c1-f6e4f720515a;
+   dcat:distribution :download_660b7005-bbb1-402c-8133-9a73768b7af0;
 .

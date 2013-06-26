@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "geodata-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_36090051-a243-429e-b920-2830715d9bdf;
+   prov:wasDerivedFrom :download_1be8cc62-69fc-4e27-8faa-85fc1dfa728d;
 .
 
-:download_36090051-a243-429e-b920-2830715d9bdf
+:download_1be8cc62-69fc-4e27-8faa-85fc1dfa728d
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/geodata-gov/catalog/version/2010-Dec-02/manual/geodata.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/geodata-gov/catalog/version/2010-Dec-02/manual/geodata.csv>;
 .
 
-<dataset/36090051-a243-429e-b920-2830715d9bdf>
+<dataset/1be8cc62-69fc-4e27-8faa-85fc1dfa728d>
    a dcat:Dataset;
-   dcat:distribution :download_36090051-a243-429e-b920-2830715d9bdf;
+   dcat:distribution :download_1be8cc62-69fc-4e27-8faa-85fc1dfa728d;
 .

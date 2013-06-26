@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "donnees-ville-quebec-qc-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_0edce499-381f-4693-9765-231172512ebb;
+   prov:wasDerivedFrom :download_733e3344-1e17-46bf-b04d-d0150fee3ecd;
 .
 
-:download_0edce499-381f-4693-9765-231172512ebb
+:download_733e3344-1e17-46bf-b04d-d0150fee3ecd
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/donnees-ville-quebec-qc-ca/catalog/version/2012-Apr-06/manual/donnees.ville.quebec.qc.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/donnees-ville-quebec-qc-ca/catalog/version/2012-Apr-06/manual/donnees.ville.quebec.qc.ca.csv>;
 .
 
-<dataset/0edce499-381f-4693-9765-231172512ebb>
+<dataset/733e3344-1e17-46bf-b04d-d0150fee3ecd>
    a dcat:Dataset;
-   dcat:distribution :download_0edce499-381f-4693-9765-231172512ebb;
+   dcat:distribution :download_733e3344-1e17-46bf-b04d-d0150fee3ecd;
 .

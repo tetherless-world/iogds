@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "citywindsor-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_69b39c26-f959-4e37-9af8-773b64232128;
+   prov:wasDerivedFrom :download_4c78bdc4-56e5-49f9-abf7-5f206aa6393e;
 .
 
-:download_69b39c26-f959-4e37-9af8-773b64232128
+:download_4c78bdc4-56e5-49f9-abf7-5f206aa6393e
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/citywindsor-ca/catalog/version/2011-Sep-01/manual/citywindsor.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/citywindsor-ca/catalog/version/2011-Sep-01/manual/citywindsor.ca.csv>;
 .
 
-<dataset/69b39c26-f959-4e37-9af8-773b64232128>
+<dataset/4c78bdc4-56e5-49f9-abf7-5f206aa6393e>
    a dcat:Dataset;
-   dcat:distribution :download_69b39c26-f959-4e37-9af8-773b64232128;
+   dcat:distribution :download_4c78bdc4-56e5-49f9-abf7-5f206aa6393e;
 .

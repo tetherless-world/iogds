@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "nebraska-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_6945c297-8e41-4eed-bee2-212171759e11;
+   prov:wasDerivedFrom :download_4dc6a35c-67e7-440c-9d4b-d0fee437fe22;
 .
 
-:download_6945c297-8e41-4eed-bee2-212171759e11
+:download_4dc6a35c-67e7-440c-9d4b-d0fee437fe22
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/nebraska-gov/catalog/version/2011-Oct-07/manual/nebraska.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/nebraska-gov/catalog/version/2011-Oct-07/manual/nebraska.gov.csv>;
 .
 
-<dataset/6945c297-8e41-4eed-bee2-212171759e11>
+<dataset/4dc6a35c-67e7-440c-9d4b-d0fee437fe22>
    a dcat:Dataset;
-   dcat:distribution :download_6945c297-8e41-4eed-bee2-212171759e11;
+   dcat:distribution :download_4dc6a35c-67e7-440c-9d4b-d0fee437fe22;
 .

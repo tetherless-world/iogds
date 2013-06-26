@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-baltimorecity-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_38dfb05c-0139-4f84-874a-38278620c53c;
+   prov:wasDerivedFrom :download_08bfd2f0-a542-4f38-9354-411364534827;
 .
 
-:download_38dfb05c-0139-4f84-874a-38278620c53c
+:download_08bfd2f0-a542-4f38-9354-411364534827
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-baltimorecity-gov/catalog/version/2012-Sep-18/manual/data.baltimorecity.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-baltimorecity-gov/catalog/version/2012-Sep-18/manual/data.baltimorecity.gov.csv>;
 .
 
-<dataset/38dfb05c-0139-4f84-874a-38278620c53c>
+<dataset/08bfd2f0-a542-4f38-9354-411364534827>
    a dcat:Dataset;
-   dcat:distribution :download_38dfb05c-0139-4f84-874a-38278620c53c;
+   dcat:distribution :download_08bfd2f0-a542-4f38-9354-411364534827;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-rennes-metropole-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_d23cc710-d214-428b-8789-9a35a174df6d;
+   prov:wasDerivedFrom :download_45f436c5-28a0-431f-b813-3a8bc0666b6a;
 .
 
-:download_d23cc710-d214-428b-8789-9a35a174df6d
+:download_45f436c5-28a0-431f-b813-3a8bc0666b6a
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-rennes-metropole-fr/catalog/version/2011-Sep-14/manual/data.rennes-metropole.fr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-rennes-metropole-fr/catalog/version/2011-Sep-14/manual/data.rennes-metropole.fr.csv>;
 .
 
-<dataset/d23cc710-d214-428b-8789-9a35a174df6d>
+<dataset/45f436c5-28a0-431f-b813-3a8bc0666b6a>
    a dcat:Dataset;
-   dcat:distribution :download_d23cc710-d214-428b-8789-9a35a174df6d;
+   dcat:distribution :download_45f436c5-28a0-431f-b813-3a8bc0666b6a;
 .

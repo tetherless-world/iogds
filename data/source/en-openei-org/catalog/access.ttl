@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "en-openei-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_b12baa88-3a88-40f0-9037-37b90425980a;
+   prov:wasDerivedFrom :download_8ea93e49-85e8-4ab4-a2b1-dfdaa8cf7709;
 .
 
-:download_b12baa88-3a88-40f0-9037-37b90425980a
+:download_8ea93e49-85e8-4ab4-a2b1-dfdaa8cf7709
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/en-openei-org/catalog/version/2011-Jun-27/manual/en.openei.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/en-openei-org/catalog/version/2011-Jun-27/manual/en.openei.org.csv>;
 .
 
-<dataset/b12baa88-3a88-40f0-9037-37b90425980a>
+<dataset/8ea93e49-85e8-4ab4-a2b1-dfdaa8cf7709>
    a dcat:Dataset;
-   dcat:distribution :download_b12baa88-3a88-40f0-9037-37b90425980a;
+   dcat:distribution :download_8ea93e49-85e8-4ab4-a2b1-dfdaa8cf7709;
 .

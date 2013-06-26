@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-gov-gh";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_fd20c952-3969-492f-beef-d288e1c94011;
+   prov:wasDerivedFrom :download_3ebd96eb-ee1a-46b6-b7a0-90829bff8438;
 .
 
-:download_fd20c952-3969-492f-beef-d288e1c94011
+:download_3ebd96eb-ee1a-46b6-b7a0-90829bff8438
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-gh/catalog/version/2013-May-06/manual/ghana.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-gh/catalog/version/2013-May-06/manual/ghana.csv>;
 .
 
-<dataset/fd20c952-3969-492f-beef-d288e1c94011>
+<dataset/3ebd96eb-ee1a-46b6-b7a0-90829bff8438>
    a dcat:Dataset;
-   dcat:distribution :download_fd20c952-3969-492f-beef-d288e1c94011;
+   dcat:distribution :download_3ebd96eb-ee1a-46b6-b7a0-90829bff8438;
 .

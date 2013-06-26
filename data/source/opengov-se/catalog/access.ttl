@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opengov-se";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_e751ff63-a219-4b4b-8db7-3cae31203cfa;
+   prov:wasDerivedFrom :download_cb6409c8-2434-4156-9009-25fa8cbe56e6;
 .
 
-:download_e751ff63-a219-4b4b-8db7-3cae31203cfa
+:download_cb6409c8-2434-4156-9009-25fa8cbe56e6
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opengov-se/catalog/version/2011-Sep-13/manual/opengov.se.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opengov-se/catalog/version/2011-Sep-13/manual/opengov.se.csv>;
 .
 
-<dataset/e751ff63-a219-4b4b-8db7-3cae31203cfa>
+<dataset/cb6409c8-2434-4156-9009-25fa8cbe56e6>
    a dcat:Dataset;
-   dcat:distribution :download_e751ff63-a219-4b4b-8db7-3cae31203cfa;
+   dcat:distribution :download_cb6409c8-2434-4156-9009-25fa8cbe56e6;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-illinois-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_73bfa2b5-000e-440c-be40-9a8a6fda5bc2;
+   prov:wasDerivedFrom :download_451c597f-b92d-4523-990c-1354f7c7298e;
 .
 
-:download_73bfa2b5-000e-440c-be40-9a8a6fda5bc2
+:download_451c597f-b92d-4523-990c-1354f7c7298e
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-illinois-gov/catalog/version/2011-Sep-01/manual/data.illinois.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-illinois-gov/catalog/version/2011-Sep-01/manual/data.illinois.gov.csv>;
 .
 
-<dataset/73bfa2b5-000e-440c-be40-9a8a6fda5bc2>
+<dataset/451c597f-b92d-4523-990c-1354f7c7298e>
    a dcat:Dataset;
-   dcat:distribution :download_73bfa2b5-000e-440c-be40-9a8a6fda5bc2;
+   dcat:distribution :download_451c597f-b92d-4523-990c-1354f7c7298e;
 .

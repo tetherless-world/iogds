@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-grandtoulouse-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_0262b35a-3ef8-4a93-9347-41f4d65de9cb;
+   prov:wasDerivedFrom :download_a82f70ab-87b7-4217-84d1-57e5ccd4ec5b;
 .
 
-:download_0262b35a-3ef8-4a93-9347-41f4d65de9cb
+:download_a82f70ab-87b7-4217-84d1-57e5ccd4ec5b
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-grandtoulouse-fr/catalog/version/2011-Oct-24/manual/data.grandtoulouse.fr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-grandtoulouse-fr/catalog/version/2011-Oct-24/manual/data.grandtoulouse.fr.csv>;
 .
 
-<dataset/0262b35a-3ef8-4a93-9347-41f4d65de9cb>
+<dataset/a82f70ab-87b7-4217-84d1-57e5ccd4ec5b>
    a dcat:Dataset;
-   dcat:distribution :download_0262b35a-3ef8-4a93-9347-41f4d65de9cb;
+   dcat:distribution :download_a82f70ab-87b7-4217-84d1-57e5ccd4ec5b;
 .

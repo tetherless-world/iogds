@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "niagarafalls-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_2c2ec588-7962-4a7b-bdd3-baed94da7eb7;
+   prov:wasDerivedFrom :download_ec814717-4f2d-4103-bb0e-136db074b614;
 .
 
-:download_2c2ec588-7962-4a7b-bdd3-baed94da7eb7
+:download_ec814717-4f2d-4103-bb0e-136db074b614
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/niagarafalls-ca/catalog/version/2011-Oct-06/manual/niagarafalls.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/niagarafalls-ca/catalog/version/2011-Oct-06/manual/niagarafalls.ca.csv>;
 .
 
-<dataset/2c2ec588-7962-4a7b-bdd3-baed94da7eb7>
+<dataset/ec814717-4f2d-4103-bb0e-136db074b614>
    a dcat:Dataset;
-   dcat:distribution :download_2c2ec588-7962-4a7b-bdd3-baed94da7eb7;
+   dcat:distribution :download_ec814717-4f2d-4103-bb0e-136db074b614;
 .

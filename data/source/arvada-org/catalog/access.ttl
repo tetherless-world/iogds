@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "arvada-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_582c92b9-67cf-4e64-89e4-07d7cd0456e2;
+   prov:wasDerivedFrom :download_ce85cb84-3123-473f-b3f7-7c7f9a97d3d2;
 .
 
-:download_582c92b9-67cf-4e64-89e4-07d7cd0456e2
+:download_ce85cb84-3123-473f-b3f7-7c7f9a97d3d2
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/arvada-org/catalog/version/2011-Oct-07/manual/arvada.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/arvada-org/catalog/version/2011-Oct-07/manual/arvada.org.csv>;
 .
 
-<dataset/582c92b9-67cf-4e64-89e4-07d7cd0456e2>
+<dataset/ce85cb84-3123-473f-b3f7-7c7f9a97d3d2>
    a dcat:Dataset;
-   dcat:distribution :download_582c92b9-67cf-4e64-89e4-07d7cd0456e2;
+   dcat:distribution :download_ce85cb84-3123-473f-b3f7-7c7f9a97d3d2;
 .

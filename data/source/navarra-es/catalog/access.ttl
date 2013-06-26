@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "navarra-es";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_c95f2637-2b42-4283-854c-45a97cd4f447;
+   prov:wasDerivedFrom :download_22bb1be1-dcf8-4e58-81a1-c0cce6315938;
 .
 
-:download_c95f2637-2b42-4283-854c-45a97cd4f447
+:download_22bb1be1-dcf8-4e58-81a1-c0cce6315938
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/navarra-es/catalog/version/2011-Sep-13/manual/navarra.es.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/navarra-es/catalog/version/2011-Sep-13/manual/navarra.es.csv>;
 .
 
-<dataset/c95f2637-2b42-4283-854c-45a97cd4f447>
+<dataset/22bb1be1-dcf8-4e58-81a1-c0cce6315938>
    a dcat:Dataset;
-   dcat:distribution :download_c95f2637-2b42-4283-854c-45a97cd4f447;
+   dcat:distribution :download_22bb1be1-dcf8-4e58-81a1-c0cce6315938;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-iowa-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_fb53b829-f045-4a6f-be1d-032be2ff926a;
+   prov:wasDerivedFrom :download_2d8ebd5d-1e91-498a-81d6-064b42bf71ea;
 .
 
-:download_fb53b829-f045-4a6f-be1d-032be2ff926a
+:download_2d8ebd5d-1e91-498a-81d6-064b42bf71ea
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-iowa-gov/catalog/version/2012-Jun-13/manual/data.iowa.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-iowa-gov/catalog/version/2012-Jun-13/manual/data.iowa.gov.csv>;
 .
 
-<dataset/fb53b829-f045-4a6f-be1d-032be2ff926a>
+<dataset/2d8ebd5d-1e91-498a-81d6-064b42bf71ea>
    a dcat:Dataset;
-   dcat:distribution :download_fb53b829-f045-4a6f-be1d-032be2ff926a;
+   dcat:distribution :download_2d8ebd5d-1e91-498a-81d6-064b42bf71ea;
 .

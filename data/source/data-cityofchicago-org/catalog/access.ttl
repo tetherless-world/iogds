@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-cityofchicago-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_f562759a-74b3-4875-91d4-5e265dd4ea62;
+   prov:wasDerivedFrom :download_7cb61c03-7851-49c9-8267-0ed1f7f9443a;
 .
 
-:download_f562759a-74b3-4875-91d4-5e265dd4ea62
+:download_7cb61c03-7851-49c9-8267-0ed1f7f9443a
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-cityofchicago-org/catalog/version/2012-Sep-18/manual/data.cityofchicago.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-cityofchicago-org/catalog/version/2012-Sep-18/manual/data.cityofchicago.org.csv>;
 .
 
-<dataset/f562759a-74b3-4875-91d4-5e265dd4ea62>
+<dataset/7cb61c03-7851-49c9-8267-0ed1f7f9443a>
    a dcat:Dataset;
-   dcat:distribution :download_f562759a-74b3-4875-91d4-5e265dd4ea62;
+   dcat:distribution :download_7cb61c03-7851-49c9-8267-0ed1f7f9443a;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-sfgov-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_f6984dc1-db21-459f-b1d8-45ec83230b5d;
+   prov:wasDerivedFrom :download_b4246cd2-ad46-4d35-87e0-b433bb944da1;
 .
 
-:download_f6984dc1-db21-459f-b1d8-45ec83230b5d
+:download_b4246cd2-ad46-4d35-87e0-b433bb944da1
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-sfgov-org/catalog/version/2012-Sep-18/manual/data.sfgov.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-sfgov-org/catalog/version/2012-Sep-18/manual/data.sfgov.org.csv>;
 .
 
-<dataset/f6984dc1-db21-459f-b1d8-45ec83230b5d>
+<dataset/b4246cd2-ad46-4d35-87e0-b433bb944da1>
    a dcat:Dataset;
-   dcat:distribution :download_f6984dc1-db21-459f-b1d8-45ec83230b5d;
+   dcat:distribution :download_b4246cd2-ad46-4d35-87e0-b433bb944da1;
 .

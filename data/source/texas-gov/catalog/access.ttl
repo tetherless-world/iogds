@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "texas-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_f1928364-3dc6-4ddc-9fc4-9192664c30e9;
+   prov:wasDerivedFrom :download_890b7a54-fe39-4325-b871-efb55b04b7fb;
 .
 
-:download_f1928364-3dc6-4ddc-9fc4-9192664c30e9
+:download_890b7a54-fe39-4325-b871-efb55b04b7fb
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/texas-gov/catalog/version/2012-Feb-21/manual/texas.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/texas-gov/catalog/version/2012-Feb-21/manual/texas.gov.csv>;
 .
 
-<dataset/f1928364-3dc6-4ddc-9fc4-9192664c30e9>
+<dataset/890b7a54-fe39-4325-b871-efb55b04b7fb>
    a dcat:Dataset;
-   dcat:distribution :download_f1928364-3dc6-4ddc-9fc4-9192664c30e9;
+   dcat:distribution :download_890b7a54-fe39-4325-b871-efb55b04b7fb;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-visitprovence-com";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_564caabe-2eff-4912-a093-9015dfee67f9;
+   prov:wasDerivedFrom :download_0e09ecdb-4bad-4e2f-9ca1-476b3575fb46;
 .
 
-:download_564caabe-2eff-4912-a093-9015dfee67f9
+:download_0e09ecdb-4bad-4e2f-9ca1-476b3575fb46
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-visitprovence-com/catalog/version/2012-Jun-05/manual/data.visitprovence.com.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-visitprovence-com/catalog/version/2012-Jun-05/manual/data.visitprovence.com.csv>;
 .
 
-<dataset/564caabe-2eff-4912-a093-9015dfee67f9>
+<dataset/0e09ecdb-4bad-4e2f-9ca1-476b3575fb46>
    a dcat:Dataset;
-   dcat:distribution :download_564caabe-2eff-4912-a093-9015dfee67f9;
+   dcat:distribution :download_0e09ecdb-4bad-4e2f-9ca1-476b3575fb46;
 .

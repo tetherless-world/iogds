@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "caib-es";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_78288aba-0541-436b-bb17-2123083e2efc;
+   prov:wasDerivedFrom :download_b9aac1eb-0f3e-4cae-ace0-78b110e372e4;
 .
 
-:download_78288aba-0541-436b-bb17-2123083e2efc
+:download_b9aac1eb-0f3e-4cae-ace0-78b110e372e4
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/caib-es/catalog/version/2012-Jan-30/manual/caib.es.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/caib-es/catalog/version/2012-Jan-30/manual/caib.es.csv>;
 .
 
-<dataset/78288aba-0541-436b-bb17-2123083e2efc>
+<dataset/b9aac1eb-0f3e-4cae-ace0-78b110e372e4>
    a dcat:Dataset;
-   dcat:distribution :download_78288aba-0541-436b-bb17-2123083e2efc;
+   dcat:distribution :download_b9aac1eb-0f3e-4cae-ace0-78b110e372e4;
 .

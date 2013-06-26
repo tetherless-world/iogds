@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "aporta-es";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_03f6e2e3-15e7-4b62-b776-b459135f9745;
+   prov:wasDerivedFrom :download_5584c1e4-9f2e-489a-a628-a93fbbe0d2ff;
 .
 
-:download_03f6e2e3-15e7-4b62-b776-b459135f9745
+:download_5584c1e4-9f2e-489a-a628-a93fbbe0d2ff
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/aporta-es/catalog/version/2011-Jun-15/manual/aporta.es.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/aporta-es/catalog/version/2011-Jun-15/manual/aporta.es.csv>;
 .
 
-<dataset/03f6e2e3-15e7-4b62-b776-b459135f9745>
+<dataset/5584c1e4-9f2e-489a-a628-a93fbbe0d2ff>
    a dcat:Dataset;
-   dcat:distribution :download_03f6e2e3-15e7-4b62-b776-b459135f9745;
+   dcat:distribution :download_5584c1e4-9f2e-489a-a628-a93fbbe0d2ff;
 .

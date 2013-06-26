@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-warwickshire-gov-uk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_7330bb57-8e04-4e67-868b-b9b90065fff9;
+   prov:wasDerivedFrom :download_e64701f8-3a5d-4f30-a161-e0c3add72dbc;
 .
 
-:download_7330bb57-8e04-4e67-868b-b9b90065fff9
+:download_e64701f8-3a5d-4f30-a161-e0c3add72dbc
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-warwickshire-gov-uk/catalog/version/2011-Sep-13/manual/opendata.warwickshire.gov.uk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-warwickshire-gov-uk/catalog/version/2011-Sep-13/manual/opendata.warwickshire.gov.uk.csv>;
 .
 
-<dataset/7330bb57-8e04-4e67-868b-b9b90065fff9>
+<dataset/e64701f8-3a5d-4f30-a161-e0c3add72dbc>
    a dcat:Dataset;
-   dcat:distribution :download_7330bb57-8e04-4e67-868b-b9b90065fff9;
+   dcat:distribution :download_e64701f8-3a5d-4f30-a161-e0c3add72dbc;
 .

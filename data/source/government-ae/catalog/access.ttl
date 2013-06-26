@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "government-ae";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_a6b6b4bd-849b-4750-bb37-1cb2207ee929;
+   prov:wasDerivedFrom :download_22cd25dd-8ba3-45be-917c-d58e78f2935b;
 .
 
-:download_a6b6b4bd-849b-4750-bb37-1cb2207ee929
+:download_22cd25dd-8ba3-45be-917c-d58e78f2935b
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/government-ae/catalog/version/2012-Jun-13/manual/government.ae.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/government-ae/catalog/version/2012-Jun-13/manual/government.ae.csv>;
 .
 
-<dataset/a6b6b4bd-849b-4750-bb37-1cb2207ee929>
+<dataset/22cd25dd-8ba3-45be-917c-d58e78f2935b>
    a dcat:Dataset;
-   dcat:distribution :download_a6b6b4bd-849b-4750-bb37-1cb2207ee929;
+   dcat:distribution :download_22cd25dd-8ba3-45be-917c-d58e78f2935b;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-loire-atlantique-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_5c444042-2cb9-434c-856f-34a6024ebe81;
+   prov:wasDerivedFrom :download_40200744-86b8-449d-9dda-4b9eb851af1e;
 .
 
-:download_5c444042-2cb9-434c-856f-34a6024ebe81
+:download_40200744-86b8-449d-9dda-4b9eb851af1e
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-loire-atlantique-fr/catalog/version/2012-Apr-11/manual/data.loire-atlantique.fr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-loire-atlantique-fr/catalog/version/2012-Apr-11/manual/data.loire-atlantique.fr.csv>;
 .
 
-<dataset/5c444042-2cb9-434c-856f-34a6024ebe81>
+<dataset/40200744-86b8-449d-9dda-4b9eb851af1e>
    a dcat:Dataset;
-   dcat:distribution :download_5c444042-2cb9-434c-856f-34a6024ebe81;
+   dcat:distribution :download_40200744-86b8-449d-9dda-4b9eb851af1e;
 .

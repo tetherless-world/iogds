@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-medicare-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_55742913-34dd-4250-b731-5fa855f4de41;
+   prov:wasDerivedFrom :download_1c6c75cf-320c-4492-8833-330e312de232;
 .
 
-:download_55742913-34dd-4250-b731-5fa855f4de41
+:download_1c6c75cf-320c-4492-8833-330e312de232
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-medicare-gov/catalog/version/2011-Sep-15/manual/data.medicare.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-medicare-gov/catalog/version/2011-Sep-15/manual/data.medicare.gov.csv>;
 .
 
-<dataset/55742913-34dd-4250-b731-5fa855f4de41>
+<dataset/1c6c75cf-320c-4492-8833-330e312de232>
    a dcat:Dataset;
-   dcat:distribution :download_55742913-34dd-4250-b731-5fa855f4de41;
+   dcat:distribution :download_1c6c75cf-320c-4492-8833-330e312de232;
 .

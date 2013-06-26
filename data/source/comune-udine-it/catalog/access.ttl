@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "comune-udine-it";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_81fceda3-5510-4d47-b7d4-059feb371620;
+   prov:wasDerivedFrom :download_6b4690b0-504c-46b4-8255-7bd05f64f5b2;
 .
 
-:download_81fceda3-5510-4d47-b7d4-059feb371620
+:download_6b4690b0-504c-46b4-8255-7bd05f64f5b2
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/comune-udine-it/catalog/version/2011-Sep-14/manual/comune.udine.it.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/comune-udine-it/catalog/version/2011-Sep-14/manual/comune.udine.it.csv>;
 .
 
-<dataset/81fceda3-5510-4d47-b7d4-059feb371620>
+<dataset/6b4690b0-504c-46b4-8255-7bd05f64f5b2>
    a dcat:Dataset;
-   dcat:distribution :download_81fceda3-5510-4d47-b7d4-059feb371620;
+   dcat:distribution :download_6b4690b0-504c-46b4-8255-7bd05f64f5b2;
 .

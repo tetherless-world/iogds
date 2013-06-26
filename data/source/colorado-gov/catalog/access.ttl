@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "colorado-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_b0bf1809-7feb-48d7-b475-65362a9801b1;
+   prov:wasDerivedFrom :download_fb0d33b0-a04b-4fda-9736-be20c87ddf6f;
 .
 
-:download_b0bf1809-7feb-48d7-b475-65362a9801b1
+:download_fb0d33b0-a04b-4fda-9736-be20c87ddf6f
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/colorado-gov/catalog/version/2011-Sep-21/manual/colorado.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/colorado-gov/catalog/version/2011-Sep-21/manual/colorado.gov.csv>;
 .
 
-<dataset/b0bf1809-7feb-48d7-b475-65362a9801b1>
+<dataset/fb0d33b0-a04b-4fda-9736-be20c87ddf6f>
    a dcat:Dataset;
-   dcat:distribution :download_b0bf1809-7feb-48d7-b475-65362a9801b1;
+   dcat:distribution :download_fb0d33b0-a04b-4fda-9736-be20c87ddf6f;
 .

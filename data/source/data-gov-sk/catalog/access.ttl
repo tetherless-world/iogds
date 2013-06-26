@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-gov-sk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_9dd770d5-4a32-4490-bcbd-0eb140611784;
+   prov:wasDerivedFrom :download_f3223442-af71-4174-87d2-4c2ee564bd79;
 .
 
-:download_9dd770d5-4a32-4490-bcbd-0eb140611784
+:download_f3223442-af71-4174-87d2-4c2ee564bd79
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-sk/catalog/version/2012-Apr-20/manual/data.gov.sk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-sk/catalog/version/2012-Apr-20/manual/data.gov.sk.csv>;
 .
 
-<dataset/9dd770d5-4a32-4490-bcbd-0eb140611784>
+<dataset/f3223442-af71-4174-87d2-4c2ee564bd79>
    a dcat:Dataset;
-   dcat:distribution :download_9dd770d5-4a32-4490-bcbd-0eb140611784;
+   dcat:distribution :download_f3223442-af71-4174-87d2-4c2ee564bd79;
 .

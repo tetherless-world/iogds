@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "consejotransparencia-cl";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_fc4d3c9a-6624-45eb-972e-c3c02f987402;
+   prov:wasDerivedFrom :download_02fecfcf-5026-44b8-b650-5407a6573982;
 .
 
-:download_fc4d3c9a-6624-45eb-972e-c3c02f987402
+:download_02fecfcf-5026-44b8-b650-5407a6573982
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/consejotransparencia-cl/catalog/version/2011-Sep-14/manual/consejotransparencia.cl.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/consejotransparencia-cl/catalog/version/2011-Sep-14/manual/consejotransparencia.cl.csv>;
 .
 
-<dataset/fc4d3c9a-6624-45eb-972e-c3c02f987402>
+<dataset/02fecfcf-5026-44b8-b650-5407a6573982>
    a dcat:Dataset;
-   dcat:distribution :download_fc4d3c9a-6624-45eb-972e-c3c02f987402;
+   dcat:distribution :download_02fecfcf-5026-44b8-b650-5407a6573982;
 .

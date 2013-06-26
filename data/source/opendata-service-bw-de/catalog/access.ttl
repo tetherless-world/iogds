@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-service-bw-de";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_cfbe5666-be87-4f9b-9490-038ebf793dba;
+   prov:wasDerivedFrom :download_467d69d8-f0ed-41eb-984f-2cd767a476ea;
 .
 
-:download_cfbe5666-be87-4f9b-9490-038ebf793dba
+:download_467d69d8-f0ed-41eb-984f-2cd767a476ea
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-service-bw-de/catalog/version/2012-Apr-11/manual/opendata.service-bw.de.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-service-bw-de/catalog/version/2012-Apr-11/manual/opendata.service-bw.de.csv>;
 .
 
-<dataset/cfbe5666-be87-4f9b-9490-038ebf793dba>
+<dataset/467d69d8-f0ed-41eb-984f-2cd767a476ea>
    a dcat:Dataset;
-   dcat:distribution :download_cfbe5666-be87-4f9b-9490-038ebf793dba;
+   dcat:distribution :download_467d69d8-f0ed-41eb-984f-2cd767a476ea;
 .

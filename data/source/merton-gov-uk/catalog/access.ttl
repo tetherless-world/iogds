@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "merton-gov-uk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_51f0135f-8eae-44ff-a302-04cb11601a32;
+   prov:wasDerivedFrom :download_a2a4f559-b028-44cb-a75a-940e0eac1aed;
 .
 
-:download_51f0135f-8eae-44ff-a302-04cb11601a32
+:download_a2a4f559-b028-44cb-a75a-940e0eac1aed
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/merton-gov-uk/catalog/version/2012-Jun-05/manual/merton.gov.uk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/merton-gov-uk/catalog/version/2012-Jun-05/manual/merton.gov.uk.csv>;
 .
 
-<dataset/51f0135f-8eae-44ff-a302-04cb11601a32>
+<dataset/a2a4f559-b028-44cb-a75a-940e0eac1aed>
    a dcat:Dataset;
-   dcat:distribution :download_51f0135f-8eae-44ff-a302-04cb11601a32;
+   dcat:distribution :download_a2a4f559-b028-44cb-a75a-940e0eac1aed;
 .

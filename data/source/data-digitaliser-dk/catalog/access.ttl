@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-digitaliser-dk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_75b77fbc-5b5f-4542-9864-8ef1b7d05f14;
+   prov:wasDerivedFrom :download_3ce6046c-d4b8-4017-ab1d-a3117ab3802f;
 .
 
-:download_75b77fbc-5b5f-4542-9864-8ef1b7d05f14
+:download_3ce6046c-d4b8-4017-ab1d-a3117ab3802f
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-digitaliser-dk/catalog/version/2011-Sep-12/manual/data.digitaliser.dk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-digitaliser-dk/catalog/version/2011-Sep-12/manual/data.digitaliser.dk.csv>;
 .
 
-<dataset/75b77fbc-5b5f-4542-9864-8ef1b7d05f14>
+<dataset/3ce6046c-d4b8-4017-ab1d-a3117ab3802f>
    a dcat:Dataset;
-   dcat:distribution :download_75b77fbc-5b5f-4542-9864-8ef1b7d05f14;
+   dcat:distribution :download_3ce6046c-d4b8-4017-ab1d-a3117ab3802f;
 .

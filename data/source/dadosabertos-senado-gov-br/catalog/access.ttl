@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "dadosabertos-senado-gov-br";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_5f47c4a4-ee26-4eaa-8cf0-e9a01e23e834;
+   prov:wasDerivedFrom :download_81b6c08d-5b9c-4c41-9d56-71e1201bfb47;
 .
 
-:download_5f47c4a4-ee26-4eaa-8cf0-e9a01e23e834
+:download_81b6c08d-5b9c-4c41-9d56-71e1201bfb47
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dadosabertos-senado-gov-br/catalog/version/2012-May-15/manual/dadosabertos.senado.gov.br.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dadosabertos-senado-gov-br/catalog/version/2012-May-15/manual/dadosabertos.senado.gov.br.csv>;
 .
 
-<dataset/5f47c4a4-ee26-4eaa-8cf0-e9a01e23e834>
+<dataset/81b6c08d-5b9c-4c41-9d56-71e1201bfb47>
    a dcat:Dataset;
-   dcat:distribution :download_5f47c4a4-ee26-4eaa-8cf0-e9a01e23e834;
+   dcat:distribution :download_81b6c08d-5b9c-4c41-9d56-71e1201bfb47;
 .

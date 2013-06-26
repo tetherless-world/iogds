@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-linz-gv-at";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_1efa49b7-a6f7-41be-954b-e51905a9604f;
+   prov:wasDerivedFrom :download_6cc0e27b-42cf-474f-bb72-8997f29bb517;
 .
 
-:download_1efa49b7-a6f7-41be-954b-e51905a9604f
+:download_6cc0e27b-42cf-474f-bb72-8997f29bb517
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-linz-gv-at/catalog/version/2011-Oct-12/manual/data.linz.gv.at.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-linz-gv-at/catalog/version/2011-Oct-12/manual/data.linz.gv.at.csv>;
 .
 
-<dataset/1efa49b7-a6f7-41be-954b-e51905a9604f>
+<dataset/6cc0e27b-42cf-474f-bb72-8997f29bb517>
    a dcat:Dataset;
-   dcat:distribution :download_1efa49b7-a6f7-41be-954b-e51905a9604f;
+   dcat:distribution :download_6cc0e27b-42cf-474f-bb72-8997f29bb517;
 .

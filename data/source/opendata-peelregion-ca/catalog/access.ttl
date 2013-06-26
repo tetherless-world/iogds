@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-peelregion-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_d1874f3f-c5d7-4e35-a2f6-b20b856e7749;
+   prov:wasDerivedFrom :download_29b13f51-7cca-4a00-9cd2-bef225df7757;
 .
 
-:download_d1874f3f-c5d7-4e35-a2f6-b20b856e7749
+:download_29b13f51-7cca-4a00-9cd2-bef225df7757
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-peelregion-ca/catalog/version/2012-May-04/manual/opendata.peelregion.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-peelregion-ca/catalog/version/2012-May-04/manual/opendata.peelregion.ca.csv>;
 .
 
-<dataset/d1874f3f-c5d7-4e35-a2f6-b20b856e7749>
+<dataset/29b13f51-7cca-4a00-9cd2-bef225df7757>
    a dcat:Dataset;
-   dcat:distribution :download_d1874f3f-c5d7-4e35-a2f6-b20b856e7749;
+   dcat:distribution :download_29b13f51-7cca-4a00-9cd2-bef225df7757;
 .

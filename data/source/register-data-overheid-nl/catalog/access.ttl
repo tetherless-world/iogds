@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "register-data-overheid-nl";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_f6630cfd-784c-40c7-a185-835a72749549;
+   prov:wasDerivedFrom :download_53e6aa6b-4252-45d9-9db3-6e69098eff8d;
 .
 
-:download_f6630cfd-784c-40c7-a185-835a72749549
+:download_53e6aa6b-4252-45d9-9db3-6e69098eff8d
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/register-data-overheid-nl/catalog/version/2011-Sep-12/manual/register.data.overheid.nl.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/register-data-overheid-nl/catalog/version/2011-Sep-12/manual/register.data.overheid.nl.csv>;
 .
 
-<dataset/f6630cfd-784c-40c7-a185-835a72749549>
+<dataset/53e6aa6b-4252-45d9-9db3-6e69098eff8d>
    a dcat:Dataset;
-   dcat:distribution :download_f6630cfd-784c-40c7-a185-835a72749549;
+   dcat:distribution :download_53e6aa6b-4252-45d9-9db3-6e69098eff8d;
 .

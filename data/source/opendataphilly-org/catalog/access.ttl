@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendataphilly-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_ae9178dd-de67-4eae-92f7-aadaccc1f482;
+   prov:wasDerivedFrom :download_455beee6-6139-47df-915d-9df5297534be;
 .
 
-:download_ae9178dd-de67-4eae-92f7-aadaccc1f482
+:download_455beee6-6139-47df-915d-9df5297534be
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendataphilly-org/catalog/version/2011-Sep-13/manual/opendataphilly.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendataphilly-org/catalog/version/2011-Sep-13/manual/opendataphilly.org.csv>;
 .
 
-<dataset/ae9178dd-de67-4eae-92f7-aadaccc1f482>
+<dataset/455beee6-6139-47df-915d-9df5297534be>
    a dcat:Dataset;
-   dcat:distribution :download_ae9178dd-de67-4eae-92f7-aadaccc1f482;
+   dcat:distribution :download_455beee6-6139-47df-915d-9df5297534be;
 .

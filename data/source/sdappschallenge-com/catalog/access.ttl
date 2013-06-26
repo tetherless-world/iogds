@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "sdappschallenge-com";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_2e625546-be33-4dc7-b37d-611263170f08;
+   prov:wasDerivedFrom :download_42b7b2f9-231f-44c2-89a5-69d43b1c3a75;
 .
 
-:download_2e625546-be33-4dc7-b37d-611263170f08
+:download_42b7b2f9-231f-44c2-89a5-69d43b1c3a75
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/sdappschallenge-com/catalog/version/2012-May-15/manual/sdappschallenge.com.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/sdappschallenge-com/catalog/version/2012-May-15/manual/sdappschallenge.com.csv>;
 .
 
-<dataset/2e625546-be33-4dc7-b37d-611263170f08>
+<dataset/42b7b2f9-231f-44c2-89a5-69d43b1c3a75>
    a dcat:Dataset;
-   dcat:distribution :download_2e625546-be33-4dc7-b37d-611263170f08;
+   dcat:distribution :download_42b7b2f9-231f-44c2-89a5-69d43b1c3a75;
 .

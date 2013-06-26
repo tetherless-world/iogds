@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "statcentral-ie";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_248323a5-f1f2-4b66-87f0-134cab6d6237;
+   prov:wasDerivedFrom :download_82917b2c-4020-4819-bdb3-c46879765425;
 .
 
-:download_248323a5-f1f2-4b66-87f0-134cab6d6237
+:download_82917b2c-4020-4819-bdb3-c46879765425
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/statcentral-ie/catalog/version/2012-Feb-03/manual/statcentral.ie.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/statcentral-ie/catalog/version/2012-Feb-03/manual/statcentral.ie.csv>;
 .
 
-<dataset/248323a5-f1f2-4b66-87f0-134cab6d6237>
+<dataset/82917b2c-4020-4819-bdb3-c46879765425>
    a dcat:Dataset;
-   dcat:distribution :download_248323a5-f1f2-4b66-87f0-134cab6d6237;
+   dcat:distribution :download_82917b2c-4020-4819-bdb3-c46879765425;
 .

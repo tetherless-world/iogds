@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "cat-open-org-nz";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_2df77cdb-651e-45a0-8964-859caf12da89;
+   prov:wasDerivedFrom :download_9f39fdd6-5d80-489e-9c06-445fe083f967;
 .
 
-:download_2df77cdb-651e-45a0-8964-859caf12da89
+:download_9f39fdd6-5d80-489e-9c06-445fe083f967
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/cat-open-org-nz/catalog/version/2011-Sep-14/manual/cat.open.org.nz.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/cat-open-org-nz/catalog/version/2011-Sep-14/manual/cat.open.org.nz.csv>;
 .
 
-<dataset/2df77cdb-651e-45a0-8964-859caf12da89>
+<dataset/9f39fdd6-5d80-489e-9c06-445fe083f967>
    a dcat:Dataset;
-   dcat:distribution :download_2df77cdb-651e-45a0-8964-859caf12da89;
+   dcat:distribution :download_9f39fdd6-5d80-489e-9c06-445fe083f967;
 .

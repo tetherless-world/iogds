@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "geogratis-gc-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_efbb29e1-09b4-4a16-9bf1-48753766151e;
+   prov:wasDerivedFrom :download_a3c3fd17-0a84-468f-9a42-7cae1bfa747a;
 .
 
-:download_efbb29e1-09b4-4a16-9bf1-48753766151e
+:download_a3c3fd17-0a84-468f-9a42-7cae1bfa747a
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/geogratis-gc-ca/catalog/version/2012-Jun-08/manual/geogratis.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/geogratis-gc-ca/catalog/version/2012-Jun-08/manual/geogratis.csv>;
 .
 
-<dataset/efbb29e1-09b4-4a16-9bf1-48753766151e>
+<dataset/a3c3fd17-0a84-468f-9a42-7cae1bfa747a>
    a dcat:Dataset;
-   dcat:distribution :download_efbb29e1-09b4-4a16-9bf1-48753766151e;
+   dcat:distribution :download_a3c3fd17-0a84-468f-9a42-7cae1bfa747a;
 .

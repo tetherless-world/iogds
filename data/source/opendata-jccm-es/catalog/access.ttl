@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-jccm-es";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_e4caccf0-7ebc-4429-b0ac-cd69c017f4ec;
+   prov:wasDerivedFrom :download_1609a968-ce06-4a0c-8bfd-ef8ee1d3abb2;
 .
 
-:download_e4caccf0-7ebc-4429-b0ac-cd69c017f4ec
+:download_1609a968-ce06-4a0c-8bfd-ef8ee1d3abb2
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-jccm-es/catalog/version/2011-Sep-13/manual/opendata.jccm.es.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-jccm-es/catalog/version/2011-Sep-13/manual/opendata.jccm.es.csv>;
 .
 
-<dataset/e4caccf0-7ebc-4429-b0ac-cd69c017f4ec>
+<dataset/1609a968-ce06-4a0c-8bfd-ef8ee1d3abb2>
    a dcat:Dataset;
-   dcat:distribution :download_e4caccf0-7ebc-4429-b0ac-cd69c017f4ec;
+   dcat:distribution :download_1609a968-ce06-4a0c-8bfd-ef8ee1d3abb2;
 .

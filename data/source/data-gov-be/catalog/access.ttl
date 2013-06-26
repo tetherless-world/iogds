@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-gov-be";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_35de0783-960a-4b83-a9ca-9661ef71a8a3;
+   prov:wasDerivedFrom :download_089ff2ef-242a-4816-bed5-ba5113ad9f99;
 .
 
-:download_35de0783-960a-4b83-a9ca-9661ef71a8a3
+:download_089ff2ef-242a-4816-bed5-ba5113ad9f99
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-be/catalog/version/2011-Sep-27/manual/data.gov.be.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-be/catalog/version/2011-Sep-27/manual/data.gov.be.csv>;
 .
 
-<dataset/35de0783-960a-4b83-a9ca-9661ef71a8a3>
+<dataset/089ff2ef-242a-4816-bed5-ba5113ad9f99>
    a dcat:Dataset;
-   dcat:distribution :download_35de0783-960a-4b83-a9ca-9661ef71a8a3;
+   dcat:distribution :download_089ff2ef-242a-4816-bed5-ba5113ad9f99;
 .

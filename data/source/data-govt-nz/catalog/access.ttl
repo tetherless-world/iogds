@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-govt-nz";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_485810ca-7cc9-447a-bbd1-70e1cbfa390f;
+   prov:wasDerivedFrom :download_653767f4-8f09-4f95-89c3-5d3acfb560c9;
 .
 
-:download_485810ca-7cc9-447a-bbd1-70e1cbfa390f
+:download_653767f4-8f09-4f95-89c3-5d3acfb560c9
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-govt-nz/catalog/version/2011-Dec-06/manual/data.govt.nz.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-govt-nz/catalog/version/2011-Dec-06/manual/data.govt.nz.csv>;
 .
 
-<dataset/485810ca-7cc9-447a-bbd1-70e1cbfa390f>
+<dataset/653767f4-8f09-4f95-89c3-5d3acfb560c9>
    a dcat:Dataset;
-   dcat:distribution :download_485810ca-7cc9-447a-bbd1-70e1cbfa390f;
+   dcat:distribution :download_653767f4-8f09-4f95-89c3-5d3acfb560c9;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-ca-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_ee43201c-c26f-4e1f-bd69-8279a5aa9cbd;
+   prov:wasDerivedFrom :download_9f124411-cb5f-4a8f-baae-30506b623e78;
 .
 
-:download_ee43201c-c26f-4e1f-bd69-8279a5aa9cbd
+:download_9f124411-cb5f-4a8f-baae-30506b623e78
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-ca-gov/catalog/version/2011-Oct-25/manual/data.ca.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-ca-gov/catalog/version/2011-Oct-25/manual/data.ca.gov.csv>;
 .
 
-<dataset/ee43201c-c26f-4e1f-bd69-8279a5aa9cbd>
+<dataset/9f124411-cb5f-4a8f-baae-30506b623e78>
    a dcat:Dataset;
-   dcat:distribution :download_ee43201c-c26f-4e1f-bd69-8279a5aa9cbd;
+   dcat:distribution :download_9f124411-cb5f-4a8f-baae-30506b623e78;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "mn-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_2b32df3b-6048-4e25-9ff4-96cc643cfd93;
+   prov:wasDerivedFrom :download_0a03af63-d992-4786-b471-33f109c424f0;
 .
 
-:download_2b32df3b-6048-4e25-9ff4-96cc643cfd93
+:download_0a03af63-d992-4786-b471-33f109c424f0
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/mn-gov/catalog/version/2012-Feb-21/manual/mn.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/mn-gov/catalog/version/2012-Feb-21/manual/mn.gov.csv>;
 .
 
-<dataset/2b32df3b-6048-4e25-9ff4-96cc643cfd93>
+<dataset/0a03af63-d992-4786-b471-33f109c424f0>
    a dcat:Dataset;
-   dcat:distribution :download_2b32df3b-6048-4e25-9ff4-96cc643cfd93;
+   dcat:distribution :download_0a03af63-d992-4786-b471-33f109c424f0;
 .

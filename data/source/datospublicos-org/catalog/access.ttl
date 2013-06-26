@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "datospublicos-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_a2ae22e2-62ef-4224-b8b7-e03b48bd9f1f;
+   prov:wasDerivedFrom :download_5a571df7-db03-4862-bd94-e777c1082729;
 .
 
-:download_a2ae22e2-62ef-4224-b8b7-e03b48bd9f1f
+:download_5a571df7-db03-4862-bd94-e777c1082729
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datospublicos-org/catalog/version/2012-May-21/manual/datospublicos.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datospublicos-org/catalog/version/2012-May-21/manual/datospublicos.org.csv>;
 .
 
-<dataset/a2ae22e2-62ef-4224-b8b7-e03b48bd9f1f>
+<dataset/5a571df7-db03-4862-bd94-e777c1082729>
    a dcat:Dataset;
-   dcat:distribution :download_a2ae22e2-62ef-4224-b8b7-e03b48bd9f1f;
+   dcat:distribution :download_5a571df7-db03-4862-bd94-e777c1082729;
 .

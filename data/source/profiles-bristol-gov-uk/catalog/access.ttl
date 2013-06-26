@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "profiles-bristol-gov-uk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_df672cf8-0530-4c9b-be04-06c4f01ddd4c;
+   prov:wasDerivedFrom :download_b9c9110b-a56f-464c-94fd-919527126923;
 .
 
-:download_df672cf8-0530-4c9b-be04-06c4f01ddd4c
+:download_b9c9110b-a56f-464c-94fd-919527126923
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/profiles-bristol-gov-uk/catalog/version/2011-Oct-12/manual/profiles.bristol.gov.uk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/profiles-bristol-gov-uk/catalog/version/2011-Oct-12/manual/profiles.bristol.gov.uk.csv>;
 .
 
-<dataset/df672cf8-0530-4c9b-be04-06c4f01ddd4c>
+<dataset/b9c9110b-a56f-464c-94fd-919527126923>
    a dcat:Dataset;
-   dcat:distribution :download_df672cf8-0530-4c9b-be04-06c4f01ddd4c;
+   dcat:distribution :download_b9c9110b-a56f-464c-94fd-919527126923;
 .

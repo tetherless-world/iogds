@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-gov-bc-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_9d8efc2b-9768-45c7-ba95-6e10bc9d8c81;
+   prov:wasDerivedFrom :download_024dce00-9f43-4eb4-b502-73aaf9b65fdc;
 .
 
-:download_9d8efc2b-9768-45c7-ba95-6e10bc9d8c81
+:download_024dce00-9f43-4eb4-b502-73aaf9b65fdc
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-bc-ca/catalog/version/2011-Sep-15/manual/data.gov.bc.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-bc-ca/catalog/version/2011-Sep-15/manual/data.gov.bc.ca.csv>;
 .
 
-<dataset/9d8efc2b-9768-45c7-ba95-6e10bc9d8c81>
+<dataset/024dce00-9f43-4eb4-b502-73aaf9b65fdc>
    a dcat:Dataset;
-   dcat:distribution :download_9d8efc2b-9768-45c7-ba95-6e10bc9d8c81;
+   dcat:distribution :download_024dce00-9f43-4eb4-b502-73aaf9b65fdc;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "datalocale-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_9c10c1ac-e277-4fec-a8c7-485e14dfdd28;
+   prov:wasDerivedFrom :download_131948d2-318d-4e57-8a05-b411b25fee01;
 .
 
-:download_9c10c1ac-e277-4fec-a8c7-485e14dfdd28
+:download_131948d2-318d-4e57-8a05-b411b25fee01
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datalocale-fr/catalog/version/2011-Sep-13/manual/datalocale.fr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datalocale-fr/catalog/version/2011-Sep-13/manual/datalocale.fr.csv>;
 .
 
-<dataset/9c10c1ac-e277-4fec-a8c7-485e14dfdd28>
+<dataset/131948d2-318d-4e57-8a05-b411b25fee01>
    a dcat:Dataset;
-   dcat:distribution :download_9c10c1ac-e277-4fec-a8c7-485e14dfdd28;
+   dcat:distribution :download_131948d2-318d-4e57-8a05-b411b25fee01;
 .

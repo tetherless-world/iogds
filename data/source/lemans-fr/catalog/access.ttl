@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "lemans-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_263e2ba1-3610-4143-ad18-bf4e078b59ac;
+   prov:wasDerivedFrom :download_d6c3ce16-5033-4857-aafd-e004eeb4e7e0;
 .
 
-:download_263e2ba1-3610-4143-ad18-bf4e078b59ac
+:download_d6c3ce16-5033-4857-aafd-e004eeb4e7e0
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/lemans-fr/catalog/version/2012-Apr-18/manual/lemans.fr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/lemans-fr/catalog/version/2012-Apr-18/manual/lemans.fr.csv>;
 .
 
-<dataset/263e2ba1-3610-4143-ad18-bf4e078b59ac>
+<dataset/d6c3ce16-5033-4857-aafd-e004eeb4e7e0>
    a dcat:Dataset;
-   dcat:distribution :download_263e2ba1-3610-4143-ad18-bf4e078b59ac;
+   dcat:distribution :download_d6c3ce16-5033-4857-aafd-e004eeb4e7e0;
 .

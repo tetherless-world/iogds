@@ -39,8 +39,8 @@ for csv in `ls */catalog/version/*/manual/*csv`; do
       fi
       pushd $global &> /dev/null
          echo "  `pwd`"
-         echo "  cr-dcat-retrieval-url.sh -w  $cached_eparams_url"
-                 cr-dcat-retrieval-url.sh -w "$cached_eparams_url"
+         echo "  cr-dcat-retrieval-url.sh -w  $cached_csv_url"
+                 cr-dcat-retrieval-url.sh -w "$cached_csv_url"
       popd &> /dev/null
    fi
    #mkdir -p $global

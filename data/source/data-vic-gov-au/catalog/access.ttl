@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-vic-gov-au";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_8db18a46-05a6-4007-929a-5cdf24682ce1;
+   prov:wasDerivedFrom :download_4524e993-59eb-4195-b15f-844d036d3a21;
 .
 
-:download_8db18a46-05a6-4007-929a-5cdf24682ce1
+:download_4524e993-59eb-4195-b15f-844d036d3a21
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-vic-gov-au/catalog/version/2011-Sep-15/manual/data.vic.gov.au.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-vic-gov-au/catalog/version/2011-Sep-15/manual/data.vic.gov.au.csv>;
 .
 
-<dataset/8db18a46-05a6-4007-929a-5cdf24682ce1>
+<dataset/4524e993-59eb-4195-b15f-844d036d3a21>
    a dcat:Dataset;
-   dcat:distribution :download_8db18a46-05a6-4007-929a-5cdf24682ce1;
+   dcat:distribution :download_4524e993-59eb-4195-b15f-844d036d3a21;
 .

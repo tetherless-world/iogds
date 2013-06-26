@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "catalog-opendata-in-th";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_ccf3d499-dc33-4b59-aac9-492b6f1c6a9b;
+   prov:wasDerivedFrom :download_290b9fac-585b-49be-ad92-8e1dd9f9c70d;
 .
 
-:download_ccf3d499-dc33-4b59-aac9-492b6f1c6a9b
+:download_290b9fac-585b-49be-ad92-8e1dd9f9c70d
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/catalog-opendata-in-th/catalog/version/2012-Jun-05/manual/catalog.opendata.in.th.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/catalog-opendata-in-th/catalog/version/2012-Jun-05/manual/catalog.opendata.in.th.csv>;
 .
 
-<dataset/ccf3d499-dc33-4b59-aac9-492b6f1c6a9b>
+<dataset/290b9fac-585b-49be-ad92-8e1dd9f9c70d>
    a dcat:Dataset;
-   dcat:distribution :download_ccf3d499-dc33-4b59-aac9-492b6f1c6a9b;
+   dcat:distribution :download_290b9fac-585b-49be-ad92-8e1dd9f9c70d;
 .

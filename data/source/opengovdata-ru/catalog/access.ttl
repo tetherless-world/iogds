@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opengovdata-ru";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_90ce496d-1cb4-4862-b716-7844ad2d5f62;
+   prov:wasDerivedFrom :download_fccec3c4-8dd4-4c1a-9a02-a0db21a9fa5e;
 .
 
-:download_90ce496d-1cb4-4862-b716-7844ad2d5f62
+:download_fccec3c4-8dd4-4c1a-9a02-a0db21a9fa5e
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opengovdata-ru/catalog/version/2011-Jun-13/manual/opengovdata.ru.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opengovdata-ru/catalog/version/2011-Jun-13/manual/opengovdata.ru.csv>;
 .
 
-<dataset/90ce496d-1cb4-4862-b716-7844ad2d5f62>
+<dataset/fccec3c4-8dd4-4c1a-9a02-a0db21a9fa5e>
    a dcat:Dataset;
-   dcat:distribution :download_90ce496d-1cb4-4862-b716-7844ad2d5f62;
+   dcat:distribution :download_fccec3c4-8dd4-4c1a-9a02-a0db21a9fa5e;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "geodata-gov-gr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_aa02224c-2789-4254-8864-4defe693b43d;
+   prov:wasDerivedFrom :download_1c95852d-9797-439b-9541-34057c407615;
 .
 
-:download_aa02224c-2789-4254-8864-4defe693b43d
+:download_1c95852d-9797-439b-9541-34057c407615
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/geodata-gov-gr/catalog/version/2012-Feb-01/manual/geodata.gov.gr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/geodata-gov-gr/catalog/version/2012-Feb-01/manual/geodata.gov.gr.csv>;
 .
 
-<dataset/aa02224c-2789-4254-8864-4defe693b43d>
+<dataset/1c95852d-9797-439b-9541-34057c407615>
    a dcat:Dataset;
-   dcat:distribution :download_aa02224c-2789-4254-8864-4defe693b43d;
+   dcat:distribution :download_1c95852d-9797-439b-9541-34057c407615;
 .

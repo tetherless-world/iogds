@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "cms-burlington-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_3e4f43fe-8d2f-4ba8-89fe-72be2deaea7e;
+   prov:wasDerivedFrom :download_eaaed75f-bf8e-4eba-a7f8-ac89cf4826ca;
 .
 
-:download_3e4f43fe-8d2f-4ba8-89fe-72be2deaea7e
+:download_eaaed75f-bf8e-4eba-a7f8-ac89cf4826ca
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/cms-burlington-ca/catalog/version/2012-Feb-28/manual/cms.burlington.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/cms-burlington-ca/catalog/version/2012-Feb-28/manual/cms.burlington.ca.csv>;
 .
 
-<dataset/3e4f43fe-8d2f-4ba8-89fe-72be2deaea7e>
+<dataset/eaaed75f-bf8e-4eba-a7f8-ac89cf4826ca>
    a dcat:Dataset;
-   dcat:distribution :download_3e4f43fe-8d2f-4ba8-89fe-72be2deaea7e;
+   dcat:distribution :download_eaaed75f-bf8e-4eba-a7f8-ac89cf4826ca;
 .

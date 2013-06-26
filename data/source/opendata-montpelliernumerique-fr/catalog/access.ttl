@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-montpelliernumerique-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_f23d3c41-a131-4e23-ae44-57f852f7ea36;
+   prov:wasDerivedFrom :download_59cf61e8-64c2-43f5-830c-388213a62f35;
 .
 
-:download_f23d3c41-a131-4e23-ae44-57f852f7ea36
+:download_59cf61e8-64c2-43f5-830c-388213a62f35
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-montpelliernumerique-fr/catalog/version/2011-Sep-22/manual/opendata.montpelliernumerique.fr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-montpelliernumerique-fr/catalog/version/2011-Sep-22/manual/opendata.montpelliernumerique.fr.csv>;
 .
 
-<dataset/f23d3c41-a131-4e23-ae44-57f852f7ea36>
+<dataset/59cf61e8-64c2-43f5-830c-388213a62f35>
    a dcat:Dataset;
-   dcat:distribution :download_f23d3c41-a131-4e23-ae44-57f852f7ea36;
+   dcat:distribution :download_59cf61e8-64c2-43f5-830c-388213a62f35;
 .

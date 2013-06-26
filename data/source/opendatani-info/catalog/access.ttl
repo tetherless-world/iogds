@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendatani-info";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_1ac7a8d1-0da4-4055-8833-06c6e4dd65d8;
+   prov:wasDerivedFrom :download_d204eced-4c96-4688-b50e-91731d0d54f5;
 .
 
-:download_1ac7a8d1-0da4-4055-8833-06c6e4dd65d8
+:download_d204eced-4c96-4688-b50e-91731d0d54f5
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendatani-info/catalog/version/2011-Sep-29/manual/opendatani.info.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendatani-info/catalog/version/2011-Sep-29/manual/opendatani.info.csv>;
 .
 
-<dataset/1ac7a8d1-0da4-4055-8833-06c6e4dd65d8>
+<dataset/d204eced-4c96-4688-b50e-91731d0d54f5>
    a dcat:Dataset;
-   dcat:distribution :download_1ac7a8d1-0da4-4055-8833-06c6e4dd65d8;
+   dcat:distribution :download_d204eced-4c96-4688-b50e-91731d0d54f5;
 .

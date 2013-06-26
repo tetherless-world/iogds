@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "london-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_1cce9b26-a3d8-484a-917e-b49bb16d2a71;
+   prov:wasDerivedFrom :download_9f77e48c-b633-49c0-8068-b87655a62e1d;
 .
 
-:download_1cce9b26-a3d8-484a-917e-b49bb16d2a71
+:download_9f77e48c-b633-49c0-8068-b87655a62e1d
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/london-ca/catalog/version/2011-Sep-13/manual/london.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/london-ca/catalog/version/2011-Sep-13/manual/london.ca.csv>;
 .
 
-<dataset/1cce9b26-a3d8-484a-917e-b49bb16d2a71>
+<dataset/9f77e48c-b633-49c0-8068-b87655a62e1d>
    a dcat:Dataset;
-   dcat:distribution :download_1cce9b26-a3d8-484a-917e-b49bb16d2a71;
+   dcat:distribution :download_9f77e48c-b633-49c0-8068-b87655a62e1d;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-gv-at";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_722d3359-747c-4f39-a387-76a8e234a623;
+   prov:wasDerivedFrom :download_13c2714a-0301-48af-a0d2-3974669ed78e;
 .
 
-:download_722d3359-747c-4f39-a387-76a8e234a623
+:download_13c2714a-0301-48af-a0d2-3974669ed78e
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gv-at/catalog/version/2012-May-15/manual/data.gv.at.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gv-at/catalog/version/2012-May-15/manual/data.gv.at.csv>;
 .
 
-<dataset/722d3359-747c-4f39-a387-76a8e234a623>
+<dataset/13c2714a-0301-48af-a0d2-3974669ed78e>
    a dcat:Dataset;
-   dcat:distribution :download_722d3359-747c-4f39-a387-76a8e234a623;
+   dcat:distribution :download_13c2714a-0301-48af-a0d2-3974669ed78e;
 .

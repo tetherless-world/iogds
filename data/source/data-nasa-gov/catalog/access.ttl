@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-nasa-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_aa120403-0768-429e-9107-b7d59a04c5be;
+   prov:wasDerivedFrom :download_f210618e-c5b0-44b8-9dfc-90a3d742f7e5;
 .
 
-:download_aa120403-0768-429e-9107-b7d59a04c5be
+:download_f210618e-c5b0-44b8-9dfc-90a3d742f7e5
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-nasa-gov/catalog/version/2011-Sep-20/manual/data.nasa.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-nasa-gov/catalog/version/2011-Sep-20/manual/data.nasa.gov.csv>;
 .
 
-<dataset/aa120403-0768-429e-9107-b7d59a04c5be>
+<dataset/f210618e-c5b0-44b8-9dfc-90a3d742f7e5>
    a dcat:Dataset;
-   dcat:distribution :download_aa120403-0768-429e-9107-b7d59a04c5be;
+   dcat:distribution :download_f210618e-c5b0-44b8-9dfc-90a3d742f7e5;
 .

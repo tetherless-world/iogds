@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "gov-hk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_bc29dea0-200d-43bc-92af-959ae9066c79;
+   prov:wasDerivedFrom :download_c5e9687f-0587-4a03-81fd-4ee279f2b5c6;
 .
 
-:download_bc29dea0-200d-43bc-92af-959ae9066c79
+:download_c5e9687f-0587-4a03-81fd-4ee279f2b5c6
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/gov-hk/catalog/version/2011-Sep-13/manual/gov.hk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/gov-hk/catalog/version/2011-Sep-13/manual/gov.hk.csv>;
 .
 
-<dataset/bc29dea0-200d-43bc-92af-959ae9066c79>
+<dataset/c5e9687f-0587-4a03-81fd-4ee279f2b5c6>
    a dcat:Dataset;
-   dcat:distribution :download_bc29dea0-200d-43bc-92af-959ae9066c79;
+   dcat:distribution :download_c5e9687f-0587-4a03-81fd-4ee279f2b5c6;
 .

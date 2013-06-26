@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-worldbank-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_f2bb6357-0a3a-4ee7-83ee-0aa4e8fff9a1;
+   prov:wasDerivedFrom :download_bb10003c-034c-446e-a38a-4c3a721259e3;
 .
 
-:download_f2bb6357-0a3a-4ee7-83ee-0aa4e8fff9a1
+:download_bb10003c-034c-446e-a38a-4c3a721259e3
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-worldbank-org/catalog/version/2011-Sep-14/manual/data.worldbank.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-worldbank-org/catalog/version/2011-Sep-14/manual/data.worldbank.org.csv>;
 .
 
-<dataset/f2bb6357-0a3a-4ee7-83ee-0aa4e8fff9a1>
+<dataset/bb10003c-034c-446e-a38a-4c3a721259e3>
    a dcat:Dataset;
-   dcat:distribution :download_f2bb6357-0a3a-4ee7-83ee-0aa4e8fff9a1;
+   dcat:distribution :download_bb10003c-034c-446e-a38a-4c3a721259e3;
 .

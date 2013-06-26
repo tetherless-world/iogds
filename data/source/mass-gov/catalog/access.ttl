@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "mass-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_50f42c83-9233-4ceb-ba3e-eeeae2e04d82;
+   prov:wasDerivedFrom :download_d631a139-a509-4c9f-9a5e-60649b58fae9;
 .
 
-:download_50f42c83-9233-4ceb-ba3e-eeeae2e04d82
+:download_d631a139-a509-4c9f-9a5e-60649b58fae9
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/mass-gov/catalog/version/2012-Feb-21/manual/mass.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/mass-gov/catalog/version/2012-Feb-21/manual/mass.gov.csv>;
 .
 
-<dataset/50f42c83-9233-4ceb-ba3e-eeeae2e04d82>
+<dataset/d631a139-a509-4c9f-9a5e-60649b58fae9>
    a dcat:Dataset;
-   dcat:distribution :download_50f42c83-9233-4ceb-ba3e-eeeae2e04d82;
+   dcat:distribution :download_d631a139-a509-4c9f-9a5e-60649b58fae9;
 .

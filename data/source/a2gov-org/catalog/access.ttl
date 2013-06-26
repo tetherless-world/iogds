@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "a2gov-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_35991619-e250-43bd-a9c5-07904f26f22e;
+   prov:wasDerivedFrom :download_96c8a329-d21b-4920-ab51-57201f7bbf5e;
 .
 
-:download_35991619-e250-43bd-a9c5-07904f26f22e
+:download_96c8a329-d21b-4920-ab51-57201f7bbf5e
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/a2gov-org/catalog/version/2011-Dec-01/manual/a2gov.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/a2gov-org/catalog/version/2011-Dec-01/manual/a2gov.org.csv>;
 .
 
-<dataset/35991619-e250-43bd-a9c5-07904f26f22e>
+<dataset/96c8a329-d21b-4920-ab51-57201f7bbf5e>
    a dcat:Dataset;
-   dcat:distribution :download_35991619-e250-43bd-a9c5-07904f26f22e;
+   dcat:distribution :download_96c8a329-d21b-4920-ab51-57201f7bbf5e;
 .

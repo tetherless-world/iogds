@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "guelph-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_0f508a94-5381-4f83-a444-98c4805c6005;
+   prov:wasDerivedFrom :download_aec7bd8f-0cc4-4b34-b21b-0010ab9b5500;
 .
 
-:download_0f508a94-5381-4f83-a444-98c4805c6005
+:download_aec7bd8f-0cc4-4b34-b21b-0010ab9b5500
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/guelph-ca/catalog/version/2012-Feb-28/manual/guelph.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/guelph-ca/catalog/version/2012-Feb-28/manual/guelph.ca.csv>;
 .
 
-<dataset/0f508a94-5381-4f83-a444-98c4805c6005>
+<dataset/aec7bd8f-0cc4-4b34-b21b-0010ab9b5500>
    a dcat:Dataset;
-   dcat:distribution :download_0f508a94-5381-4f83-a444-98c4805c6005;
+   dcat:distribution :download_aec7bd8f-0cc4-4b34-b21b-0010ab9b5500;
 .

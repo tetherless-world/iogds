@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "dati-gov-it";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_081d0694-b06c-4770-bcf2-7a93e2c6a64e;
+   prov:wasDerivedFrom :download_b17aa326-36bd-4b54-836d-3f26b7b577f4;
 .
 
-:download_081d0694-b06c-4770-bcf2-7a93e2c6a64e
+:download_b17aa326-36bd-4b54-836d-3f26b7b577f4
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dati-gov-it/catalog/version/2011-Oct-20/manual/dati.gov.it.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dati-gov-it/catalog/version/2011-Oct-20/manual/dati.gov.it.csv>;
 .
 
-<dataset/081d0694-b06c-4770-bcf2-7a93e2c6a64e>
+<dataset/b17aa326-36bd-4b54-836d-3f26b7b577f4>
    a dcat:Dataset;
-   dcat:distribution :download_081d0694-b06c-4770-bcf2-7a93e2c6a64e;
+   dcat:distribution :download_b17aa326-36bd-4b54-836d-3f26b7b577f4;
 .

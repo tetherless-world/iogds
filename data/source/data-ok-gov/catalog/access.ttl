@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-ok-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_3c79b0a6-67d2-4ece-9a70-5d984cd6e22f;
+   prov:wasDerivedFrom :download_fec6e389-efc3-4060-914a-927cedd56d50;
 .
 
-:download_3c79b0a6-67d2-4ece-9a70-5d984cd6e22f
+:download_fec6e389-efc3-4060-914a-927cedd56d50
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-ok-gov/catalog/version/2011-Sep-01/manual/data.ok.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-ok-gov/catalog/version/2011-Sep-01/manual/data.ok.gov.csv>;
 .
 
-<dataset/3c79b0a6-67d2-4ece-9a70-5d984cd6e22f>
+<dataset/fec6e389-efc3-4060-914a-927cedd56d50>
    a dcat:Dataset;
-   dcat:distribution :download_3c79b0a6-67d2-4ece-9a70-5d984cd6e22f;
+   dcat:distribution :download_fec6e389-efc3-4060-914a-927cedd56d50;
 .

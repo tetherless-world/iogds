@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "maine-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_800757d0-2291-4e2f-b9db-ee0183eb2fe2;
+   prov:wasDerivedFrom :download_de4772f7-f9c6-4139-a393-2e170f8822c1;
 .
 
-:download_800757d0-2291-4e2f-b9db-ee0183eb2fe2
+:download_de4772f7-f9c6-4139-a393-2e170f8822c1
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/maine-gov/catalog/version/2011-Sep-21/manual/maine.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/maine-gov/catalog/version/2011-Sep-21/manual/maine.gov.csv>;
 .
 
-<dataset/800757d0-2291-4e2f-b9db-ee0183eb2fe2>
+<dataset/de4772f7-f9c6-4139-a393-2e170f8822c1>
    a dcat:Dataset;
-   dcat:distribution :download_800757d0-2291-4e2f-b9db-ee0183eb2fe2;
+   dcat:distribution :download_de4772f7-f9c6-4139-a393-2e170f8822c1;
 .

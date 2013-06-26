@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "risp-asturias-es";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_aff096b6-46a4-4b1a-8da6-52cb5c02bbc0;
+   prov:wasDerivedFrom :download_5175da53-17d9-42ca-b5cc-4c6b536aa850;
 .
 
-:download_aff096b6-46a4-4b1a-8da6-52cb5c02bbc0
+:download_5175da53-17d9-42ca-b5cc-4c6b536aa850
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/risp-asturias-es/catalog/version/2011-Sep-12/manual/risp.asturias.es.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/risp-asturias-es/catalog/version/2011-Sep-12/manual/risp.asturias.es.csv>;
 .
 
-<dataset/aff096b6-46a4-4b1a-8da6-52cb5c02bbc0>
+<dataset/5175da53-17d9-42ca-b5cc-4c6b536aa850>
    a dcat:Dataset;
-   dcat:distribution :download_aff096b6-46a4-4b1a-8da6-52cb5c02bbc0;
+   dcat:distribution :download_5175da53-17d9-42ca-b5cc-4c6b536aa850;
 .

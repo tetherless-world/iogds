@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "tol-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_8d96c641-4ab0-4298-ad68-efd5181100b8;
+   prov:wasDerivedFrom :download_2d50d0bf-bcb8-49d1-82a2-6b7d766246fc;
 .
 
-:download_8d96c641-4ab0-4298-ad68-efd5181100b8
+:download_2d50d0bf-bcb8-49d1-82a2-6b7d766246fc
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/tol-ca/catalog/version/2011-Sep-12/manual/tol.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/tol-ca/catalog/version/2011-Sep-12/manual/tol.ca.csv>;
 .
 
-<dataset/8d96c641-4ab0-4298-ad68-efd5181100b8>
+<dataset/2d50d0bf-bcb8-49d1-82a2-6b7d766246fc>
    a dcat:Dataset;
-   dcat:distribution :download_8d96c641-4ab0-4298-ad68-efd5181100b8;
+   dcat:distribution :download_2d50d0bf-bcb8-49d1-82a2-6b7d766246fc;
 .

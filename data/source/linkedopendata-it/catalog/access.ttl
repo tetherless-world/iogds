@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "linkedopendata-it";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_d188d76f-0a15-443c-b75b-43e708c45b97;
+   prov:wasDerivedFrom :download_20accec4-88f3-46c7-9314-58e581f46b41;
 .
 
-:download_d188d76f-0a15-443c-b75b-43e708c45b97
+:download_20accec4-88f3-46c7-9314-58e581f46b41
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/linkedopendata-it/catalog/version/2011-Sep-13/manual/linkedopendata.it.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/linkedopendata-it/catalog/version/2011-Sep-13/manual/linkedopendata.it.csv>;
 .
 
-<dataset/d188d76f-0a15-443c-b75b-43e708c45b97>
+<dataset/20accec4-88f3-46c7-9314-58e581f46b41>
    a dcat:Dataset;
-   dcat:distribution :download_d188d76f-0a15-443c-b75b-43e708c45b97;
+   dcat:distribution :download_20accec4-88f3-46c7-9314-58e581f46b41;
 .

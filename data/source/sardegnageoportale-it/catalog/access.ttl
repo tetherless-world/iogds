@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "sardegnageoportale-it";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_b46735eb-8ccb-49d3-8a84-201def750dd7;
+   prov:wasDerivedFrom :download_636095ae-335a-4609-914a-9aef7bcb8b09;
 .
 
-:download_b46735eb-8ccb-49d3-8a84-201def750dd7
+:download_636095ae-335a-4609-914a-9aef7bcb8b09
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/sardegnageoportale-it/catalog/version/2011-Oct-25/manual/sardegnageoportale.it.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/sardegnageoportale-it/catalog/version/2011-Oct-25/manual/sardegnageoportale.it.csv>;
 .
 
-<dataset/b46735eb-8ccb-49d3-8a84-201def750dd7>
+<dataset/636095ae-335a-4609-914a-9aef7bcb8b09>
    a dcat:Dataset;
-   dcat:distribution :download_b46735eb-8ccb-49d3-8a84-201def750dd7;
+   dcat:distribution :download_636095ae-335a-4609-914a-9aef7bcb8b09;
 .

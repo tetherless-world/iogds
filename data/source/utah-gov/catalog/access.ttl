@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "utah-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_c610bef6-3fab-47ef-bac6-014393b9e8ca;
+   prov:wasDerivedFrom :download_0c1b7c65-f853-4e64-b518-a7e4f122ef07;
 .
 
-:download_c610bef6-3fab-47ef-bac6-014393b9e8ca
+:download_0c1b7c65-f853-4e64-b518-a7e4f122ef07
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/utah-gov/catalog/version/2011-Oct-07/manual/utah.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/utah-gov/catalog/version/2011-Oct-07/manual/utah.gov.csv>;
 .
 
-<dataset/c610bef6-3fab-47ef-bac6-014393b9e8ca>
+<dataset/0c1b7c65-f853-4e64-b518-a7e4f122ef07>
    a dcat:Dataset;
-   dcat:distribution :download_c610bef6-3fab-47ef-bac6-014393b9e8ca;
+   dcat:distribution :download_0c1b7c65-f853-4e64-b518-a7e4f122ef07;
 .

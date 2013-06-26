@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "comune-torino-it";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_7fc5fc18-d69d-481d-bcc2-57e52fa34cae;
+   prov:wasDerivedFrom :download_3fdb4c84-dc93-4f54-8b31-8148dab38f2a;
 .
 
-:download_7fc5fc18-d69d-481d-bcc2-57e52fa34cae
+:download_3fdb4c84-dc93-4f54-8b31-8148dab38f2a
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/comune-torino-it/catalog/version/2012-Jun-22/manual/comune.torino.it.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/comune-torino-it/catalog/version/2012-Jun-22/manual/comune.torino.it.csv>;
 .
 
-<dataset/7fc5fc18-d69d-481d-bcc2-57e52fa34cae>
+<dataset/3fdb4c84-dc93-4f54-8b31-8148dab38f2a>
    a dcat:Dataset;
-   dcat:distribution :download_7fc5fc18-d69d-481d-bcc2-57e52fa34cae;
+   dcat:distribution :download_3fdb4c84-dc93-4f54-8b31-8148dab38f2a;
 .

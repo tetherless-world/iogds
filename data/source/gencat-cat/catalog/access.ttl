@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "gencat-cat";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_075d4bc5-b675-49ee-a800-87420811b39b;
+   prov:wasDerivedFrom :download_c8b36c9d-db41-49bf-8c2e-363998041f7f;
 .
 
-:download_075d4bc5-b675-49ee-a800-87420811b39b
+:download_c8b36c9d-db41-49bf-8c2e-363998041f7f
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/gencat-cat/catalog/version/2012-Jan-31/manual/gencat_cat.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/gencat-cat/catalog/version/2012-Jan-31/manual/gencat_cat.csv>;
 .
 
-<dataset/075d4bc5-b675-49ee-a800-87420811b39b>
+<dataset/c8b36c9d-db41-49bf-8c2e-363998041f7f>
    a dcat:Dataset;
-   dcat:distribution :download_075d4bc5-b675-49ee-a800-87420811b39b;
+   dcat:distribution :download_c8b36c9d-db41-49bf-8c2e-363998041f7f;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "michigan-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_2beac7aa-43a5-483e-a87e-fb18f7b925ba;
+   prov:wasDerivedFrom :download_cf7ec38e-8720-4907-864b-8684052de21c;
 .
 
-:download_2beac7aa-43a5-483e-a87e-fb18f7b925ba
+:download_cf7ec38e-8720-4907-864b-8684052de21c
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/michigan-gov/catalog/version/2011-Oct-07/manual/michigan.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/michigan-gov/catalog/version/2011-Oct-07/manual/michigan.gov.csv>;
 .
 
-<dataset/2beac7aa-43a5-483e-a87e-fb18f7b925ba>
+<dataset/cf7ec38e-8720-4907-864b-8684052de21c>
    a dcat:Dataset;
-   dcat:distribution :download_2beac7aa-43a5-483e-a87e-fb18f7b925ba;
+   dcat:distribution :download_cf7ec38e-8720-4907-864b-8684052de21c;
 .

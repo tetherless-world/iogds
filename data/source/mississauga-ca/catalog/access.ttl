@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "mississauga-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_d827b780-46aa-4ce9-b936-83619bc75604;
+   prov:wasDerivedFrom :download_f8c45896-1e25-4943-a6b2-173029e10ad9;
 .
 
-:download_d827b780-46aa-4ce9-b936-83619bc75604
+:download_f8c45896-1e25-4943-a6b2-173029e10ad9
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/mississauga-ca/catalog/version/2011-Sep-13/manual/mississauga.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/mississauga-ca/catalog/version/2011-Sep-13/manual/mississauga.ca.csv>;
 .
 
-<dataset/d827b780-46aa-4ce9-b936-83619bc75604>
+<dataset/f8c45896-1e25-4943-a6b2-173029e10ad9>
    a dcat:Dataset;
-   dcat:distribution :download_d827b780-46aa-4ce9-b936-83619bc75604;
+   dcat:distribution :download_f8c45896-1e25-4943-a6b2-173029e10ad9;
 .

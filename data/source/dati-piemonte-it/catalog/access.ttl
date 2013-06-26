@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "dati-piemonte-it";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_bcf46cbe-43ac-4ea1-aaaf-fd4273ac612b;
+   prov:wasDerivedFrom :download_9360ea6a-3e8e-4cc6-96e3-28ccdfa8d4d2;
 .
 
-:download_bcf46cbe-43ac-4ea1-aaaf-fd4273ac612b
+:download_9360ea6a-3e8e-4cc6-96e3-28ccdfa8d4d2
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dati-piemonte-it/catalog/version/2012-May-03/manual/dati.piemonte.it.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dati-piemonte-it/catalog/version/2012-May-03/manual/dati.piemonte.it.csv>;
 .
 
-<dataset/bcf46cbe-43ac-4ea1-aaaf-fd4273ac612b>
+<dataset/9360ea6a-3e8e-4cc6-96e3-28ccdfa8d4d2>
    a dcat:Dataset;
-   dcat:distribution :download_bcf46cbe-43ac-4ea1-aaaf-fd4273ac612b;
+   dcat:distribution :download_9360ea6a-3e8e-4cc6-96e3-28ccdfa8d4d2;
 .

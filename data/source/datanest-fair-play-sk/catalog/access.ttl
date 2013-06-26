@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "datanest-fair-play-sk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_3af87780-d0d6-4a53-8818-ffad1049e18a;
+   prov:wasDerivedFrom :download_8e3b6045-1d73-4c00-adcf-641a6bee4f12;
 .
 
-:download_3af87780-d0d6-4a53-8818-ffad1049e18a
+:download_8e3b6045-1d73-4c00-adcf-641a6bee4f12
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datanest-fair-play-sk/catalog/version/2011-Sep-13/manual/datanest.fair-play.sk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datanest-fair-play-sk/catalog/version/2011-Sep-13/manual/datanest.fair-play.sk.csv>;
 .
 
-<dataset/3af87780-d0d6-4a53-8818-ffad1049e18a>
+<dataset/8e3b6045-1d73-4c00-adcf-641a6bee4f12>
    a dcat:Dataset;
-   dcat:distribution :download_3af87780-d0d6-4a53-8818-ffad1049e18a;
+   dcat:distribution :download_8e3b6045-1d73-4c00-adcf-641a6bee4f12;
 .

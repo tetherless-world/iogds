@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "alkmaar-nl";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_702baaf7-262e-4381-bc68-ec9646e13040;
+   prov:wasDerivedFrom :download_24487310-c922-48b3-bead-c8ad14be452a;
 .
 
-:download_702baaf7-262e-4381-bc68-ec9646e13040
+:download_24487310-c922-48b3-bead-c8ad14be452a
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/alkmaar-nl/catalog/version/2012-Jun-22/manual/alkmaar.nl.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/alkmaar-nl/catalog/version/2012-Jun-22/manual/alkmaar.nl.csv>;
 .
 
-<dataset/702baaf7-262e-4381-bc68-ec9646e13040>
+<dataset/24487310-c922-48b3-bead-c8ad14be452a>
    a dcat:Dataset;
-   dcat:distribution :download_702baaf7-262e-4381-bc68-ec9646e13040;
+   dcat:distribution :download_24487310-c922-48b3-bead-c8ad14be452a;
 .

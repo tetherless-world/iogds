@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-redbridge-gov-uk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_e28cd195-c325-4e33-bc7a-db1790539e7c;
+   prov:wasDerivedFrom :download_3a599f51-a6e4-4e3e-a99d-6b7b3d12d877;
 .
 
-:download_e28cd195-c325-4e33-bc7a-db1790539e7c
+:download_3a599f51-a6e4-4e3e-a99d-6b7b3d12d877
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-redbridge-gov-uk/catalog/version/2012-Jan-24/manual/data.redbridge.gov.uk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-redbridge-gov-uk/catalog/version/2012-Jan-24/manual/data.redbridge.gov.uk.csv>;
 .
 
-<dataset/e28cd195-c325-4e33-bc7a-db1790539e7c>
+<dataset/3a599f51-a6e4-4e3e-a99d-6b7b3d12d877>
    a dcat:Dataset;
-   dcat:distribution :download_e28cd195-c325-4e33-bc7a-db1790539e7c;
+   dcat:distribution :download_3a599f51-a6e4-4e3e-a99d-6b7b3d12d877;
 .

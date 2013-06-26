@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "kozadat-neumannhaz-hu";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_34d94bee-7367-46a8-9496-cb0731aafe15;
+   prov:wasDerivedFrom :download_5398146c-726f-4659-9d7b-9a6edafd124b;
 .
 
-:download_34d94bee-7367-46a8-9496-cb0731aafe15
+:download_5398146c-726f-4659-9d7b-9a6edafd124b
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/kozadat-neumannhaz-hu/catalog/version/2011-Oct-16/manual/kozadat.neumannhaz.hu.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/kozadat-neumannhaz-hu/catalog/version/2011-Oct-16/manual/kozadat.neumannhaz.hu.csv>;
 .
 
-<dataset/34d94bee-7367-46a8-9496-cb0731aafe15>
+<dataset/5398146c-726f-4659-9d7b-9a6edafd124b>
    a dcat:Dataset;
-   dcat:distribution :download_34d94bee-7367-46a8-9496-cb0731aafe15;
+   dcat:distribution :download_5398146c-726f-4659-9d7b-9a6edafd124b;
 .

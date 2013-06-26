@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-vancouver-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_ffe364a0-87e9-4d44-8f6d-a4c06afa595f;
+   prov:wasDerivedFrom :download_2f3b47c8-f93d-468f-a630-3f58e5dc31ba;
 .
 
-:download_ffe364a0-87e9-4d44-8f6d-a4c06afa595f
+:download_2f3b47c8-f93d-468f-a630-3f58e5dc31ba
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-vancouver-ca/catalog/version/2011-Sep-14/manual/data.vancouver.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-vancouver-ca/catalog/version/2011-Sep-14/manual/data.vancouver.ca.csv>;
 .
 
-<dataset/ffe364a0-87e9-4d44-8f6d-a4c06afa595f>
+<dataset/2f3b47c8-f93d-468f-a630-3f58e5dc31ba>
    a dcat:Dataset;
-   dcat:distribution :download_ffe364a0-87e9-4d44-8f6d-a4c06afa595f;
+   dcat:distribution :download_2f3b47c8-f93d-468f-a630-3f58e5dc31ba;
 .

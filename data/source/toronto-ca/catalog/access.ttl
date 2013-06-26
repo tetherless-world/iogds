@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "toronto-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_839a32d7-fdf6-411f-b212-02d5fd53a844;
+   prov:wasDerivedFrom :download_27f4af5d-8e1f-4a2f-ab73-f6c92de30eb5;
 .
 
-:download_839a32d7-fdf6-411f-b212-02d5fd53a844
+:download_27f4af5d-8e1f-4a2f-ab73-f6c92de30eb5
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/toronto-ca/catalog/version/2011-Sep-12/manual/toronto.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/toronto-ca/catalog/version/2011-Sep-12/manual/toronto.ca.csv>;
 .
 
-<dataset/839a32d7-fdf6-411f-b212-02d5fd53a844>
+<dataset/27f4af5d-8e1f-4a2f-ab73-f6c92de30eb5>
    a dcat:Dataset;
-   dcat:distribution :download_839a32d7-fdf6-411f-b212-02d5fd53a844;
+   dcat:distribution :download_27f4af5d-8e1f-4a2f-ab73-f6c92de30eb5;
 .

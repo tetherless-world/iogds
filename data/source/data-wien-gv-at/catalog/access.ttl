@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-wien-gv-at";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_24e3edfa-6633-4a91-97ea-2684ef9a5981;
+   prov:wasDerivedFrom :download_6fed7adc-b304-4706-bf0e-97f56a0a9957;
 .
 
-:download_24e3edfa-6633-4a91-97ea-2684ef9a5981
+:download_6fed7adc-b304-4706-bf0e-97f56a0a9957
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-wien-gv-at/catalog/version/2011-Sep-12/manual/data.wien.gv.at.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-wien-gv-at/catalog/version/2011-Sep-12/manual/data.wien.gv.at.csv>;
 .
 
-<dataset/24e3edfa-6633-4a91-97ea-2684ef9a5981>
+<dataset/6fed7adc-b304-4706-bf0e-97f56a0a9957>
    a dcat:Dataset;
-   dcat:distribution :download_24e3edfa-6633-4a91-97ea-2684ef9a5981;
+   dcat:distribution :download_6fed7adc-b304-4706-bf0e-97f56a0a9957;
 .

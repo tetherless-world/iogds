@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-gov-uk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_891ed177-416a-4d8d-9e78-8196ad940908;
+   prov:wasDerivedFrom :download_4e3a22df-9109-4373-bfae-6ffbba68d3c6;
 .
 
-:download_891ed177-416a-4d8d-9e78-8196ad940908
+:download_4e3a22df-9109-4373-bfae-6ffbba68d3c6
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-uk/catalog/version/2011-Aug-10/manual/data.gov.uk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-uk/catalog/version/2011-Aug-10/manual/data.gov.uk.csv>;
 .
 
-<dataset/891ed177-416a-4d8d-9e78-8196ad940908>
+<dataset/4e3a22df-9109-4373-bfae-6ffbba68d3c6>
    a dcat:Dataset;
-   dcat:distribution :download_891ed177-416a-4d8d-9e78-8196ad940908;
+   dcat:distribution :download_4e3a22df-9109-4373-bfae-6ffbba68d3c6;
 .

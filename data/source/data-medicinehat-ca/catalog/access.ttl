@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-medicinehat-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_5c8a84c3-64dc-48d8-a0c2-37a6cb9e729d;
+   prov:wasDerivedFrom :download_d5845265-09f4-4ee4-83f8-b1965406561d;
 .
 
-:download_5c8a84c3-64dc-48d8-a0c2-37a6cb9e729d
+:download_d5845265-09f4-4ee4-83f8-b1965406561d
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-medicinehat-ca/catalog/version/2012-Jun-05/manual/data.medicinehat.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-medicinehat-ca/catalog/version/2012-Jun-05/manual/data.medicinehat.ca.csv>;
 .
 
-<dataset/5c8a84c3-64dc-48d8-a0c2-37a6cb9e729d>
+<dataset/d5845265-09f4-4ee4-83f8-b1965406561d>
    a dcat:Dataset;
-   dcat:distribution :download_5c8a84c3-64dc-48d8-a0c2-37a6cb9e729d;
+   dcat:distribution :download_d5845265-09f4-4ee4-83f8-b1965406561d;
 .

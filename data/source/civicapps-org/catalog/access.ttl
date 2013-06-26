@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "civicapps-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_9467eb14-fab3-4312-baa6-cb3289a1e1d3;
+   prov:wasDerivedFrom :download_4d5832a4-2602-4cef-a049-90bb49125cb2;
 .
 
-:download_9467eb14-fab3-4312-baa6-cb3289a1e1d3
+:download_4d5832a4-2602-4cef-a049-90bb49125cb2
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/civicapps-org/catalog/version/2011-Sep-14/manual/civicapps.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/civicapps-org/catalog/version/2011-Sep-14/manual/civicapps.org.csv>;
 .
 
-<dataset/9467eb14-fab3-4312-baa6-cb3289a1e1d3>
+<dataset/4d5832a4-2602-4cef-a049-90bb49125cb2>
    a dcat:Dataset;
-   dcat:distribution :download_9467eb14-fab3-4312-baa6-cb3289a1e1d3;
+   dcat:distribution :download_4d5832a4-2602-4cef-a049-90bb49125cb2;
 .

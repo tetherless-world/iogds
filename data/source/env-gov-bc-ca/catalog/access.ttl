@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "env-gov-bc-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_c73495f3-baf9-4881-b07d-037712937ff3;
+   prov:wasDerivedFrom :download_234ac667-3150-42f5-ba89-e59850bb010a;
 .
 
-:download_c73495f3-baf9-4881-b07d-037712937ff3
+:download_234ac667-3150-42f5-ba89-e59850bb010a
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/env-gov-bc-ca/catalog/version/2011-Jul-13/manual/env.gov.bc.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/env-gov-bc-ca/catalog/version/2011-Jul-13/manual/env.gov.bc.ca.csv>;
 .
 
-<dataset/c73495f3-baf9-4881-b07d-037712937ff3>
+<dataset/234ac667-3150-42f5-ba89-e59850bb010a>
    a dcat:Dataset;
-   dcat:distribution :download_c73495f3-baf9-4881-b07d-037712937ff3;
+   dcat:distribution :download_234ac667-3150-42f5-ba89-e59850bb010a;
 .

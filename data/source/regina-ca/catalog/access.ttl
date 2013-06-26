@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "regina-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_729a0f05-3c5b-4f77-9655-082e11ba83e9;
+   prov:wasDerivedFrom :download_2e6dc09f-acf9-45d4-8adb-855f233e3609;
 .
 
-:download_729a0f05-3c5b-4f77-9655-082e11ba83e9
+:download_2e6dc09f-acf9-45d4-8adb-855f233e3609
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/regina-ca/catalog/version/2012-Jun-05/manual/regina.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/regina-ca/catalog/version/2012-Jun-05/manual/regina.ca.csv>;
 .
 
-<dataset/729a0f05-3c5b-4f77-9655-082e11ba83e9>
+<dataset/2e6dc09f-acf9-45d4-8adb-855f233e3609>
    a dcat:Dataset;
-   dcat:distribution :download_729a0f05-3c5b-4f77-9655-082e11ba83e9;
+   dcat:distribution :download_2e6dc09f-acf9-45d4-8adb-855f233e3609;
 .

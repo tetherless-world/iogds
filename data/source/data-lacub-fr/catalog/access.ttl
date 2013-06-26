@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-lacub-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_29a0873a-9e4e-4a44-82c0-24140c07c176;
+   prov:wasDerivedFrom :download_390f4e0b-44ed-4194-99d2-7936dd0271e5;
 .
 
-:download_29a0873a-9e4e-4a44-82c0-24140c07c176
+:download_390f4e0b-44ed-4194-99d2-7936dd0271e5
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-lacub-fr/catalog/version/2012-Feb-14/manual/data.lacub.fr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-lacub-fr/catalog/version/2012-Feb-14/manual/data.lacub.fr.csv>;
 .
 
-<dataset/29a0873a-9e4e-4a44-82c0-24140c07c176>
+<dataset/390f4e0b-44ed-4194-99d2-7936dd0271e5>
    a dcat:Dataset;
-   dcat:distribution :download_29a0873a-9e4e-4a44-82c0-24140c07c176;
+   dcat:distribution :download_390f4e0b-44ed-4194-99d2-7936dd0271e5;
 .

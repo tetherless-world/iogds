@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "fredericton-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_2cbc9763-71d2-4bda-9b1b-d392eecfcf97;
+   prov:wasDerivedFrom :download_d004ad5b-9d2b-41ef-bd1e-fb0c656bcdb3;
 .
 
-:download_2cbc9763-71d2-4bda-9b1b-d392eecfcf97
+:download_d004ad5b-9d2b-41ef-bd1e-fb0c656bcdb3
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/fredericton-ca/catalog/version/2012-Feb-28/manual/fredericton.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/fredericton-ca/catalog/version/2012-Feb-28/manual/fredericton.ca.csv>;
 .
 
-<dataset/2cbc9763-71d2-4bda-9b1b-d392eecfcf97>
+<dataset/d004ad5b-9d2b-41ef-bd1e-fb0c656bcdb3>
    a dcat:Dataset;
-   dcat:distribution :download_2cbc9763-71d2-4bda-9b1b-d392eecfcf97;
+   dcat:distribution :download_d004ad5b-9d2b-41ef-bd1e-fb0c656bcdb3;
 .

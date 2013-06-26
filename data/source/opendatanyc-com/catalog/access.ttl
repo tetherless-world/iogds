@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendatanyc-com";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_49e2b3a0-2f1b-4569-8a9e-f394b4dd7602;
+   prov:wasDerivedFrom :download_fb5c0738-f42a-4c42-b6e0-c4a5f06c8462;
 .
 
-:download_49e2b3a0-2f1b-4569-8a9e-f394b4dd7602
+:download_fb5c0738-f42a-4c42-b6e0-c4a5f06c8462
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendatanyc-com/catalog/version/2012-Sep-18/manual/opendatanyc.com.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendatanyc-com/catalog/version/2012-Sep-18/manual/opendatanyc.com.csv>;
 .
 
-<dataset/49e2b3a0-2f1b-4569-8a9e-f394b4dd7602>
+<dataset/fb5c0738-f42a-4c42-b6e0-c4a5f06c8462>
    a dcat:Dataset;
-   dcat:distribution :download_49e2b3a0-2f1b-4569-8a9e-f394b4dd7602;
+   dcat:distribution :download_fb5c0738-f42a-4c42-b6e0-c4a5f06c8462;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-seattle-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_2b24e7eb-a898-4900-a211-6e42f594a9c5;
+   prov:wasDerivedFrom :download_411778d6-cd08-4400-b3d2-b08316efad24;
 .
 
-:download_2b24e7eb-a898-4900-a211-6e42f594a9c5
+:download_411778d6-cd08-4400-b3d2-b08316efad24
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-seattle-gov/catalog/version/2012-Sep-18/manual/data.seattle.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-seattle-gov/catalog/version/2012-Sep-18/manual/data.seattle.gov.csv>;
 .
 
-<dataset/2b24e7eb-a898-4900-a211-6e42f594a9c5>
+<dataset/411778d6-cd08-4400-b3d2-b08316efad24>
    a dcat:Dataset;
-   dcat:distribution :download_2b24e7eb-a898-4900-a211-6e42f594a9c5;
+   dcat:distribution :download_411778d6-cd08-4400-b3d2-b08316efad24;
 .

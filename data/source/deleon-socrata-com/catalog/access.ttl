@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "deleon-socrata-com";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_f05e010e-de5f-47ed-a5b7-bd0c6f183432;
+   prov:wasDerivedFrom :download_f0a1f60d-70ce-455e-9b77-432cacc8263b;
 .
 
-:download_f05e010e-de5f-47ed-a5b7-bd0c6f183432
+:download_f0a1f60d-70ce-455e-9b77-432cacc8263b
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/deleon-socrata-com/catalog/version/2012-Sep-18/manual/deleon.socrata.com.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/deleon-socrata-com/catalog/version/2012-Sep-18/manual/deleon.socrata.com.csv>;
 .
 
-<dataset/f05e010e-de5f-47ed-a5b7-bd0c6f183432>
+<dataset/f0a1f60d-70ce-455e-9b77-432cacc8263b>
    a dcat:Dataset;
-   dcat:distribution :download_f05e010e-de5f-47ed-a5b7-bd0c6f183432;
+   dcat:distribution :download_f0a1f60d-70ce-455e-9b77-432cacc8263b;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "abertos-xunta-es";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_4599e8f4-099d-41bf-8ac0-b1d4433f2fab;
+   prov:wasDerivedFrom :download_a05fe373-65ef-43e5-aca9-9c143ff6db55;
 .
 
-:download_4599e8f4-099d-41bf-8ac0-b1d4433f2fab
+:download_a05fe373-65ef-43e5-aca9-9c143ff6db55
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/abertos-xunta-es/catalog/version/2012-Apr-06/manual/abertos.xunta.es.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/abertos-xunta-es/catalog/version/2012-Apr-06/manual/abertos.xunta.es.csv>;
 .
 
-<dataset/4599e8f4-099d-41bf-8ac0-b1d4433f2fab>
+<dataset/a05fe373-65ef-43e5-aca9-9c143ff6db55>
    a dcat:Dataset;
-   dcat:distribution :download_4599e8f4-099d-41bf-8ac0-b1d4433f2fab;
+   dcat:distribution :download_a05fe373-65ef-43e5-aca9-9c143ff6db55;
 .

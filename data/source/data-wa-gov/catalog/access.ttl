@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-wa-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_54530dbe-d861-4ea3-b1ef-337d211fec27;
+   prov:wasDerivedFrom :download_d8b1e6ed-5c02-4662-a595-87c6a4199ecc;
 .
 
-:download_54530dbe-d861-4ea3-b1ef-337d211fec27
+:download_d8b1e6ed-5c02-4662-a595-87c6a4199ecc
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-wa-gov/catalog/version/2011-Sep-01/manual/data.wa.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-wa-gov/catalog/version/2011-Sep-01/manual/data.wa.gov.csv>;
 .
 
-<dataset/54530dbe-d861-4ea3-b1ef-337d211fec27>
+<dataset/d8b1e6ed-5c02-4662-a595-87c6a4199ecc>
    a dcat:Dataset;
-   dcat:distribution :download_54530dbe-d861-4ea3-b1ef-337d211fec27;
+   dcat:distribution :download_d8b1e6ed-5c02-4662-a595-87c6a4199ecc;
 .

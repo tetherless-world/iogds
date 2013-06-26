@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-nsw-gov-au";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_ca5cb3a8-88a3-44a2-8710-f3e31d40c698;
+   prov:wasDerivedFrom :download_53fe69f7-10ef-485e-acbd-38d2cfc65507;
 .
 
-:download_ca5cb3a8-88a3-44a2-8710-f3e31d40c698
+:download_53fe69f7-10ef-485e-acbd-38d2cfc65507
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-nsw-gov-au/catalog/version/2011-Sep-14/manual/data.nsw.gov.au.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-nsw-gov-au/catalog/version/2011-Sep-14/manual/data.nsw.gov.au.csv>;
 .
 
-<dataset/ca5cb3a8-88a3-44a2-8710-f3e31d40c698>
+<dataset/53fe69f7-10ef-485e-acbd-38d2cfc65507>
    a dcat:Dataset;
-   dcat:distribution :download_ca5cb3a8-88a3-44a2-8710-f3e31d40c698;
+   dcat:distribution :download_53fe69f7-10ef-485e-acbd-38d2cfc65507;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-oregon-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_fa159a8a-ebe4-4cac-a363-3b4238eb3a19;
+   prov:wasDerivedFrom :download_6cf2d7ee-411c-4def-b458-a4c8c10f4768;
 .
 
-:download_fa159a8a-ebe4-4cac-a363-3b4238eb3a19
+:download_6cf2d7ee-411c-4def-b458-a4c8c10f4768
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-oregon-gov/catalog/version/2011-Sep-01/manual/data.oregon.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-oregon-gov/catalog/version/2011-Sep-01/manual/data.oregon.gov.csv>;
 .
 
-<dataset/fa159a8a-ebe4-4cac-a363-3b4238eb3a19>
+<dataset/6cf2d7ee-411c-4def-b458-a4c8c10f4768>
    a dcat:Dataset;
-   dcat:distribution :download_fa159a8a-ebe4-4cac-a363-3b4238eb3a19;
+   dcat:distribution :download_6cf2d7ee-411c-4def-b458-a4c8c10f4768;
 .

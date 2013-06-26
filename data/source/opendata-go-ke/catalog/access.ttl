@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-go-ke";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_cf02f4dd-5a48-4695-9aea-8242fd902a41;
+   prov:wasDerivedFrom :download_7351dcfc-d103-4c7c-bd44-0331be855c2c;
 .
 
-:download_cf02f4dd-5a48-4695-9aea-8242fd902a41
+:download_7351dcfc-d103-4c7c-bd44-0331be855c2c
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-go-ke/catalog/version/2011-Sep-13/manual/opendata.go.ke.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-go-ke/catalog/version/2011-Sep-13/manual/opendata.go.ke.csv>;
 .
 
-<dataset/cf02f4dd-5a48-4695-9aea-8242fd902a41>
+<dataset/7351dcfc-d103-4c7c-bd44-0331be855c2c>
    a dcat:Dataset;
-   dcat:distribution :download_cf02f4dd-5a48-4695-9aea-8242fd902a41;
+   dcat:distribution :download_7351dcfc-d103-4c7c-bd44-0331be855c2c;
 .

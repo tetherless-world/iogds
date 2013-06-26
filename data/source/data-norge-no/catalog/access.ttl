@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-norge-no";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_4271c4dd-0158-4693-bb6f-98eaefe6437b;
+   prov:wasDerivedFrom :download_b664ce40-74bb-43e5-b5f9-857e78e24d31;
 .
 
-:download_4271c4dd-0158-4693-bb6f-98eaefe6437b
+:download_b664ce40-74bb-43e5-b5f9-857e78e24d31
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-norge-no/catalog/version/2011-Sep-14/manual/data.norge.no.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-norge-no/catalog/version/2011-Sep-14/manual/data.norge.no.csv>;
 .
 
-<dataset/4271c4dd-0158-4693-bb6f-98eaefe6437b>
+<dataset/b664ce40-74bb-43e5-b5f9-857e78e24d31>
    a dcat:Dataset;
-   dcat:distribution :download_4271c4dd-0158-4693-bb6f-98eaefe6437b;
+   dcat:distribution :download_b664ce40-74bb-43e5-b5f9-857e78e24d31;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "datosabiertos-jcyl-es";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_d2a378d0-4f61-4dee-9c7b-302423d01f33;
+   prov:wasDerivedFrom :download_1186d55c-100f-43aa-8a04-f703fd3c0ab8;
 .
 
-:download_d2a378d0-4f61-4dee-9c7b-302423d01f33
+:download_1186d55c-100f-43aa-8a04-f703fd3c0ab8
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datosabiertos-jcyl-es/catalog/version/2012-Apr-06/manual/datosabiertos.jcyl.es.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datosabiertos-jcyl-es/catalog/version/2012-Apr-06/manual/datosabiertos.jcyl.es.csv>;
 .
 
-<dataset/d2a378d0-4f61-4dee-9c7b-302423d01f33>
+<dataset/1186d55c-100f-43aa-8a04-f703fd3c0ab8>
    a dcat:Dataset;
-   dcat:distribution :download_d2a378d0-4f61-4dee-9c7b-302423d01f33;
+   dcat:distribution :download_1186d55c-100f-43aa-8a04-f703fd3c0ab8;
 .

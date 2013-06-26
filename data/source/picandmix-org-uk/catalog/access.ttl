@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "picandmix-org-uk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_3edc5cef-649d-4ee8-a5d4-fb6c6c9dc7d3;
+   prov:wasDerivedFrom :download_0d73c46d-7f39-4596-b580-91f2792afd4b;
 .
 
-:download_3edc5cef-649d-4ee8-a5d4-fb6c6c9dc7d3
+:download_0d73c46d-7f39-4596-b580-91f2792afd4b
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/picandmix-org-uk/catalog/version/2011-Sep-21/manual/picandmix.org.uk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/picandmix-org-uk/catalog/version/2011-Sep-21/manual/picandmix.org.uk.csv>;
 .
 
-<dataset/3edc5cef-649d-4ee8-a5d4-fb6c6c9dc7d3>
+<dataset/0d73c46d-7f39-4596-b580-91f2792afd4b>
    a dcat:Dataset;
-   dcat:distribution :download_3edc5cef-649d-4ee8-a5d4-fb6c6c9dc7d3;
+   dcat:distribution :download_0d73c46d-7f39-4596-b580-91f2792afd4b;
 .

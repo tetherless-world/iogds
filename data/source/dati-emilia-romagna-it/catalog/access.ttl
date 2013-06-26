@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "dati-emilia-romagna-it";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_c61b647c-8606-40b1-bda1-455466ac1cc6;
+   prov:wasDerivedFrom :download_dcf51f30-284d-4c28-ac9e-c9e1d87c481b;
 .
 
-:download_c61b647c-8606-40b1-bda1-455466ac1cc6
+:download_dcf51f30-284d-4c28-ac9e-c9e1d87c481b
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dati-emilia-romagna-it/catalog/version/2011-Oct-15/manual/dati.emilia-romagna.it.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dati-emilia-romagna-it/catalog/version/2011-Oct-15/manual/dati.emilia-romagna.it.csv>;
 .
 
-<dataset/c61b647c-8606-40b1-bda1-455466ac1cc6>
+<dataset/dcf51f30-284d-4c28-ac9e-c9e1d87c481b>
    a dcat:Dataset;
-   dcat:distribution :download_c61b647c-8606-40b1-bda1-455466ac1cc6;
+   dcat:distribution :download_dcf51f30-284d-4c28-ac9e-c9e1d87c481b;
 .

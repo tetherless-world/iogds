@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "trafford-gov-uk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_5cba6d74-ddc5-4e12-bd43-1db7aabf5a0f;
+   prov:wasDerivedFrom :download_37fca3b2-5460-4f0c-9f89-68a4db81c53f;
 .
 
-:download_5cba6d74-ddc5-4e12-bd43-1db7aabf5a0f
+:download_37fca3b2-5460-4f0c-9f89-68a4db81c53f
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/trafford-gov-uk/catalog/version/2012-Mar-06/manual/trafford.gov.uk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/trafford-gov-uk/catalog/version/2012-Mar-06/manual/trafford.gov.uk.csv>;
 .
 
-<dataset/5cba6d74-ddc5-4e12-bd43-1db7aabf5a0f>
+<dataset/37fca3b2-5460-4f0c-9f89-68a4db81c53f>
    a dcat:Dataset;
-   dcat:distribution :download_5cba6d74-ddc5-4e12-bd43-1db7aabf5a0f;
+   dcat:distribution :download_37fca3b2-5460-4f0c-9f89-68a4db81c53f;
 .

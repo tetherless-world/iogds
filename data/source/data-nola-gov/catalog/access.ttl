@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-nola-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_2f17d37f-bee9-4e43-9f61-02532ea1fcc9;
+   prov:wasDerivedFrom :download_3e578176-5e23-4311-aca2-687670b74534;
 .
 
-:download_2f17d37f-bee9-4e43-9f61-02532ea1fcc9
+:download_3e578176-5e23-4311-aca2-687670b74534
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-nola-gov/catalog/version/2011-Oct-21/manual/data.nola.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-nola-gov/catalog/version/2011-Oct-21/manual/data.nola.gov.csv>;
 .
 
-<dataset/2f17d37f-bee9-4e43-9f61-02532ea1fcc9>
+<dataset/3e578176-5e23-4311-aca2-687670b74534>
    a dcat:Dataset;
-   dcat:distribution :download_2f17d37f-bee9-4e43-9f61-02532ea1fcc9;
+   dcat:distribution :download_3e578176-5e23-4311-aca2-687670b74534;
 .

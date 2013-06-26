@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "zaragoza-es";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_de348c4e-5ad0-4968-b7e2-cfc64467f08d;
+   prov:wasDerivedFrom :download_84873fcd-7da5-47fb-988d-0fd84fb02b88;
 .
 
-:download_de348c4e-5ad0-4968-b7e2-cfc64467f08d
+:download_84873fcd-7da5-47fb-988d-0fd84fb02b88
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/zaragoza-es/catalog/version/2011-Sep-12/manual/zaragoza.es.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/zaragoza-es/catalog/version/2011-Sep-12/manual/zaragoza.es.csv>;
 .
 
-<dataset/de348c4e-5ad0-4968-b7e2-cfc64467f08d>
+<dataset/84873fcd-7da5-47fb-988d-0fd84fb02b88>
    a dcat:Dataset;
-   dcat:distribution :download_de348c4e-5ad0-4968-b7e2-cfc64467f08d;
+   dcat:distribution :download_84873fcd-7da5-47fb-988d-0fd84fb02b88;
 .

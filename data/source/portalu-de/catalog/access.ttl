@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "portalu-de";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_8147672c-9425-403c-977f-3abcbf57743b;
+   prov:wasDerivedFrom :download_799c195b-cf8d-4057-837a-e03868a9e830;
 .
 
-:download_8147672c-9425-403c-977f-3abcbf57743b
+:download_799c195b-cf8d-4057-837a-e03868a9e830
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/portalu-de/catalog/version/2011-Sep-13/manual/portalu.de.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/portalu-de/catalog/version/2011-Sep-13/manual/portalu.de.csv>;
 .
 
-<dataset/8147672c-9425-403c-977f-3abcbf57743b>
+<dataset/799c195b-cf8d-4057-837a-e03868a9e830>
    a dcat:Dataset;
-   dcat:distribution :download_8147672c-9425-403c-977f-3abcbf57743b;
+   dcat:distribution :download_799c195b-cf8d-4057-837a-e03868a9e830;
 .

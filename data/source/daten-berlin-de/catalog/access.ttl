@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "daten-berlin-de";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_6b02c705-5945-40a6-86d6-c5742428677a;
+   prov:wasDerivedFrom :download_a9c6ba06-a26f-4587-8292-d01a4f90074f;
 .
 
-:download_6b02c705-5945-40a6-86d6-c5742428677a
+:download_a9c6ba06-a26f-4587-8292-d01a4f90074f
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/daten-berlin-de/catalog/version/2011-Sep-27/manual/daten.berlin.de.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/daten-berlin-de/catalog/version/2011-Sep-27/manual/daten.berlin.de.csv>;
 .
 
-<dataset/6b02c705-5945-40a6-86d6-c5742428677a>
+<dataset/a9c6ba06-a26f-4587-8292-d01a4f90074f>
    a dcat:Dataset;
-   dcat:distribution :download_6b02c705-5945-40a6-86d6-c5742428677a;
+   dcat:distribution :download_a9c6ba06-a26f-4587-8292-d01a4f90074f;
 .

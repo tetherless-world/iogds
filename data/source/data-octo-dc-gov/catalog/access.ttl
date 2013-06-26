@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-octo-dc-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_2bb42cfc-5274-4fb4-99e1-7ee853607c58;
+   prov:wasDerivedFrom :download_06529c45-7b43-488f-8410-6ec70fa35c27;
 .
 
-:download_2bb42cfc-5274-4fb4-99e1-7ee853607c58
+:download_06529c45-7b43-488f-8410-6ec70fa35c27
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-octo-dc-gov/catalog/version/2011-Sep-14/manual/data.octo.dc.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-octo-dc-gov/catalog/version/2011-Sep-14/manual/data.octo.dc.gov.csv>;
 .
 
-<dataset/2bb42cfc-5274-4fb4-99e1-7ee853607c58>
+<dataset/06529c45-7b43-488f-8410-6ec70fa35c27>
    a dcat:Dataset;
-   dcat:distribution :download_2bb42cfc-5274-4fb4-99e1-7ee853607c58;
+   dcat:distribution :download_06529c45-7b43-488f-8410-6ec70fa35c27;
 .

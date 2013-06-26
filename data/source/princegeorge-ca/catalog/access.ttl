@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "princegeorge-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_75d480b4-5b51-4fa1-8a3e-64720cd7221d;
+   prov:wasDerivedFrom :download_0882bc9e-314f-4da7-bd31-2252c9bfb40f;
 .
 
-:download_75d480b4-5b51-4fa1-8a3e-64720cd7221d
+:download_0882bc9e-314f-4da7-bd31-2252c9bfb40f
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/princegeorge-ca/catalog/version/2011-Oct-25/manual/princegeorge.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/princegeorge-ca/catalog/version/2011-Oct-25/manual/princegeorge.ca.csv>;
 .
 
-<dataset/75d480b4-5b51-4fa1-8a3e-64720cd7221d>
+<dataset/0882bc9e-314f-4da7-bd31-2252c9bfb40f>
    a dcat:Dataset;
-   dcat:distribution :download_75d480b4-5b51-4fa1-8a3e-64720cd7221d;
+   dcat:distribution :download_0882bc9e-314f-4da7-bd31-2252c9bfb40f;
 .

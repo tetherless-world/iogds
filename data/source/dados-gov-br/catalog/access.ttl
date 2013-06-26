@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "dados-gov-br";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_751f3e0c-3927-4763-9353-3189c6725b96;
+   prov:wasDerivedFrom :download_8cff96b3-f0a3-4a0e-a34a-1986845b28c2;
 .
 
-:download_751f3e0c-3927-4763-9353-3189c6725b96
+:download_8cff96b3-f0a3-4a0e-a34a-1986845b28c2
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dados-gov-br/catalog/version/2011-Oct-11/manual/dados.gov.br.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dados-gov-br/catalog/version/2011-Oct-11/manual/dados.gov.br.csv>;
 .
 
-<dataset/751f3e0c-3927-4763-9353-3189c6725b96>
+<dataset/8cff96b3-f0a3-4a0e-a34a-1986845b28c2>
    a dcat:Dataset;
-   dcat:distribution :download_751f3e0c-3927-4763-9353-3189c6725b96;
+   dcat:distribution :download_8cff96b3-f0a3-4a0e-a34a-1986845b28c2;
 .

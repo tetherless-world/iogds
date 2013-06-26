@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "openbelgium-be";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_bd7710f5-01a6-43b4-a730-cfb0ecdfa6de;
+   prov:wasDerivedFrom :download_81eda5e6-2b59-40dc-87f2-4eb912c23d19;
 .
 
-:download_bd7710f5-01a6-43b4-a730-cfb0ecdfa6de
+:download_81eda5e6-2b59-40dc-87f2-4eb912c23d19
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/openbelgium-be/catalog/version/2011-Sep-13/manual/openbelgium.be.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/openbelgium-be/catalog/version/2011-Sep-13/manual/openbelgium.be.csv>;
 .
 
-<dataset/bd7710f5-01a6-43b4-a730-cfb0ecdfa6de>
+<dataset/81eda5e6-2b59-40dc-87f2-4eb912c23d19>
    a dcat:Dataset;
-   dcat:distribution :download_bd7710f5-01a6-43b4-a730-cfb0ecdfa6de;
+   dcat:distribution :download_81eda5e6-2b59-40dc-87f2-4eb912c23d19;
 .

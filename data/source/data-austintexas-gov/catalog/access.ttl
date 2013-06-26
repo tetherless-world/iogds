@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-austintexas-gov";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_10795dd1-bdef-41d0-a036-6f1ce472177a;
+   prov:wasDerivedFrom :download_75252346-309b-492b-ac11-a40b34c87304;
 .
 
-:download_10795dd1-bdef-41d0-a036-6f1ce472177a
+:download_75252346-309b-492b-ac11-a40b34c87304
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-austintexas-gov/catalog/version/2012-Sep-18/manual/data.austintexas.gov.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-austintexas-gov/catalog/version/2012-Sep-18/manual/data.austintexas.gov.csv>;
 .
 
-<dataset/10795dd1-bdef-41d0-a036-6f1ce472177a>
+<dataset/75252346-309b-492b-ac11-a40b34c87304>
    a dcat:Dataset;
-   dcat:distribution :download_10795dd1-bdef-41d0-a036-6f1ce472177a;
+   dcat:distribution :download_75252346-309b-492b-ac11-a40b34c87304;
 .

@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "finances-worldbank-org";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_0c88cda9-79ff-43fb-ab30-f8ec9d4210b5;
+   prov:wasDerivedFrom :download_d7b1dc77-067a-44fe-ab3a-43cf2a26d657;
 .
 
-:download_0c88cda9-79ff-43fb-ab30-f8ec9d4210b5
+:download_d7b1dc77-067a-44fe-ab3a-43cf2a26d657
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/finances-worldbank-org/catalog/version/2011-Sep-01/manual/finances.worldbank.org.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/finances-worldbank-org/catalog/version/2011-Sep-01/manual/finances.worldbank.org.csv>;
 .
 
-<dataset/0c88cda9-79ff-43fb-ab30-f8ec9d4210b5>
+<dataset/d7b1dc77-067a-44fe-ab3a-43cf2a26d657>
    a dcat:Dataset;
-   dcat:distribution :download_0c88cda9-79ff-43fb-ab30-f8ec9d4210b5;
+   dcat:distribution :download_d7b1dc77-067a-44fe-ab3a-43cf2a26d657;
 .

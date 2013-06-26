@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "montevideo-gub-uy";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_465471d0-56bb-4f68-abf0-fe759c295c91;
+   prov:wasDerivedFrom :download_380862f0-9d58-48b1-8f7b-2d92235ba387;
 .
 
-:download_465471d0-56bb-4f68-abf0-fe759c295c91
+:download_380862f0-9d58-48b1-8f7b-2d92235ba387
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/montevideo-gub-uy/catalog/version/2011-Sep-13/manual/montevideo.gub.uy.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/montevideo-gub-uy/catalog/version/2011-Sep-13/manual/montevideo.gub.uy.csv>;
 .
 
-<dataset/465471d0-56bb-4f68-abf0-fe759c295c91>
+<dataset/380862f0-9d58-48b1-8f7b-2d92235ba387>
    a dcat:Dataset;
-   dcat:distribution :download_465471d0-56bb-4f68-abf0-fe759c295c91;
+   dcat:distribution :download_380862f0-9d58-48b1-8f7b-2d92235ba387;
 .

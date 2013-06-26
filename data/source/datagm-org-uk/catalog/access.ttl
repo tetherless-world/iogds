@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "datagm-org-uk";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_5230f8d1-3cb8-42be-a44d-7b97e8ec6c7c;
+   prov:wasDerivedFrom :download_5c769b41-0007-4fc9-9b20-90653ef3704c;
 .
 
-:download_5230f8d1-3cb8-42be-a44d-7b97e8ec6c7c
+:download_5c769b41-0007-4fc9-9b20-90653ef3704c
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datagm-org-uk/catalog/version/2011-Sep-14/manual/datagm.org.uk.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datagm-org-uk/catalog/version/2011-Sep-14/manual/datagm.org.uk.csv>;
 .
 
-<dataset/5230f8d1-3cb8-42be-a44d-7b97e8ec6c7c>
+<dataset/5c769b41-0007-4fc9-9b20-90653ef3704c>
    a dcat:Dataset;
-   dcat:distribution :download_5230f8d1-3cb8-42be-a44d-7b97e8ec6c7c;
+   dcat:distribution :download_5c769b41-0007-4fc9-9b20-90653ef3704c;
 .

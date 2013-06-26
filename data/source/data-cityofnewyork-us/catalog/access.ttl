@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-cityofnewyork-us";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_11cdd78a-74c4-4b2d-86c5-a073d44d5f03;
+   prov:wasDerivedFrom :download_c978cda0-6e17-4364-9513-100511bfdfc1;
 .
 
-:download_11cdd78a-74c4-4b2d-86c5-a073d44d5f03
+:download_c978cda0-6e17-4364-9513-100511bfdfc1
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-cityofnewyork-us/catalog/version/2012-Sep-18/manual/data.cityofnewyork.us.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-cityofnewyork-us/catalog/version/2012-Sep-18/manual/data.cityofnewyork.us.csv>;
 .
 
-<dataset/11cdd78a-74c4-4b2d-86c5-a073d44d5f03>
+<dataset/c978cda0-6e17-4364-9513-100511bfdfc1>
    a dcat:Dataset;
-   dcat:distribution :download_11cdd78a-74c4-4b2d-86c5-a073d44d5f03;
+   dcat:distribution :download_c978cda0-6e17-4364-9513-100511bfdfc1;
 .

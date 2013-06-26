@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "hri-fi";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_da718947-ca67-4d62-be36-1091071d8ba8;
+   prov:wasDerivedFrom :download_d2949336-b911-4c15-9c7f-e90343d5e677;
 .
 
-:download_da718947-ca67-4d62-be36-1091071d8ba8
+:download_d2949336-b911-4c15-9c7f-e90343d5e677
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/hri-fi/catalog/version/2012-Jun-18/manual/hri.fi.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/hri-fi/catalog/version/2012-Jun-18/manual/hri.fi.csv>;
 .
 
-<dataset/da718947-ca67-4d62-be36-1091071d8ba8>
+<dataset/d2949336-b911-4c15-9c7f-e90343d5e677>
    a dcat:Dataset;
-   dcat:distribution :download_da718947-ca67-4d62-be36-1091071d8ba8;
+   dcat:distribution :download_d2949336-b911-4c15-9c7f-e90343d5e677;
 .

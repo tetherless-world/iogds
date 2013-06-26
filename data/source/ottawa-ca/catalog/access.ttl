@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "ottawa-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_2d29ff40-433c-4e71-9799-a4bd879595cb;
+   prov:wasDerivedFrom :download_d9de380d-3300-4832-b5c8-355e59bcaf64;
 .
 
-:download_2d29ff40-433c-4e71-9799-a4bd879595cb
+:download_d9de380d-3300-4832-b5c8-355e59bcaf64
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/ottawa-ca/catalog/version/2011-Sep-13/manual/ottawa.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/ottawa-ca/catalog/version/2011-Sep-13/manual/ottawa.ca.csv>;
 .
 
-<dataset/2d29ff40-433c-4e71-9799-a4bd879595cb>
+<dataset/d9de380d-3300-4832-b5c8-355e59bcaf64>
    a dcat:Dataset;
-   dcat:distribution :download_2d29ff40-433c-4e71-9799-a4bd879595cb;
+   dcat:distribution :download_d9de380d-3300-4832-b5c8-355e59bcaf64;
 .

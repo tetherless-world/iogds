@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-mosman-nsw-gov-au";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_d53c89f2-afdd-48b1-a575-acb6afe25dad;
+   prov:wasDerivedFrom :download_788f6f7a-e173-467b-9578-eda9c7cab256;
 .
 
-:download_d53c89f2-afdd-48b1-a575-acb6afe25dad
+:download_788f6f7a-e173-467b-9578-eda9c7cab256
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-mosman-nsw-gov-au/catalog/version/2012-May-21/manual/data.mosman.nsw.gov.au.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-mosman-nsw-gov-au/catalog/version/2012-May-21/manual/data.mosman.nsw.gov.au.csv>;
 .
 
-<dataset/d53c89f2-afdd-48b1-a575-acb6afe25dad>
+<dataset/788f6f7a-e173-467b-9578-eda9c7cab256>
    a dcat:Dataset;
-   dcat:distribution :download_d53c89f2-afdd-48b1-a575-acb6afe25dad;
+   dcat:distribution :download_788f6f7a-e173-467b-9578-eda9c7cab256;
 .

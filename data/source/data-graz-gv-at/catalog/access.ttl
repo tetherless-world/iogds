@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-graz-gv-at";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_c1c424fd-068c-45a7-8f6f-53f794da69df;
+   prov:wasDerivedFrom :download_389c9aeb-b783-402d-88e0-7d611466b126;
 .
 
-:download_c1c424fd-068c-45a7-8f6f-53f794da69df
+:download_389c9aeb-b783-402d-88e0-7d611466b126
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-graz-gv-at/catalog/version/2012-Jun-18/manual/data.graz.gv.at.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-graz-gv-at/catalog/version/2012-Jun-18/manual/data.graz.gv.at.csv>;
 .
 
-<dataset/c1c424fd-068c-45a7-8f6f-53f794da69df>
+<dataset/389c9aeb-b783-402d-88e0-7d611466b126>
    a dcat:Dataset;
-   dcat:distribution :download_c1c424fd-068c-45a7-8f6f-53f794da69df;
+   dcat:distribution :download_389c9aeb-b783-402d-88e0-7d611466b126;
 .

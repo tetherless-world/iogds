@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "cartolleida-paeria-es";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_2c55dc17-b536-413a-b000-f9d5766b9f70;
+   prov:wasDerivedFrom :download_cbc67350-7828-476e-8542-166ee1831a41;
 .
 
-:download_2c55dc17-b536-413a-b000-f9d5766b9f70
+:download_cbc67350-7828-476e-8542-166ee1831a41
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/cartolleida-paeria-es/catalog/version/2012-May-09/manual/cartolleida.paeria.es.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/cartolleida-paeria-es/catalog/version/2012-May-09/manual/cartolleida.paeria.es.csv>;
 .
 
-<dataset/2c55dc17-b536-413a-b000-f9d5766b9f70>
+<dataset/cbc67350-7828-476e-8542-166ee1831a41>
    a dcat:Dataset;
-   dcat:distribution :download_2c55dc17-b536-413a-b000-f9d5766b9f70;
+   dcat:distribution :download_cbc67350-7828-476e-8542-166ee1831a41;
 .

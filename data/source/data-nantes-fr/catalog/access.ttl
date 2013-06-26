@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-nantes-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_effc0a0e-a64b-474a-89fc-da0f6c4b40c0;
+   prov:wasDerivedFrom :download_53665486-36d2-41e5-ab4a-a0a0af41df44;
 .
 
-:download_effc0a0e-a64b-474a-89fc-da0f6c4b40c0
+:download_53665486-36d2-41e5-ab4a-a0a0af41df44
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-nantes-fr/catalog/version/2012-Feb-09/manual/data.nantes.fr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-nantes-fr/catalog/version/2012-Feb-09/manual/data.nantes.fr.csv>;
 .
 
-<dataset/effc0a0e-a64b-474a-89fc-da0f6c4b40c0>
+<dataset/53665486-36d2-41e5-ab4a-a0a0af41df44>
    a dcat:Dataset;
-   dcat:distribution :download_effc0a0e-a64b-474a-89fc-da0f6c4b40c0;
+   dcat:distribution :download_53665486-36d2-41e5-ab4a-a0a0af41df44;
 .

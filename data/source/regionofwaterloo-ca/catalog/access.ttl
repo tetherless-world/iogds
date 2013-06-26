@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "regionofwaterloo-ca";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_b995d920-7d21-4ea5-9bc1-24e2b089024e;
+   prov:wasDerivedFrom :download_de3dd1a5-1760-4f60-858f-3effe7a976de;
 .
 
-:download_b995d920-7d21-4ea5-9bc1-24e2b089024e
+:download_de3dd1a5-1760-4f60-858f-3effe7a976de
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/regionofwaterloo-ca/catalog/version/2012-Feb-28/manual/regionofwaterloo.ca.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/regionofwaterloo-ca/catalog/version/2012-Feb-28/manual/regionofwaterloo.ca.csv>;
 .
 
-<dataset/b995d920-7d21-4ea5-9bc1-24e2b089024e>
+<dataset/de3dd1a5-1760-4f60-858f-3effe7a976de>
    a dcat:Dataset;
-   dcat:distribution :download_b995d920-7d21-4ea5-9bc1-24e2b089024e;
+   dcat:distribution :download_de3dd1a5-1760-4f60-858f-3effe7a976de;
 .

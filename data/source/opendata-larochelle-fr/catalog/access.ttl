@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata-larochelle-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_5c1d018d-4b1e-49bb-99dc-722ee8ca6712;
+   prov:wasDerivedFrom :download_b94c79d7-c828-4672-b2e4-c46baea504ae;
 .
 
-:download_5c1d018d-4b1e-49bb-99dc-722ee8ca6712
+:download_b94c79d7-c828-4672-b2e4-c46baea504ae
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-larochelle-fr/catalog/version/2012-Jun-13/manual/opendata-larochelle-fr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata-larochelle-fr/catalog/version/2012-Jun-13/manual/opendata-larochelle-fr.csv>;
 .
 
-<dataset/5c1d018d-4b1e-49bb-99dc-722ee8ca6712>
+<dataset/b94c79d7-c828-4672-b2e4-c46baea504ae>
    a dcat:Dataset;
-   dcat:distribution :download_5c1d018d-4b1e-49bb-99dc-722ee8ca6712;
+   dcat:distribution :download_b94c79d7-c828-4672-b2e4-c46baea504ae;
 .

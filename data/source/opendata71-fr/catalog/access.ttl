@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "opendata71-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_eebbf0d1-8f6d-46eb-87f0-4fef45d9302c;
+   prov:wasDerivedFrom :download_2cfec73e-5b41-4a45-8c8e-3e8518b4ecc7;
 .
 
-:download_eebbf0d1-8f6d-46eb-87f0-4fef45d9302c
+:download_2cfec73e-5b41-4a45-8c8e-3e8518b4ecc7
    a dcat:Distribution;
-   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata71-fr/catalog/version/2012-Jun-25/manual/opendata71.fr.csv.e1.params.ttl>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata71-fr/catalog/version/2012-Jun-25/manual/opendata71.fr.csv>;
 .
 
-<dataset/eebbf0d1-8f6d-46eb-87f0-4fef45d9302c>
+<dataset/2cfec73e-5b41-4a45-8c8e-3e8518b4ecc7>
    a dcat:Dataset;
-   dcat:distribution :download_eebbf0d1-8f6d-46eb-87f0-4fef45d9302c;
+   dcat:distribution :download_2cfec73e-5b41-4a45-8c8e-3e8518b4ecc7;
 .
