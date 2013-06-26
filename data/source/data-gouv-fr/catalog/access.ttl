@@ -10,15 +10,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "data-gouv-fr";
    conversion:dataset_identifier "catalog";
-   prov:wasDerivedFrom :download_b877a517-5f1e-4546-871e-448f88c59159;
+   prov:wasDerivedFrom :download_5ca44115-542c-4f24-b460-9eadfe178d75;
 .
 
-:download_b877a517-5f1e-4546-871e-448f88c59159
+:download_5ca44115-542c-4f24-b460-9eadfe178d75
    a dcat:Distribution;
-   dcat:downloadURL <http://www.data.gouv.fr/content/search?SearchText=%23all&Type=data>;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gouv-fr/catalog/version/2011-Dec-17/manual/data.gouv.fr.csv.e1.params.ttl>;
 .
 
-<dataset/b877a517-5f1e-4546-871e-448f88c59159>
+<dataset/5ca44115-542c-4f24-b460-9eadfe178d75>
    a dcat:Dataset;
-   dcat:distribution :download_b877a517-5f1e-4546-871e-448f88c59159;
+   dcat:distribution :download_5ca44115-542c-4f24-b460-9eadfe178d75;
 .

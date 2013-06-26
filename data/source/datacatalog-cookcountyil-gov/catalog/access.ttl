@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/datacatalog-cookcountyil-gov/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "datacatalog-cookcountyil-gov";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_566efcdc-826d-4999-9d7b-28e889b4d131;
+.
+
+:download_566efcdc-826d-4999-9d7b-28e889b4d131
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datacatalog-cookcountyil-gov/catalog/version/2011-Oct-13/manual/datacatalog.cookcountyil.gov.csv.e1.params.ttl>;
+.
+
+<dataset/566efcdc-826d-4999-9d7b-28e889b4d131>
+   a dcat:Dataset;
+   dcat:distribution :download_566efcdc-826d-4999-9d7b-28e889b4d131;
+.

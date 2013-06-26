@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/data-london-gov-uk/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "data-london-gov-uk";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_348bc752-6d56-416f-8200-8c1b2ac2c6ba;
+.
+
+:download_348bc752-6d56-416f-8200-8c1b2ac2c6ba
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-london-gov-uk/catalog/version/2012-Jan-19/manual/data.london.gov.uk.csv.e1.params.ttl>;
+.
+
+<dataset/348bc752-6d56-416f-8200-8c1b2ac2c6ba>
+   a dcat:Dataset;
+   dcat:distribution :download_348bc752-6d56-416f-8200-8c1b2ac2c6ba;
+.

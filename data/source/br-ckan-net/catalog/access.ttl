@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/br-ckan-net/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "br-ckan-net";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_63d9ded6-da9d-4749-855b-f77de9fc368b;
+.
+
+:download_63d9ded6-da9d-4749-855b-f77de9fc368b
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/br-ckan-net/catalog/version/2011-Sep-14/manual/br.ckan.net.csv.e1.params.ttl>;
+.
+
+<dataset/63d9ded6-da9d-4749-855b-f77de9fc368b>
+   a dcat:Dataset;
+   dcat:distribution :download_63d9ded6-da9d-4749-855b-f77de9fc368b;
+.

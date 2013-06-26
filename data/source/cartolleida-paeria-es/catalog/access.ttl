@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/cartolleida-paeria-es/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "cartolleida-paeria-es";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_2c55dc17-b536-413a-b000-f9d5766b9f70;
+.
+
+:download_2c55dc17-b536-413a-b000-f9d5766b9f70
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/cartolleida-paeria-es/catalog/version/2012-May-09/manual/cartolleida.paeria.es.csv.e1.params.ttl>;
+.
+
+<dataset/2c55dc17-b536-413a-b000-f9d5766b9f70>
+   a dcat:Dataset;
+   dcat:distribution :download_2c55dc17-b536-413a-b000-f9d5766b9f70;
+.

@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/opendatani-info/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "opendatani-info";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_1ac7a8d1-0da4-4055-8833-06c6e4dd65d8;
+.
+
+:download_1ac7a8d1-0da4-4055-8833-06c6e4dd65d8
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendatani-info/catalog/version/2011-Sep-29/manual/opendatani.info.csv.e1.params.ttl>;
+.
+
+<dataset/1ac7a8d1-0da4-4055-8833-06c6e4dd65d8>
+   a dcat:Dataset;
+   dcat:distribution :download_1ac7a8d1-0da4-4055-8833-06c6e4dd65d8;
+.

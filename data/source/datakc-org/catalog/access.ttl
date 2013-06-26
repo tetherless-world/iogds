@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/datakc-org/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "datakc-org";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_d6e06c08-af75-46fa-953d-7b4b292af2a1;
+.
+
+:download_d6e06c08-af75-46fa-953d-7b4b292af2a1
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datakc-org/catalog/version/2011-Sep-01/manual/datakc.org.csv.e1.params.ttl>;
+.
+
+<dataset/d6e06c08-af75-46fa-953d-7b4b292af2a1>
+   a dcat:Dataset;
+   dcat:distribution :download_d6e06c08-af75-46fa-953d-7b4b292af2a1;
+.

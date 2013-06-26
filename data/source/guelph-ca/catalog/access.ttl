@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/guelph-ca/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "guelph-ca";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_0f508a94-5381-4f83-a444-98c4805c6005;
+.
+
+:download_0f508a94-5381-4f83-a444-98c4805c6005
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/guelph-ca/catalog/version/2012-Feb-28/manual/guelph.ca.csv.e1.params.ttl>;
+.
+
+<dataset/0f508a94-5381-4f83-a444-98c4805c6005>
+   a dcat:Dataset;
+   dcat:distribution :download_0f508a94-5381-4f83-a444-98c4805c6005;
+.

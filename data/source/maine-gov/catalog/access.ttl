@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/maine-gov/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "maine-gov";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_800757d0-2291-4e2f-b9db-ee0183eb2fe2;
+.
+
+:download_800757d0-2291-4e2f-b9db-ee0183eb2fe2
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/maine-gov/catalog/version/2011-Sep-21/manual/maine.gov.csv.e1.params.ttl>;
+.
+
+<dataset/800757d0-2291-4e2f-b9db-ee0183eb2fe2>
+   a dcat:Dataset;
+   dcat:distribution :download_800757d0-2291-4e2f-b9db-ee0183eb2fe2;
+.

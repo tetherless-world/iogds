@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/gov-hk/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "gov-hk";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_bc29dea0-200d-43bc-92af-959ae9066c79;
+.
+
+:download_bc29dea0-200d-43bc-92af-959ae9066c79
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/gov-hk/catalog/version/2011-Sep-13/manual/gov.hk.csv.e1.params.ttl>;
+.
+
+<dataset/bc29dea0-200d-43bc-92af-959ae9066c79>
+   a dcat:Dataset;
+   dcat:distribution :download_bc29dea0-200d-43bc-92af-959ae9066c79;
+.

@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/opengovdata-ru/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "opengovdata-ru";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_90ce496d-1cb4-4862-b716-7844ad2d5f62;
+.
+
+:download_90ce496d-1cb4-4862-b716-7844ad2d5f62
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opengovdata-ru/catalog/version/2011-Jun-13/manual/opengovdata.ru.csv.e1.params.ttl>;
+.
+
+<dataset/90ce496d-1cb4-4862-b716-7844ad2d5f62>
+   a dcat:Dataset;
+   dcat:distribution :download_90ce496d-1cb4-4862-b716-7844ad2d5f62;
+.

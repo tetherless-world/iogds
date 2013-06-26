@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/data-oregon-gov/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "data-oregon-gov";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_fa159a8a-ebe4-4cac-a363-3b4238eb3a19;
+.
+
+:download_fa159a8a-ebe4-4cac-a363-3b4238eb3a19
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-oregon-gov/catalog/version/2011-Sep-01/manual/data.oregon.gov.csv.e1.params.ttl>;
+.
+
+<dataset/fa159a8a-ebe4-4cac-a363-3b4238eb3a19>
+   a dcat:Dataset;
+   dcat:distribution :download_fa159a8a-ebe4-4cac-a363-3b4238eb3a19;
+.

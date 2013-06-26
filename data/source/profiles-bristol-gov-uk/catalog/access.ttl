@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/profiles-bristol-gov-uk/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "profiles-bristol-gov-uk";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_df672cf8-0530-4c9b-be04-06c4f01ddd4c;
+.
+
+:download_df672cf8-0530-4c9b-be04-06c4f01ddd4c
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/profiles-bristol-gov-uk/catalog/version/2011-Oct-12/manual/profiles.bristol.gov.uk.csv.e1.params.ttl>;
+.
+
+<dataset/df672cf8-0530-4c9b-be04-06c4f01ddd4c>
+   a dcat:Dataset;
+   dcat:distribution :download_df672cf8-0530-4c9b-be04-06c4f01ddd4c;
+.

@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/opendata71-fr/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "opendata71-fr";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_eebbf0d1-8f6d-46eb-87f0-4fef45d9302c;
+.
+
+:download_eebbf0d1-8f6d-46eb-87f0-4fef45d9302c
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/opendata71-fr/catalog/version/2012-Jun-25/manual/opendata71.fr.csv.e1.params.ttl>;
+.
+
+<dataset/eebbf0d1-8f6d-46eb-87f0-4fef45d9302c>
+   a dcat:Dataset;
+   dcat:distribution :download_eebbf0d1-8f6d-46eb-87f0-4fef45d9302c;
+.
