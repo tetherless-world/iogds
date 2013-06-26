@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/data-gov-au/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "data-gov-au";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_0978b7b9-8177-421b-aff5-6791e3b5121a;
+.
+
+:download_0978b7b9-8177-421b-aff5-6791e3b5121a
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-gov-au/catalog/version/2011-Jun-27/manual/data.gov.au.csv>;
+.
+
+<dataset/0978b7b9-8177-421b-aff5-6791e3b5121a>
+   a dcat:Dataset;
+   dcat:distribution :download_0978b7b9-8177-421b-aff5-6791e3b5121a;
+.

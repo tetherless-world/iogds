@@ -1,0 +1,220 @@
+@prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix todo:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix vann:          <http://purl.org/vocab/vann/> .
+@prefix skos:          <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:          <http://www.w3.org/2006/time#> .
+@prefix wgs:           <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geonames:      <http://www.geonames.org/ontology#> .
+@prefix geonamesid:    <http://sws.geonames.org/> .
+@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
+@prefix dbpedia:       <http://dbpedia.org/resource/> .
+@prefix dbpediaprop:   <http://dbpedia.org/property/> .
+@prefix dbpediaowl:    <http://dbpedia.org/ontology/> .
+@prefix con:           <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix muo:           <http://purl.oclc.org/NET/muo/muo#> .
+@prefix vs:            <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix frbr:          <http://purl.org/vocab/frbr/core#> .
+@prefix bibo:          <http://purl.org/ontology/bibo/> .
+@prefix doap:          <http://usefulinc.com/ns/doap#> .
+@prefix qb:            <http://purl.org/linked-data/cube#> .
+@prefix dgtwc:         <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix void:          <http://rdfs.org/ns/void#> .
+@prefix scovo:         <http://purl.org/NET/scovo#> .
+@prefix sioc:          <http://rdfs.org/sioc/ns#> .
+@prefix foaf:          <http://xmlns.com/foaf/0.1/> .
+@prefix ov:            <http://open.vocab.org/terms/> .
+@prefix conversion:    <http://purl.org/twc/vocab/conversion/> .
+@prefix :              <http://logd.tw.rpi.edu/source/data-gov-ma/dataset/catalog/version/2012-May-15/params/enhancement/1/> .
+
+<http://tw.rpi.edu/web/inside/machine/gemini#sym>
+   a foaf:OnlineAccount;
+   foaf:accountName "sym";
+   dcterms:isPartOf <http://tw.rpi.edu/web/inside/machine/gemini>;
+.
+
+#:a_bundle
+#   a conversion:ImplicitBundle;
+#   conversion:property_name "a_property"; # Can also be a URI, e.g. dcterms:title.
+#   #conversion:type_name     "My Class";   # Can also be a URI, e.g. foaf:Person.
+#.
+
+<http://logd.tw.rpi.edu/source/data-gov-ma/dataset/catalog/version/2012-May-15/conversion/enhancement/1>
+   a conversion:LayerDataset, void:Dataset;
+
+   conversion:base_uri           "http://logd.tw.rpi.edu"^^xsd:anyURI;
+   conversion:source_identifier  "data-gov-ma";
+   conversion:dataset_identifier "catalog";
+   conversion:version_identifier "2012-May-15";
+   conversion:enhancement_identifier "1";
+
+   a conversion:DatasetCatalog, conversion:MetaDataset;   #dataset catalog addition
+   dgtwc:catalog_title "Data.gov.ma (Morocco)" ;
+   dgtwc:catalog_homepage <http://data.gov.ma/Pages/Home.aspx> ;
+   dgtwc:catalog_country  dbpedia:Morocco;
+   dgtwc:catalog_language       "French";
+
+
+   conversion:conversion_process [
+      a conversion:EnhancementConversionProcess;
+      conversion:enhancement_identifier "1";
+
+      dcterms:creator <http://tw.rpi.edu/web/inside/machine/gemini#sym>;
+      dcterms:created "2012-05-15T19:47:48-04:00"^^xsd:dateTime;
+
+      conversion:delimits_cell ",";
+      #conversion:delimits_cell "	"; # tab
+      #conversion:delimits_cell "|";   # pipe
+      #conversion:delimits_cell ",";   # comma
+
+      #conversion:interpret [
+      #   conversion:symbol        "";
+      #   conversion:interpretation conversion:null; 
+      #];
+      #conversion:enhance [
+      #   conversion:domain_template "thing_[r]";
+      #   conversion:domain_name     "Thing";
+      #];
+      #conversion:enhance [
+      #   conversion:class_name "Thing";
+      #   conversion:subclass_of <http://purl.org/...>;
+      #];
+
+      conversion:enhance [
+      #  conversion:domain_template "dataset_[r]";
+         conversion:domain_name     "Dataset";
+      ];
+      conversion:enhance [
+         conversion:class_name "Dataset";
+         conversion:subclass_of conversion:CatalogedDataset; 
+      ];
+      
+      
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_title;
+         conversion:object    "Data.gov.ma (Morocco)" ;
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_subtitle;
+         conversion:object    ""; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_homepage;
+         conversion:object    <http://data.gov.ma/Pages/Home.aspx> ;
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_country;
+         conversion:object    dbpedia:Morocco;
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_language;
+         conversion:object    "French" ; 
+      ];
+
+
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dcterms:subject;
+         conversion:object    "n/a"; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:agency;
+         conversion:object    conversion:null; 
+      ];
+
+
+      conversion:enhance [
+         ov:csvCol          1;
+         ov:csvHeader       "url";
+         #conversion:label   "url";
+         conversion:comment "";
+
+         conversion:range  rdfs:Resource;		
+         conversion:subproperty_of foaf:homepage;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol        "";
+            conversion:interpretation conversion:null; 
+         ]; 
+         conversion:interpret [
+            conversion:symbol "(none)";
+            conversion:interpretation conversion:null; 
+         ];         
+
+
+      ];
+      conversion:enhance [
+         ov:csvCol          2;
+         ov:csvHeader       "titre";
+         #conversion:label   "titre";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+
+         conversion:subproperty_of dcterms:title;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+
+      ];
+      conversion:enhance [
+         ov:csvCol          3;
+         ov:csvHeader       "Description";
+         #conversion:label   "Description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+
+         conversion:subproperty_of dcterms:description;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+
+      ];
+      conversion:enhance [
+         ov:csvCol          4;
+         ov:csvHeader       "Date de publication";
+         #conversion:label   "Date de publication";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          5;
+         ov:csvHeader       "Thème";
+         #conversion:label   "Thème";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+
+         conversion:subproperty_of dgtwc:category ;	#dataset catalog addition
+         conversion:subproperty_of dgtwc:categories ;
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         conversion:interpret [
+            conversion:symbol "(none)";
+            conversion:interpretation "n/a";
+         ];         
+
+      ];
+      conversion:enhance [
+         ov:csvCol          6;
+         ov:csvHeader       "Source du document";
+         #conversion:label   "Source du document";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      #conversion:enhance [            
+      #   ov:csvRow 3,4,5;             
+      #   a conversion:ExampleResource;
+      #];                              
+   ];
+.

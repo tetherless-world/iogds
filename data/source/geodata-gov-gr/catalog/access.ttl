@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/geodata-gov-gr/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "geodata-gov-gr";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_1c95852d-9797-439b-9541-34057c407615;
+.
+
+:download_1c95852d-9797-439b-9541-34057c407615
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/geodata-gov-gr/catalog/version/2012-Feb-01/manual/geodata.gov.gr.csv>;
+.
+
+<dataset/1c95852d-9797-439b-9541-34057c407615>
+   a dcat:Dataset;
+   dcat:distribution :download_1c95852d-9797-439b-9541-34057c407615;
+.

@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/government-ae/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "government-ae";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_22cd25dd-8ba3-45be-917c-d58e78f2935b;
+.
+
+:download_22cd25dd-8ba3-45be-917c-d58e78f2935b
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/government-ae/catalog/version/2012-Jun-13/manual/government.ae.csv>;
+.
+
+<dataset/22cd25dd-8ba3-45be-917c-d58e78f2935b>
+   a dcat:Dataset;
+   dcat:distribution :download_22cd25dd-8ba3-45be-917c-d58e78f2935b;
+.

@@ -1,0 +1,1475 @@
+@prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix todo:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix vann:          <http://purl.org/vocab/vann/> .
+@prefix skos:          <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:          <http://www.w3.org/2006/time#> .
+@prefix wgs:           <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geonames:      <http://www.geonames.org/ontology#> .
+@prefix geonamesid:    <http://sws.geonames.org/> .
+@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
+@prefix dbpedia:       <http://dbpedia.org/resource/> .
+@prefix con:           <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix muo:           <http://purl.oclc.org/NET/muo/muo#> .
+@prefix vs:            <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix frbr:          <http://purl.org/vocab/frbr/core#> .
+@prefix bibo:          <http://purl.org/ontology/bibo/> .
+@prefix doap:          <http://usefulinc.com/ns/doap#> .
+@prefix qb:            <http://purl.org/linked-data/cube#> .
+@prefix dgtwc:         <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix void:          <http://rdfs.org/ns/void#> .
+@prefix scovo:         <http://purl.org/NET/scovo#> .
+@prefix sioc:          <http://rdfs.org/sioc/ns#> .
+@prefix foaf:          <http://xmlns.com/foaf/0.1/> .
+@prefix ov:            <http://open.vocab.org/terms/> .
+@prefix conversion:    <http://purl.org/twc/vocab/conversion/> .
+@prefix :              <http://logd.tw.rpi.edu/source/dados-gov-br/dataset/catalog/version/2011-Oct-11/params/enhancement/1/> .
+
+<http://tw.rpi.edu/web/inside/machine/gemini#sym>
+   a foaf:OnlineAccount;
+   foaf:accountName "sym";
+   dcterms:isPartOf <http://tw.rpi.edu/web/inside/machine/gemini>;
+.
+
+#:a_bundle
+#   a conversion:ImplicitBundle;
+#   conversion:property_name "a_property"; # Can also be a URI, e.g. dcterms:title.
+#   #conversion:type_name     "My Class";   # Can also be a URI, e.g. foaf:Person.
+#.
+
+<http://logd.tw.rpi.edu/source/dados-gov-br/dataset/catalog/version/2011-Oct-11/conversion/enhancement/1>
+   a conversion:LayerDataset, void:Dataset;
+
+   conversion:base_uri           "http://logd.tw.rpi.edu"^^xsd:anyURI;
+   conversion:source_identifier  "dados-gov-br";
+   conversion:dataset_identifier "catalog";
+   conversion:version_identifier "2011-Oct-11";
+
+   a conversion:DatasetCatalog, conversion:MetaDataset;   #dataset catalog addition
+   dgtwc:catalog_title "Dados.gov.br (Brazil)" ;
+   dgtwc:catalog_homepage <http://dados.gov.br/dados/package> ;
+   dgtwc:catalog_country  dbpedia:Brazil ;
+
+
+   conversion:conversion_process [
+      a conversion:EnhancementConversionProcess;
+      conversion:enhancement_identifier "1";
+
+      dcterms:creator <http://tw.rpi.edu/web/inside/machine/gemini#sym>;
+      dcterms:created "2011-11-02T19:37:38-04:00"^^xsd:dateTime;
+
+      conversion:delimits_cell ",";
+      #conversion:delimits_cell "	"; # tab
+      #conversion:delimits_cell "|";   # pipe
+      #conversion:delimits_cell ",";   # comma
+
+      #conversion:interpret [
+      #   conversion:symbol        "";
+      #   conversion:interpretation conversion:null; 
+      #];
+      #conversion:enhance [
+      #   conversion:domain_template "tool_[r]";
+      #   conversion:domain_name     "Tool";
+      #];
+      #conversion:enhance [
+      #   conversion:class_name "Tool";
+      #   conversion:subclass_of <http://purl.org/...>;
+      #];
+      
+      conversion:enhance [
+      #  conversion:domain_template "dataset_[r]";
+         conversion:domain_name     "Dataset";
+      ];
+      conversion:enhance [
+         conversion:class_name "Dataset";
+         conversion:subclass_of conversion:CatalogedDataset; 
+      ];
+      
+      
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_title;
+         conversion:object    "Dados.gov.br (Brazil)" ; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_subtitle;
+         conversion:object    ""; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_homepage;
+         conversion:object    <http://dados.gov.br/dados/package> ;
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_country;
+         conversion:object    dbpedia:Brazil ; 
+      ];
+      
+      
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:category;
+         conversion:object    "n/a"; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:categories;
+         conversion:object    "n/a"; 
+      ];
+      
+      
+      conversion:enhance [
+         ov:csvCol          1;
+         ov:csvHeader       "Title";
+         #conversion:label   "Title";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dcterms:title;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          2;
+         ov:csvHeader       "url";
+         #conversion:label   "url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:range  rdfs:Resource;		
+         conversion:subproperty_of foaf:homepage;	#dataset catalog addition
+         conversion:interpret [          
+            conversion:symbol        "";
+            conversion:interpretation conversion:null; 
+         ];                            
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          3;
+         ov:csvHeader       "Format";
+         #conversion:label   "Format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          4;
+         ov:csvHeader       "Openness";
+         #conversion:label   "Openness";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          5;
+         ov:csvHeader       "Short_desc";
+         #conversion:label   "Short_desc";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          6;
+         ov:csvHeader       "Fonte";
+         #conversion:label   "Fonte";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          7;
+         ov:csvHeader       "Notes";
+         #conversion:label   "Notes";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dcterms:description;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          8;
+         ov:csvHeader       "Descrição_1";
+         #conversion:label   "Descrição_1";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          9;
+         ov:csvHeader       "Descrição_1_URL";
+         #conversion:label   "Descrição_1_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          10;
+         ov:csvHeader       "Formato_1";
+         #conversion:label   "Formato_1";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          11;
+         ov:csvHeader       "Descrição_2";
+         #conversion:label   "Descrição_2";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          12;
+         ov:csvHeader       "Descrição_2_URL";
+         #conversion:label   "Descrição_2_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          13;
+         ov:csvHeader       "Formato_2";
+         #conversion:label   "Formato_2";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          14;
+         ov:csvHeader       "Descrição_3";
+         #conversion:label   "Descrição_3";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          15;
+         ov:csvHeader       "Descrição_3_URL";
+         #conversion:label   "Descrição_3_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          16;
+         ov:csvHeader       "Formato_3";
+         #conversion:label   "Formato_3";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          17;
+         ov:csvHeader       "Descrição_4";
+         #conversion:label   "Descrição_4";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          18;
+         ov:csvHeader       "Descrição_4_URL";
+         #conversion:label   "Descrição_4_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          19;
+         ov:csvHeader       "Formato_4";
+         #conversion:label   "Formato_4";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          20;
+         ov:csvHeader       "Descrição_5";
+         #conversion:label   "Descrição_5";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          21;
+         ov:csvHeader       "Descrição_5_URL";
+         #conversion:label   "Descrição_5_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          22;
+         ov:csvHeader       "Formato_5";
+         #conversion:label   "Formato_5";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          23;
+         ov:csvHeader       "Descrição_6";
+         #conversion:label   "Descrição_6";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          24;
+         ov:csvHeader       "Descrição_6_URL";
+         #conversion:label   "Descrição_6_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          25;
+         ov:csvHeader       "Formato_6";
+         #conversion:label   "Formato_6";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          26;
+         ov:csvHeader       "Descrição_7";
+         #conversion:label   "Descrição_7";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          27;
+         ov:csvHeader       "Descrição_7_URL";
+         #conversion:label   "Descrição_7_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          28;
+         ov:csvHeader       "Formato_7";
+         #conversion:label   "Formato_7";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          29;
+         ov:csvHeader       "Descrição_8";
+         #conversion:label   "Descrição_8";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          30;
+         ov:csvHeader       "Descrição_8_URL";
+         #conversion:label   "Descrição_8_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          31;
+         ov:csvHeader       "Formato_8";
+         #conversion:label   "Formato_8";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          32;
+         ov:csvHeader       "Descrição_9";
+         #conversion:label   "Descrição_9";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          33;
+         ov:csvHeader       "Descrição_9_URL";
+         #conversion:label   "Descrição_9_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          34;
+         ov:csvHeader       "Formato_9";
+         #conversion:label   "Formato_9";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          35;
+         ov:csvHeader       "Descrição_10";
+         #conversion:label   "Descrição_10";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          36;
+         ov:csvHeader       "Descrição_10_URL";
+         #conversion:label   "Descrição_10_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          37;
+         ov:csvHeader       "Formato_10";
+         #conversion:label   "Formato_10";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          38;
+         ov:csvHeader       "Descrição_11";
+         #conversion:label   "Descrição_11";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          39;
+         ov:csvHeader       "Descrição_11_URL";
+         #conversion:label   "Descrição_11_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          40;
+         ov:csvHeader       "Formato_11";
+         #conversion:label   "Formato_11";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          41;
+         ov:csvHeader       "Descrição_12";
+         #conversion:label   "Descrição_12";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          42;
+         ov:csvHeader       "Descrição_12_URL";
+         #conversion:label   "Descrição_12_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          43;
+         ov:csvHeader       "Formato_12";
+         #conversion:label   "Formato_12";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          44;
+         ov:csvHeader       "Descrição_13";
+         #conversion:label   "Descrição_13";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          45;
+         ov:csvHeader       "Descrição_13_URL";
+         #conversion:label   "Descrição_13_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          46;
+         ov:csvHeader       "Formato_13";
+         #conversion:label   "Formato_13";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          47;
+         ov:csvHeader       "Descrição_14";
+         #conversion:label   "Descrição_14";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          48;
+         ov:csvHeader       "Descrição_14_URL";
+         #conversion:label   "Descrição_14_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          49;
+         ov:csvHeader       "Formato_14";
+         #conversion:label   "Formato_14";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          50;
+         ov:csvHeader       "Descrição_15";
+         #conversion:label   "Descrição_15";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          51;
+         ov:csvHeader       "Descrição_15_URL";
+         #conversion:label   "Descrição_15_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          52;
+         ov:csvHeader       "Formato_15";
+         #conversion:label   "Formato_15";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          53;
+         ov:csvHeader       "Descrição_16";
+         #conversion:label   "Descrição_16";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          54;
+         ov:csvHeader       "Descrição_16_URL";
+         #conversion:label   "Descrição_16_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          55;
+         ov:csvHeader       "Formato_16";
+         #conversion:label   "Formato_16";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          56;
+         ov:csvHeader       "Descrição_17";
+         #conversion:label   "Descrição_17";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          57;
+         ov:csvHeader       "Descrição_17_URL";
+         #conversion:label   "Descrição_17_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          58;
+         ov:csvHeader       "Formato_17";
+         #conversion:label   "Formato_17";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          59;
+         ov:csvHeader       "Descrição_18";
+         #conversion:label   "Descrição_18";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          60;
+         ov:csvHeader       "Descrição_18_URL";
+         #conversion:label   "Descrição_18_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          61;
+         ov:csvHeader       "Formato_18";
+         #conversion:label   "Formato_18";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          62;
+         ov:csvHeader       "Descrição_19";
+         #conversion:label   "Descrição_19";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          63;
+         ov:csvHeader       "Descrição_19_URL";
+         #conversion:label   "Descrição_19_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          64;
+         ov:csvHeader       "Formato_19";
+         #conversion:label   "Formato_19";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          65;
+         ov:csvHeader       "Descrição_20";
+         #conversion:label   "Descrição_20";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          66;
+         ov:csvHeader       "Descrição_20_URL";
+         #conversion:label   "Descrição_20_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          67;
+         ov:csvHeader       "Formato_20";
+         #conversion:label   "Formato_20";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          68;
+         ov:csvHeader       "Descrição_21";
+         #conversion:label   "Descrição_21";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          69;
+         ov:csvHeader       "Descrição_21_URL";
+         #conversion:label   "Descrição_21_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          70;
+         ov:csvHeader       "Formato_21";
+         #conversion:label   "Formato_21";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          71;
+         ov:csvHeader       "Descrição_22";
+         #conversion:label   "Descrição_22";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          72;
+         ov:csvHeader       "Descrição_22_URL";
+         #conversion:label   "Descrição_22_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          73;
+         ov:csvHeader       "Formato_22";
+         #conversion:label   "Formato_22";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          74;
+         ov:csvHeader       "Descrição_23";
+         #conversion:label   "Descrição_23";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          75;
+         ov:csvHeader       "Descrição_23_URL";
+         #conversion:label   "Descrição_23_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          76;
+         ov:csvHeader       "Formato_23";
+         #conversion:label   "Formato_23";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          77;
+         ov:csvHeader       "Descrição_24";
+         #conversion:label   "Descrição_24";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          78;
+         ov:csvHeader       "Descrição_24_URL";
+         #conversion:label   "Descrição_24_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          79;
+         ov:csvHeader       "Formato_24";
+         #conversion:label   "Formato_24";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          80;
+         ov:csvHeader       "Descrição_25";
+         #conversion:label   "Descrição_25";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          81;
+         ov:csvHeader       "Descrição_25_URL";
+         #conversion:label   "Descrição_25_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          82;
+         ov:csvHeader       "Formato_25";
+         #conversion:label   "Formato_25";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          83;
+         ov:csvHeader       "Descrição_26";
+         #conversion:label   "Descrição_26";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          84;
+         ov:csvHeader       "Descrição_26_URL";
+         #conversion:label   "Descrição_26_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          85;
+         ov:csvHeader       "Formato_26";
+         #conversion:label   "Formato_26";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          86;
+         ov:csvHeader       "Descrição_27";
+         #conversion:label   "Descrição_27";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          87;
+         ov:csvHeader       "Descrição_27_URL";
+         #conversion:label   "Descrição_27_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          88;
+         ov:csvHeader       "Formato_27";
+         #conversion:label   "Formato_27";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          89;
+         ov:csvHeader       "Descrição_28";
+         #conversion:label   "Descrição_28";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          90;
+         ov:csvHeader       "Descrição_28_URL";
+         #conversion:label   "Descrição_28_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          91;
+         ov:csvHeader       "Formato_28";
+         #conversion:label   "Formato_28";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          92;
+         ov:csvHeader       "Descrição_29";
+         #conversion:label   "Descrição_29";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          93;
+         ov:csvHeader       "Descrição_29_URL";
+         #conversion:label   "Descrição_29_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          94;
+         ov:csvHeader       "Formato_29";
+         #conversion:label   "Formato_29";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          95;
+         ov:csvHeader       "Descrição_30";
+         #conversion:label   "Descrição_30";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          96;
+         ov:csvHeader       "Descrição_30_URL";
+         #conversion:label   "Descrição_30_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          97;
+         ov:csvHeader       "Formato_30";
+         #conversion:label   "Formato_30";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          98;
+         ov:csvHeader       "Descrição_31";
+         #conversion:label   "Descrição_31";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          99;
+         ov:csvHeader       "Descrição_31_URL";
+         #conversion:label   "Descrição_31_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          100;
+         ov:csvHeader       "Formato_31";
+         #conversion:label   "Formato_31";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          101;
+         ov:csvHeader       "Descrição_32";
+         #conversion:label   "Descrição_32";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          102;
+         ov:csvHeader       "Descrição_32_URL";
+         #conversion:label   "Descrição_32_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          103;
+         ov:csvHeader       "Formato_32";
+         #conversion:label   "Formato_32";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          104;
+         ov:csvHeader       "Descrição_33";
+         #conversion:label   "Descrição_33";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          105;
+         ov:csvHeader       "Descrição_33_URL";
+         #conversion:label   "Descrição_33_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          106;
+         ov:csvHeader       "Formato_33";
+         #conversion:label   "Formato_33";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          107;
+         ov:csvHeader       "Descrição_34";
+         #conversion:label   "Descrição_34";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          108;
+         ov:csvHeader       "Descrição_34_URL";
+         #conversion:label   "Descrição_34_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          109;
+         ov:csvHeader       "Formato_34";
+         #conversion:label   "Formato_34";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          110;
+         ov:csvHeader       "Descrição_35";
+         #conversion:label   "Descrição_35";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          111;
+         ov:csvHeader       "Descrição_35_URL";
+         #conversion:label   "Descrição_35_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          112;
+         ov:csvHeader       "Formato_35";
+         #conversion:label   "Formato_35";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          113;
+         ov:csvHeader       "Descrição_36";
+         #conversion:label   "Descrição_36";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          114;
+         ov:csvHeader       "Descrição_36_URL";
+         #conversion:label   "Descrição_36_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          115;
+         ov:csvHeader       "Formato_36";
+         #conversion:label   "Formato_36";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          116;
+         ov:csvHeader       "Descrição_37";
+         #conversion:label   "Descrição_37";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          117;
+         ov:csvHeader       "Descrição_37_URL";
+         #conversion:label   "Descrição_37_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          118;
+         ov:csvHeader       "Formato_37";
+         #conversion:label   "Formato_37";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          119;
+         ov:csvHeader       "Descrição_38";
+         #conversion:label   "Descrição_38";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          120;
+         ov:csvHeader       "Descrição_38_URL";
+         #conversion:label   "Descrição_38_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          121;
+         ov:csvHeader       "Formato_38";
+         #conversion:label   "Formato_38";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          122;
+         ov:csvHeader       "Descrição_39";
+         #conversion:label   "Descrição_39";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          123;
+         ov:csvHeader       "Descrição_39_URL";
+         #conversion:label   "Descrição_39_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          124;
+         ov:csvHeader       "Formato_39";
+         #conversion:label   "Formato_39";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          125;
+         ov:csvHeader       "Descrição_40";
+         #conversion:label   "Descrição_40";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          126;
+         ov:csvHeader       "Descrição_40_URL";
+         #conversion:label   "Descrição_40_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          127;
+         ov:csvHeader       "Formato_40";
+         #conversion:label   "Formato_40";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          128;
+         ov:csvHeader       "Descrição_41";
+         #conversion:label   "Descrição_41";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          129;
+         ov:csvHeader       "Descrição_41_URL";
+         #conversion:label   "Descrição_41_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          130;
+         ov:csvHeader       "Formato_41";
+         #conversion:label   "Formato_41";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          131;
+         ov:csvHeader       "Descrição_42";
+         #conversion:label   "Descrição_42";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          132;
+         ov:csvHeader       "Descrição_42_URL";
+         #conversion:label   "Descrição_42_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          133;
+         ov:csvHeader       "Formato_42";
+         #conversion:label   "Formato_42";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          134;
+         ov:csvHeader       "Descrição_43";
+         #conversion:label   "Descrição_43";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          135;
+         ov:csvHeader       "Descrição_43_URL";
+         #conversion:label   "Descrição_43_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          136;
+         ov:csvHeader       "Formato_43";
+         #conversion:label   "Formato_43";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          137;
+         ov:csvHeader       "Descrição_44";
+         #conversion:label   "Descrição_44";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          138;
+         ov:csvHeader       "Descrição_44_URL";
+         #conversion:label   "Descrição_44_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          139;
+         ov:csvHeader       "Formato_44";
+         #conversion:label   "Formato_44";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          140;
+         ov:csvHeader       "Descrição_45";
+         #conversion:label   "Descrição_45";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          141;
+         ov:csvHeader       "Descrição_45_URL";
+         #conversion:label   "Descrição_45_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          142;
+         ov:csvHeader       "Formato_45";
+         #conversion:label   "Formato_45";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          143;
+         ov:csvHeader       "Descrição_46";
+         #conversion:label   "Descrição_46";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          144;
+         ov:csvHeader       "Descrição_46_URL";
+         #conversion:label   "Descrição_46_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          145;
+         ov:csvHeader       "Formato_46";
+         #conversion:label   "Formato_46";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          146;
+         ov:csvHeader       "Descrição_47";
+         #conversion:label   "Descrição_47";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          147;
+         ov:csvHeader       "Descrição_47_URL";
+         #conversion:label   "Descrição_47_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          148;
+         ov:csvHeader       "Formato_47";
+         #conversion:label   "Formato_47";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          149;
+         ov:csvHeader       "Descrição_48";
+         #conversion:label   "Descrição_48";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          150;
+         ov:csvHeader       "Descrição_48_URL";
+         #conversion:label   "Descrição_48_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          151;
+         ov:csvHeader       "Formato_48";
+         #conversion:label   "Formato_48";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          152;
+         ov:csvHeader       "Descrição_49";
+         #conversion:label   "Descrição_49";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          153;
+         ov:csvHeader       "Descrição_49_URL";
+         #conversion:label   "Descrição_49_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          154;
+         ov:csvHeader       "Formato_49";
+         #conversion:label   "Formato_49";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          155;
+         ov:csvHeader       "Descrição_50";
+         #conversion:label   "Descrição_50";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          156;
+         ov:csvHeader       "Descrição_50_URL";
+         #conversion:label   "Descrição_50_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          157;
+         ov:csvHeader       "Formato_50";
+         #conversion:label   "Formato_50";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          158;
+         ov:csvHeader       "Descrição_51";
+         #conversion:label   "Descrição_51";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          159;
+         ov:csvHeader       "Descrição_51_URL";
+         #conversion:label   "Descrição_51_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          160;
+         ov:csvHeader       "Formato_51";
+         #conversion:label   "Formato_51";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          161;
+         ov:csvHeader       "Descrição_52";
+         #conversion:label   "Descrição_52";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          162;
+         ov:csvHeader       "Descrição_52_URL";
+         #conversion:label   "Descrição_52_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          163;
+         ov:csvHeader       "Formato_52";
+         #conversion:label   "Formato_52";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          164;
+         ov:csvHeader       "Descrição_53";
+         #conversion:label   "Descrição_53";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          165;
+         ov:csvHeader       "Descrição_53_URL";
+         #conversion:label   "Descrição_53_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          166;
+         ov:csvHeader       "Formato_53";
+         #conversion:label   "Formato_53";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          167;
+         ov:csvHeader       "Descrição_54";
+         #conversion:label   "Descrição_54";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          168;
+         ov:csvHeader       "Descrição_54_URL";
+         #conversion:label   "Descrição_54_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          169;
+         ov:csvHeader       "Formato_54";
+         #conversion:label   "Formato_54";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          170;
+         ov:csvHeader       "Descrição_55";
+         #conversion:label   "Descrição_55";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          171;
+         ov:csvHeader       "Descrição_55_URL";
+         #conversion:label   "Descrição_55_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          172;
+         ov:csvHeader       "Formato_55";
+         #conversion:label   "Formato_55";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          173;
+         ov:csvHeader       "Descrição_56";
+         #conversion:label   "Descrição_56";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          174;
+         ov:csvHeader       "Descrição_56_URL";
+         #conversion:label   "Descrição_56_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          175;
+         ov:csvHeader       "Formato_56";
+         #conversion:label   "Formato_56";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          176;
+         ov:csvHeader       "Descrição_57";
+         #conversion:label   "Descrição_57";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          177;
+         ov:csvHeader       "Descrição_57_URL";
+         #conversion:label   "Descrição_57_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          178;
+         ov:csvHeader       "Formato_57";
+         #conversion:label   "Formato_57";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          179;
+         ov:csvHeader       "Descrição_58";
+         #conversion:label   "Descrição_58";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          180;
+         ov:csvHeader       "Descrição_58_URL";
+         #conversion:label   "Descrição_58_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          181;
+         ov:csvHeader       "Formato_58";
+         #conversion:label   "Formato_58";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          182;
+         ov:csvHeader       "Author";
+         #conversion:label   "Author";
+         conversion:comment "";
+                  
+         conversion:range  rdfs:Resource;
+         conversion:subproperty_of dgtwc:agency ;	#dataset catalog addition
+         conversion:subproperty_of dcterms:contributor;
+         conversion:interpret [          
+            conversion:symbol        "";
+            conversion:interpretation conversion:null; 
+         ];                            
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          183;
+         ov:csvHeader       "Maintainer";
+         #conversion:label   "Maintainer";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          184;
+         ov:csvHeader       "Version";
+         #conversion:label   "Version";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          185;
+         ov:csvHeader       "Licença";
+         #conversion:label   "Licença";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          186;
+         ov:csvHeader       "Tags";
+         #conversion:label   "Tags";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dgtwc:keywords;
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         conversion:object_search [
+            conversion:regex     "\\s*([^,]+)";
+            conversion:predicate dcterms:subject;
+            conversion:object    "[>\\1<]";
+         ]; # https://github.com/timrdf/csv2rdf4lod-automation/wiki/conversion:object_search
+         
+      ];
+      #conversion:enhance [            
+      #   ov:csvRow 3,4,5;             
+      #   a conversion:ExampleResource;
+      #];                              
+   ];
+.

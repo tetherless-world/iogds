@@ -1,0 +1,213 @@
+@prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix todo:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix vann:          <http://purl.org/vocab/vann/> .
+@prefix skos:          <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:          <http://www.w3.org/2006/time#> .
+@prefix wgs:           <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geonames:      <http://www.geonames.org/ontology#> .
+@prefix geonamesid:    <http://sws.geonames.org/> .
+@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
+@prefix dbpedia:       <http://dbpedia.org/resource/> .
+@prefix dbpediaprop:   <http://dbpedia.org/property/> .
+@prefix dbpediaowl:    <http://dbpedia.org/ontology/> .
+@prefix con:           <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix muo:           <http://purl.oclc.org/NET/muo/muo#> .
+@prefix vs:            <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix frbr:          <http://purl.org/vocab/frbr/core#> .
+@prefix bibo:          <http://purl.org/ontology/bibo/> .
+@prefix doap:          <http://usefulinc.com/ns/doap#> .
+@prefix qb:            <http://purl.org/linked-data/cube#> .
+@prefix dgtwc:         <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix void:          <http://rdfs.org/ns/void#> .
+@prefix scovo:         <http://purl.org/NET/scovo#> .
+@prefix sioc:          <http://rdfs.org/sioc/ns#> .
+@prefix foaf:          <http://xmlns.com/foaf/0.1/> .
+@prefix ov:            <http://open.vocab.org/terms/> .
+@prefix conversion:    <http://purl.org/twc/vocab/conversion/> .
+@prefix :              <http://logd.tw.rpi.edu/source/geogratis-gc-ca/dataset/catalog/version/2012-Jun-08/params/enhancement/1/> .
+
+# added by Yongmei for dgtwc:agency
+@prefix value_of_agency: <http://logd.tw.rpi.edu/source/geogratis-gc-ca/dataset/catalog/value-of/agency/> .
+
+<http://tw.rpi.edu/web/inside/machine/gemini#Bassem>
+   a foaf:OnlineAccount;
+   foaf:accountName "Bassem";
+   dcterms:isPartOf <http://tw.rpi.edu/web/inside/machine/gemini>;
+.
+
+#:a_bundle
+#   a conversion:ImplicitBundle;
+#   conversion:property_name "a_property"; # Can also be a URI, e.g. dcterms:title.
+#   #conversion:type_name     "My Class";   # Can also be a URI, e.g. foaf:Person.
+#.
+
+# added by Yongmei
+value_of_agency:Natural_Resources_Canada dcterms:identifier "Natural Resources Canada" ;
+        rdfs:label "Natural Resources Canada" .
+
+<http://logd.tw.rpi.edu/source/geogratis-gc-ca/dataset/catalog/version/2012-Jun-08/conversion/enhancement/1>
+   a conversion:LayerDataset, void:Dataset;
+
+   conversion:base_uri           "http://logd.tw.rpi.edu"^^xsd:anyURI;
+   conversion:source_identifier  "geogratis-gc-ca";
+   conversion:dataset_identifier "catalog";
+   conversion:version_identifier "2012-Jun-08";
+   conversion:enhancement_identifier "1";
+   
+   a conversion:DatasetCatalog, conversion:MetaDataset;
+   dgtwc:catalog_title "geogratis.gc.ca (Canada)";
+   dgtwc:catalog_homepage <http://www.geogratis.gc.ca>;
+   dgtwc:catalog_country dbpedia:Canada;
+   dgtwc:catalog_subject "Geo data";
+   dgtwc:catalog_language "English", "French";
+
+
+   conversion:conversion_process [
+      a conversion:EnhancementConversionProcess;
+      conversion:enhancement_identifier "1";
+
+      dcterms:creator <http://tw.rpi.edu/web/inside/machine/gemini#Bassem>;
+      dcterms:created "2012-06-12T23:51:00-04:00"^^xsd:dateTime;
+
+      conversion:delimits_cell ",";
+      #conversion:delimits_cell "	"; # tab
+      #conversion:delimits_cell "|";   # pipe
+      #conversion:delimits_cell ",";   # comma
+
+      #conversion:interpret [
+      #   conversion:symbol        "";
+      #   conversion:interpretation conversion:null; 
+      #];
+      #conversion:enhance [
+      #   conversion:domain_template "thing_[r]";
+      #   conversion:domain_name     "Thing";
+      #];
+      #conversion:enhance [
+      #   conversion:class_name "Thing";
+      #   conversion:subclass_of <http://purl.org/...>;
+      #];
+conversion:enhance [
+      #  conversion:domain_template "dataset_[r]";
+         conversion:domain_name     "Dataset";
+      ];
+      conversion:enhance [
+         conversion:class_name "Dataset";
+         conversion:subclass_of conversion:CatalogedDataset; 
+      ];
+
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_subtitle;
+         conversion:object    ""; 
+      ];
+conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_title;
+         conversion:object    "geogratis.gc.ca (Canada)"; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_homepage;
+         conversion:object    <http://www.geogratis.gc.ca> ; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_country;
+         conversion:object    dbpedia:Canada ; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_subject;
+         conversion:object   "Geo data";
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_language;
+         conversion:object    "English", "French" ; 
+      ]; 
+
+
+      # added by Yongmei
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:agency;
+         conversion:object value_of_agency:Natural_Resources_Canada  ; 
+
+      ];
+ 
+#     this is wrong      
+#      conversion:enhance [
+#         a conversion:SubjectAnnotation;
+#         conversion:predicate dgtwc:agency;
+#         conversion:object    "Natural Resources Canada" ; 
+#      ];
+
+      conversion:enhance [
+         ov:csvCol          1;
+         ov:csvHeader       "id";
+         #conversion:label   "id";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+	conversion:equivalent_property dcterms:identifier
+      ];
+      conversion:enhance [
+         ov:csvCol          2;
+         ov:csvHeader       "title";
+         #conversion:label   "title";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+
+conversion:equivalent_property dcterms:title;
+	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+      ];
+      conversion:enhance [
+         ov:csvCol          3;
+         ov:csvHeader       "summary";
+         #conversion:label   "summary";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+	conversion:equivalent_property dcterms:description
+      ];
+      conversion:enhance [
+         ov:csvCol          4;
+         ov:csvHeader       "categoryList";
+         #conversion:label   "categoryList";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+	conversion:equivalent_property dgtwc:categories 
+      ];
+      conversion:enhance [
+         ov:csvCol          5;
+         ov:csvHeader       "bboxKML";
+         #conversion:label   "bboxKML";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          6;
+         ov:csvHeader       "bboxWKT";
+         #conversion:label   "bboxWKT";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          7;
+         ov:csvHeader       "metadataURL";
+         #conversion:label   "metadataURL";
+         conversion:comment "";
+         conversion:range  rdfs:Resource;
+      ];
+      #conversion:enhance [            
+      #   ov:csvRow 3,4,5;             
+      #   a conversion:ExampleResource;
+      #]; 
+   ];
+.

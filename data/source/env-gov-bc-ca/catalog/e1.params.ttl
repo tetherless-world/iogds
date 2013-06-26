@@ -1,0 +1,193 @@
+@prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix todo:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix vann:          <http://purl.org/vocab/vann/> .
+@prefix skos:          <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:          <http://www.w3.org/2006/time#> .
+@prefix wgs:           <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geonames:      <http://www.geonames.org/ontology#> .
+@prefix geonamesid:    <http://sws.geonames.org/> .
+@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
+@prefix dbpedia:       <http://dbpedia.org/resource/> .
+@prefix con:           <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix muo:           <http://purl.oclc.org/NET/muo/muo#> .
+@prefix vs:            <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix frbr:          <http://purl.org/vocab/frbr/core#> .
+@prefix dgtwc:         <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix void:          <http://rdfs.org/ns/void#> .
+@prefix scovo:         <http://purl.org/NET/scovo#> .
+@prefix sioc:          <http://rdfs.org/sioc/ns#> .
+@prefix foaf:          <http://xmlns.com/foaf/0.1/> .
+@prefix ov:            <http://open.vocab.org/terms/> .
+@prefix conversion:    <http://purl.org/twc/vocab/conversion/> .
+@prefix :              <http://logd.tw.rpi.edu/source/env-gov-bc-ca/dataset/catalog/version/2011-Jul-13/params/enhancement/1/> .
+
+<http://tw.rpi.edu/web/inside/machine/sam#sym>
+   a foaf:OnlineAccount;
+   foaf:accountName "sym";
+   dcterms:isPartOf <http://tw.rpi.edu/web/inside/machine/sam>;
+.
+
+#:a_bundle
+#   a conversion:ImplicitBundle;
+#   conversion:property_name "a_property"; # Can also be a URI, e.g. dcterms:title.
+#   #conversion:type_name     "My Class";   # Can also be a URI, e.g. foaf:Person.
+#.
+
+<http://logd.tw.rpi.edu/source/env-gov-bc-ca/dataset/catalog/version/2011-Jul-13/conversion/enhancement/1>
+   a conversion:LayerDataset, void:Dataset;
+
+   conversion:base_uri           "http://logd.tw.rpi.edu"^^xsd:anyURI;
+   conversion:source_identifier  "env-gov-bc-ca";
+   conversion:dataset_identifier "catalog";
+   conversion:version_identifier "2011-Jul-13";
+
+   a conversion:DatasetCatalog, conversion:MetaDataset;   #dataset catalog addition
+   dgtwc:catalog_title "Env.gov.bc.ca (British Columbia, Canada)" ;
+   dgtwc:catalog_homepage <http://www.env.gov.bc.ca/cas/data/> ;
+   dgtwc:catalog_country  dbpedia:Canada ;
+
+
+   conversion:conversion_process [
+      a conversion:EnhancementConversionProcess;
+      conversion:enhancement_identifier "1";
+      conversion:subject_discriminator  "env.gov.bc.ca";
+
+      dcterms:creator <http://tw.rpi.edu/web/inside/machine/sam#sym>;
+      dcterms:created "2011-07-14T11:45:07-04:00"^^xsd:dateTime;
+
+      conversion:delimits_cell ",";
+      #conversion:delimits_cell "	"; # tab
+      #conversion:delimits_cell "|";   # pipe
+      #conversion:delimits_cell ",";   # comma
+
+      #conversion:interpret [          
+      #   conversion:symbol        "";
+      #   conversion:interpretation conversion:null; 
+      #];                            
+      
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate rdf:type;
+         conversion:object    conversion:CatalogedDataset; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_subtitle;
+         conversion:object    ""; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_title;
+         conversion:object    "Env.gov.bc.ca (British Columbia, Canada)" ;
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_homepage;
+         conversion:object    <http://www.env.gov.bc.ca/cas/data/> ;
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_country;
+         conversion:object    dbpedia:Canada ; 
+      ];
+
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dcterms:description;
+         conversion:object    "n/a"; 
+      ];
+
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dcterms:subject;
+         conversion:object    "n/a"; 
+      ];
+      
+      
+      
+      conversion:enhance [
+         ov:csvCol          1;
+         ov:csvHeader       "Category";
+         #conversion:label   "Category";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dgtwc:category ;	#dataset catalog addition
+         conversion:subproperty_of dgtwc:categories;
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         conversion:interpret [
+            conversion:symbol "(none)";
+            conversion:interpretation "n/a";
+         ];                  
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          2;
+         ov:csvHeader       "Sub-topic";
+         #conversion:label   "Sub-topic";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          3;
+         ov:csvHeader       "Title";
+         #conversion:label   "Title";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dcterms:title;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          4;
+         ov:csvHeader       "Link";
+         #conversion:label   "Link";
+         conversion:comment "";
+                  
+         conversion:range  rdfs:Resource;		
+         conversion:subproperty_of foaf:homepage;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation conversion:null;
+         ];
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          5;
+         ov:csvHeader       "Agency";
+         #conversion:label   "Agency";
+         conversion:comment "";
+                 
+         conversion:range  rdfs:Resource;
+         conversion:subproperty_of dgtwc:agency ;	#dataset catalog addition
+         conversion:subproperty_of dcterms:contributor;
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation conversion:null;
+         ];
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          6;
+         ov:csvHeader       "Format";
+         #conversion:label   "Format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      #conversion:enhance [            
+      #   ov:csvRow 3,4,5;             
+      #   a conversion:ExampleResource;
+      #];                              
+   ];
+.

@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/daten-bremen-de/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "daten-bremen-de";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_9e4eb621-9945-4702-a70b-c3386340fbba;
+.
+
+:download_9e4eb621-9945-4702-a70b-c3386340fbba
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/daten-bremen-de/catalog/version/2012-Apr-11/manual/daten.bremen.de.csv>;
+.
+
+<dataset/9e4eb621-9945-4702-a70b-c3386340fbba>
+   a dcat:Dataset;
+   dcat:distribution :download_9e4eb621-9945-4702-a70b-c3386340fbba;
+.

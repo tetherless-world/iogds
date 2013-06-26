@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/mn-gov/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "mn-gov";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_0a03af63-d992-4786-b471-33f109c424f0;
+.
+
+:download_0a03af63-d992-4786-b471-33f109c424f0
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/mn-gov/catalog/version/2012-Feb-21/manual/mn.gov.csv>;
+.
+
+<dataset/0a03af63-d992-4786-b471-33f109c424f0>
+   a dcat:Dataset;
+   dcat:distribution :download_0a03af63-d992-4786-b471-33f109c424f0;
+.

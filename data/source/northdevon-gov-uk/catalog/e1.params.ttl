@@ -1,0 +1,1326 @@
+@prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix todo:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix vann:          <http://purl.org/vocab/vann/> .
+@prefix skos:          <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:          <http://www.w3.org/2006/time#> .
+@prefix wgs:           <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geonames:      <http://www.geonames.org/ontology#> .
+@prefix geonamesid:    <http://sws.geonames.org/> .
+@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
+@prefix dbpedia:       <http://dbpedia.org/resource/> .
+@prefix dbpediaprop:   <http://dbpedia.org/property/> .
+@prefix dbpediaowl:    <http://dbpedia.org/ontology/> .
+@prefix con:           <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix muo:           <http://purl.oclc.org/NET/muo/muo#> .
+@prefix vs:            <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix frbr:          <http://purl.org/vocab/frbr/core#> .
+@prefix bibo:          <http://purl.org/ontology/bibo/> .
+@prefix doap:          <http://usefulinc.com/ns/doap#> .
+@prefix qb:            <http://purl.org/linked-data/cube#> .
+@prefix dgtwc:         <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix void:          <http://rdfs.org/ns/void#> .
+@prefix scovo:         <http://purl.org/NET/scovo#> .
+@prefix sioc:          <http://rdfs.org/sioc/ns#> .
+@prefix foaf:          <http://xmlns.com/foaf/0.1/> .
+@prefix ov:            <http://open.vocab.org/terms/> .
+@prefix conversion:    <http://purl.org/twc/vocab/conversion/> .
+@prefix :              <http://logd.tw.rpi.edu/source/northdevon-gov-uk/dataset/catalog/version/2012-Jan-24/params/enhancement/1/> .
+
+<http://tw.rpi.edu/web/inside/machine/gemini#sym>
+   a foaf:OnlineAccount;
+   foaf:accountName "sym";
+   dcterms:isPartOf <http://tw.rpi.edu/web/inside/machine/gemini>;
+.
+
+#:a_bundle
+#   a conversion:ImplicitBundle;
+#   conversion:property_name "a_property"; # Can also be a URI, e.g. dcterms:title.
+#   #conversion:type_name     "My Class";   # Can also be a URI, e.g. foaf:Person.
+#.
+
+<http://logd.tw.rpi.edu/source/northdevon-gov-uk/dataset/catalog/version/2012-Jan-24/conversion/enhancement/1>
+   a conversion:LayerDataset, void:Dataset;
+
+   conversion:base_uri           "http://logd.tw.rpi.edu"^^xsd:anyURI;
+   conversion:source_identifier  "northdevon-gov-uk";
+   conversion:dataset_identifier "catalog";
+   conversion:version_identifier "2012-Jan-24";
+
+   a conversion:DatasetCatalog, conversion:MetaDataset;   #dataset catalog addition
+   dgtwc:catalog_title    "Northdevon.gov.uk (North Devon, United Kingdom)";
+   dgtwc:catalog_homepage <http://www.northdevon.gov.uk/index/lgcl_council_government_and_democracy/nonlgcl_open_data.htm> ;
+   dgtwc:catalog_country  dbpedia:United_Kingdom;
+   dgtwc:catalog_language       "English";
+
+
+   conversion:conversion_process [
+      a conversion:EnhancementConversionProcess;
+      conversion:enhancement_identifier "1";
+
+      dcterms:creator <http://tw.rpi.edu/web/inside/machine/gemini#sym>;
+      dcterms:created "2012-01-24T17:47:48-05:00"^^xsd:dateTime;
+
+      conversion:delimits_cell ",";
+      #conversion:delimits_cell "	"; # tab
+      #conversion:delimits_cell "|";   # pipe
+      #conversion:delimits_cell ",";   # comma
+
+      #conversion:interpret [
+      #   conversion:symbol        "";
+      #   conversion:interpretation conversion:null; 
+      #];
+      #conversion:enhance [
+      #   conversion:domain_template "thing_[r]";
+      #   conversion:domain_name     "Thing";
+      #];
+      #conversion:enhance [
+      #   conversion:class_name "Thing";
+      #   conversion:subclass_of <http://purl.org/...>;
+      #];
+
+
+      conversion:enhance [
+      #  conversion:domain_template "dataset_[r]";
+         conversion:domain_name     "Dataset";
+      ];
+      conversion:enhance [
+         conversion:class_name "Dataset";
+         conversion:subclass_of conversion:CatalogedDataset; 
+      ];
+      
+      
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_title;
+         conversion:object    "Northdevon.gov.uk (North Devon, United Kingdom)";
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_subtitle;
+         conversion:object    ""; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_homepage;
+         conversion:object    <http://www.northdevon.gov.uk/index/lgcl_council_government_and_democracy/nonlgcl_open_data.htm> ;
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_country;
+         conversion:object    dbpedia:United_Kingdom;
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_language;
+         conversion:object    "English" ; 
+      ];
+
+
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:category;
+         conversion:object    "n/a"; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:categories;
+         conversion:object    "n/a"; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dcterms:subject;
+         conversion:object    "n/a"; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:agency;
+         conversion:object    conversion:null; 
+      ];
+
+
+      conversion:enhance [
+         ov:csvCol          1;
+         ov:csvHeader       "Title";
+         #conversion:label   "Title";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+
+         conversion:subproperty_of dcterms:title;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+
+      ];
+      conversion:enhance [
+         ov:csvCol          2;
+         ov:csvHeader       "url";
+         #conversion:label   "url";
+         conversion:comment "";
+
+         conversion:range  rdfs:Resource;		
+         conversion:subproperty_of foaf:homepage;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol        "";
+            conversion:interpretation conversion:null; 
+         ];                            
+
+      ];
+      conversion:enhance [
+         ov:csvCol          3;
+         ov:csvHeader       "summary";
+         #conversion:label   "summary";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          4;
+         ov:csvHeader       "date";
+         #conversion:label   "date";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          5;
+         ov:csvHeader       "description";
+         #conversion:label   "description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+
+         conversion:subproperty_of dcterms:description;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+
+      ];
+      conversion:enhance [
+         ov:csvCol          6;
+         ov:csvHeader       "Download_title_1";
+         #conversion:label   "Download_title_1";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          7;
+         ov:csvHeader       "Download_url_1";
+         #conversion:label   "Download_url_1";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          8;
+         ov:csvHeader       "Download_format_1";
+         #conversion:label   "Download_format_1";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          9;
+         ov:csvHeader       "Download_size_1";
+         #conversion:label   "Download_size_1";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          10;
+         ov:csvHeader       "Download_title_2";
+         #conversion:label   "Download_title_2";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          11;
+         ov:csvHeader       "Download_url_2";
+         #conversion:label   "Download_url_2";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          12;
+         ov:csvHeader       "Download_format_2";
+         #conversion:label   "Download_format_2";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          13;
+         ov:csvHeader       "Download_size_2";
+         #conversion:label   "Download_size_2";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          14;
+         ov:csvHeader       "Download_title_3";
+         #conversion:label   "Download_title_3";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          15;
+         ov:csvHeader       "Download_url_3";
+         #conversion:label   "Download_url_3";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          16;
+         ov:csvHeader       "Download_format_3";
+         #conversion:label   "Download_format_3";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          17;
+         ov:csvHeader       "Download_size_3";
+         #conversion:label   "Download_size_3";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          18;
+         ov:csvHeader       "Download_title_4";
+         #conversion:label   "Download_title_4";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          19;
+         ov:csvHeader       "Download_url_4";
+         #conversion:label   "Download_url_4";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          20;
+         ov:csvHeader       "Download_format_4";
+         #conversion:label   "Download_format_4";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          21;
+         ov:csvHeader       "Download_size_4";
+         #conversion:label   "Download_size_4";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          22;
+         ov:csvHeader       "Download_title_5";
+         #conversion:label   "Download_title_5";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          23;
+         ov:csvHeader       "Download_url_5";
+         #conversion:label   "Download_url_5";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          24;
+         ov:csvHeader       "Download_format_5";
+         #conversion:label   "Download_format_5";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          25;
+         ov:csvHeader       "Download_size_5";
+         #conversion:label   "Download_size_5";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          26;
+         ov:csvHeader       "Download_title_6";
+         #conversion:label   "Download_title_6";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          27;
+         ov:csvHeader       "Download_url_6";
+         #conversion:label   "Download_url_6";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          28;
+         ov:csvHeader       "Download_format_6";
+         #conversion:label   "Download_format_6";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          29;
+         ov:csvHeader       "Download_size_6";
+         #conversion:label   "Download_size_6";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          30;
+         ov:csvHeader       "Download_title_7";
+         #conversion:label   "Download_title_7";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          31;
+         ov:csvHeader       "Download_url_7";
+         #conversion:label   "Download_url_7";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          32;
+         ov:csvHeader       "Download_format_7";
+         #conversion:label   "Download_format_7";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          33;
+         ov:csvHeader       "Download_size_7";
+         #conversion:label   "Download_size_7";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          34;
+         ov:csvHeader       "Download_title_8";
+         #conversion:label   "Download_title_8";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          35;
+         ov:csvHeader       "Download_url_8";
+         #conversion:label   "Download_url_8";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          36;
+         ov:csvHeader       "Download_format_8";
+         #conversion:label   "Download_format_8";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          37;
+         ov:csvHeader       "Download_size_8";
+         #conversion:label   "Download_size_8";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          38;
+         ov:csvHeader       "Download_title_9";
+         #conversion:label   "Download_title_9";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          39;
+         ov:csvHeader       "Download_url_9";
+         #conversion:label   "Download_url_9";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          40;
+         ov:csvHeader       "Download_format_9";
+         #conversion:label   "Download_format_9";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          41;
+         ov:csvHeader       "Download_size_9";
+         #conversion:label   "Download_size_9";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          42;
+         ov:csvHeader       "Download_title_10";
+         #conversion:label   "Download_title_10";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          43;
+         ov:csvHeader       "Download_url_10";
+         #conversion:label   "Download_url_10";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          44;
+         ov:csvHeader       "Download_format_10";
+         #conversion:label   "Download_format_10";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          45;
+         ov:csvHeader       "Download_size_10";
+         #conversion:label   "Download_size_10";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          46;
+         ov:csvHeader       "Download_title_11";
+         #conversion:label   "Download_title_11";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          47;
+         ov:csvHeader       "Download_url_11";
+         #conversion:label   "Download_url_11";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          48;
+         ov:csvHeader       "Download_format_11";
+         #conversion:label   "Download_format_11";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          49;
+         ov:csvHeader       "Download_size_11";
+         #conversion:label   "Download_size_11";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          50;
+         ov:csvHeader       "Download_title_12";
+         #conversion:label   "Download_title_12";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          51;
+         ov:csvHeader       "Download_url_12";
+         #conversion:label   "Download_url_12";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          52;
+         ov:csvHeader       "Download_format_12";
+         #conversion:label   "Download_format_12";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          53;
+         ov:csvHeader       "Download_size_12";
+         #conversion:label   "Download_size_12";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          54;
+         ov:csvHeader       "Download_title_13";
+         #conversion:label   "Download_title_13";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          55;
+         ov:csvHeader       "Download_url_13";
+         #conversion:label   "Download_url_13";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          56;
+         ov:csvHeader       "Download_format_13";
+         #conversion:label   "Download_format_13";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          57;
+         ov:csvHeader       "Download_size_13";
+         #conversion:label   "Download_size_13";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          58;
+         ov:csvHeader       "Download_title_14";
+         #conversion:label   "Download_title_14";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          59;
+         ov:csvHeader       "Download_url_14";
+         #conversion:label   "Download_url_14";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          60;
+         ov:csvHeader       "Download_format_14";
+         #conversion:label   "Download_format_14";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          61;
+         ov:csvHeader       "Download_size_14";
+         #conversion:label   "Download_size_14";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          62;
+         ov:csvHeader       "Download_title_15";
+         #conversion:label   "Download_title_15";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          63;
+         ov:csvHeader       "Download_url_15";
+         #conversion:label   "Download_url_15";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          64;
+         ov:csvHeader       "Download_format_15";
+         #conversion:label   "Download_format_15";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          65;
+         ov:csvHeader       "Download_size_15";
+         #conversion:label   "Download_size_15";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          66;
+         ov:csvHeader       "Download_title_16";
+         #conversion:label   "Download_title_16";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          67;
+         ov:csvHeader       "Download_url_16";
+         #conversion:label   "Download_url_16";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          68;
+         ov:csvHeader       "Download_format_16";
+         #conversion:label   "Download_format_16";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          69;
+         ov:csvHeader       "Download_size_16";
+         #conversion:label   "Download_size_16";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          70;
+         ov:csvHeader       "Download_title_17";
+         #conversion:label   "Download_title_17";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          71;
+         ov:csvHeader       "Download_url_17";
+         #conversion:label   "Download_url_17";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          72;
+         ov:csvHeader       "Download_format_17";
+         #conversion:label   "Download_format_17";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          73;
+         ov:csvHeader       "Download_size_17";
+         #conversion:label   "Download_size_17";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          74;
+         ov:csvHeader       "Download_title_18";
+         #conversion:label   "Download_title_18";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          75;
+         ov:csvHeader       "Download_url_18";
+         #conversion:label   "Download_url_18";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          76;
+         ov:csvHeader       "Download_format_18";
+         #conversion:label   "Download_format_18";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          77;
+         ov:csvHeader       "Download_size_18";
+         #conversion:label   "Download_size_18";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          78;
+         ov:csvHeader       "Download_title_19";
+         #conversion:label   "Download_title_19";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          79;
+         ov:csvHeader       "Download_url_19";
+         #conversion:label   "Download_url_19";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          80;
+         ov:csvHeader       "Download_format_19";
+         #conversion:label   "Download_format_19";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          81;
+         ov:csvHeader       "Download_size_19";
+         #conversion:label   "Download_size_19";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          82;
+         ov:csvHeader       "Download_title_20";
+         #conversion:label   "Download_title_20";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          83;
+         ov:csvHeader       "Download_url_20";
+         #conversion:label   "Download_url_20";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          84;
+         ov:csvHeader       "Download_format_20";
+         #conversion:label   "Download_format_20";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          85;
+         ov:csvHeader       "Download_size_20";
+         #conversion:label   "Download_size_20";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          86;
+         ov:csvHeader       "Download_title_21";
+         #conversion:label   "Download_title_21";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          87;
+         ov:csvHeader       "Download_url_21";
+         #conversion:label   "Download_url_21";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          88;
+         ov:csvHeader       "Download_format_21";
+         #conversion:label   "Download_format_21";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          89;
+         ov:csvHeader       "Download_size_21";
+         #conversion:label   "Download_size_21";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          90;
+         ov:csvHeader       "Download_title_22";
+         #conversion:label   "Download_title_22";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          91;
+         ov:csvHeader       "Download_url_22";
+         #conversion:label   "Download_url_22";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          92;
+         ov:csvHeader       "Download_format_22";
+         #conversion:label   "Download_format_22";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          93;
+         ov:csvHeader       "Download_size_22";
+         #conversion:label   "Download_size_22";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          94;
+         ov:csvHeader       "Download_title_23";
+         #conversion:label   "Download_title_23";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          95;
+         ov:csvHeader       "Download_url_23";
+         #conversion:label   "Download_url_23";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          96;
+         ov:csvHeader       "Download_format_23";
+         #conversion:label   "Download_format_23";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          97;
+         ov:csvHeader       "Download_size_23";
+         #conversion:label   "Download_size_23";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          98;
+         ov:csvHeader       "Download_title_24";
+         #conversion:label   "Download_title_24";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          99;
+         ov:csvHeader       "Download_url_24";
+         #conversion:label   "Download_url_24";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          100;
+         ov:csvHeader       "Download_format_24";
+         #conversion:label   "Download_format_24";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          101;
+         ov:csvHeader       "Download_size_24";
+         #conversion:label   "Download_size_24";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          102;
+         ov:csvHeader       "Download_title_25";
+         #conversion:label   "Download_title_25";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          103;
+         ov:csvHeader       "Download_url_25";
+         #conversion:label   "Download_url_25";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          104;
+         ov:csvHeader       "Download_format_25";
+         #conversion:label   "Download_format_25";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          105;
+         ov:csvHeader       "Download_size_25";
+         #conversion:label   "Download_size_25";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          106;
+         ov:csvHeader       "Download_title_26";
+         #conversion:label   "Download_title_26";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          107;
+         ov:csvHeader       "Download_url_26";
+         #conversion:label   "Download_url_26";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          108;
+         ov:csvHeader       "Download_format_26";
+         #conversion:label   "Download_format_26";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          109;
+         ov:csvHeader       "Download_size_26";
+         #conversion:label   "Download_size_26";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          110;
+         ov:csvHeader       "Download_title_27";
+         #conversion:label   "Download_title_27";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          111;
+         ov:csvHeader       "Download_url_27";
+         #conversion:label   "Download_url_27";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          112;
+         ov:csvHeader       "Download_format_27";
+         #conversion:label   "Download_format_27";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          113;
+         ov:csvHeader       "Download_size_27";
+         #conversion:label   "Download_size_27";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          114;
+         ov:csvHeader       "Download_title_28";
+         #conversion:label   "Download_title_28";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          115;
+         ov:csvHeader       "Download_url_28";
+         #conversion:label   "Download_url_28";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          116;
+         ov:csvHeader       "Download_format_28";
+         #conversion:label   "Download_format_28";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          117;
+         ov:csvHeader       "Download_size_28";
+         #conversion:label   "Download_size_28";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          118;
+         ov:csvHeader       "Download_title_29";
+         #conversion:label   "Download_title_29";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          119;
+         ov:csvHeader       "Download_url_29";
+         #conversion:label   "Download_url_29";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          120;
+         ov:csvHeader       "Download_format_29";
+         #conversion:label   "Download_format_29";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          121;
+         ov:csvHeader       "Download_size_29";
+         #conversion:label   "Download_size_29";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          122;
+         ov:csvHeader       "Download_title_30";
+         #conversion:label   "Download_title_30";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          123;
+         ov:csvHeader       "Download_url_30";
+         #conversion:label   "Download_url_30";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          124;
+         ov:csvHeader       "Download_format_30";
+         #conversion:label   "Download_format_30";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          125;
+         ov:csvHeader       "Download_size_30";
+         #conversion:label   "Download_size_30";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          126;
+         ov:csvHeader       "Download_title_31";
+         #conversion:label   "Download_title_31";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          127;
+         ov:csvHeader       "Download_url_31";
+         #conversion:label   "Download_url_31";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          128;
+         ov:csvHeader       "Download_format_31";
+         #conversion:label   "Download_format_31";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          129;
+         ov:csvHeader       "Download_size_31";
+         #conversion:label   "Download_size_31";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          130;
+         ov:csvHeader       "Download_title_32";
+         #conversion:label   "Download_title_32";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          131;
+         ov:csvHeader       "Download_url_32";
+         #conversion:label   "Download_url_32";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          132;
+         ov:csvHeader       "Download_format_32";
+         #conversion:label   "Download_format_32";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          133;
+         ov:csvHeader       "Download_size_32";
+         #conversion:label   "Download_size_32";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          134;
+         ov:csvHeader       "Download_title_33";
+         #conversion:label   "Download_title_33";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          135;
+         ov:csvHeader       "Download_url_33";
+         #conversion:label   "Download_url_33";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          136;
+         ov:csvHeader       "Download_format_33";
+         #conversion:label   "Download_format_33";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          137;
+         ov:csvHeader       "Download_size_33";
+         #conversion:label   "Download_size_33";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          138;
+         ov:csvHeader       "Download_title_34";
+         #conversion:label   "Download_title_34";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          139;
+         ov:csvHeader       "Download_url_34";
+         #conversion:label   "Download_url_34";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          140;
+         ov:csvHeader       "Download_format_34";
+         #conversion:label   "Download_format_34";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          141;
+         ov:csvHeader       "Download_size_34";
+         #conversion:label   "Download_size_34";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          142;
+         ov:csvHeader       "Download_title_35";
+         #conversion:label   "Download_title_35";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          143;
+         ov:csvHeader       "Download_url_35";
+         #conversion:label   "Download_url_35";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          144;
+         ov:csvHeader       "Download_format_35";
+         #conversion:label   "Download_format_35";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          145;
+         ov:csvHeader       "Download_size_35";
+         #conversion:label   "Download_size_35";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          146;
+         ov:csvHeader       "Download_title_36";
+         #conversion:label   "Download_title_36";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          147;
+         ov:csvHeader       "Download_url_36";
+         #conversion:label   "Download_url_36";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          148;
+         ov:csvHeader       "Download_format_36";
+         #conversion:label   "Download_format_36";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          149;
+         ov:csvHeader       "Download_size_36";
+         #conversion:label   "Download_size_36";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          150;
+         ov:csvHeader       "Download_title_37";
+         #conversion:label   "Download_title_37";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          151;
+         ov:csvHeader       "Download_url_37";
+         #conversion:label   "Download_url_37";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          152;
+         ov:csvHeader       "Download_format_37";
+         #conversion:label   "Download_format_37";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          153;
+         ov:csvHeader       "Download_size_37";
+         #conversion:label   "Download_size_37";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          154;
+         ov:csvHeader       "Download_title_38";
+         #conversion:label   "Download_title_38";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          155;
+         ov:csvHeader       "Download_url_38";
+         #conversion:label   "Download_url_38";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          156;
+         ov:csvHeader       "Download_format_38";
+         #conversion:label   "Download_format_38";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          157;
+         ov:csvHeader       "Download_size_38";
+         #conversion:label   "Download_size_38";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          158;
+         ov:csvHeader       "Download_title_39";
+         #conversion:label   "Download_title_39";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          159;
+         ov:csvHeader       "Download_url_39";
+         #conversion:label   "Download_url_39";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          160;
+         ov:csvHeader       "Download_format_39";
+         #conversion:label   "Download_format_39";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          161;
+         ov:csvHeader       "Download_size_39";
+         #conversion:label   "Download_size_39";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          162;
+         ov:csvHeader       "Download_title_40";
+         #conversion:label   "Download_title_40";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          163;
+         ov:csvHeader       "Download_url_40";
+         #conversion:label   "Download_url_40";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          164;
+         ov:csvHeader       "Download_format_40";
+         #conversion:label   "Download_format_40";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          165;
+         ov:csvHeader       "Download_size_40";
+         #conversion:label   "Download_size_40";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      #conversion:enhance [            
+      #   ov:csvRow 3,4,5;             
+      #   a conversion:ExampleResource;
+      #];                              
+   ];
+.

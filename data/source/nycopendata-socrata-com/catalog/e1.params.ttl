@@ -1,0 +1,764 @@
+@prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix todo:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix vann:          <http://purl.org/vocab/vann/> .
+@prefix skos:          <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:          <http://www.w3.org/2006/time#> .
+@prefix wgs:           <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geonames:      <http://www.geonames.org/ontology#> .
+@prefix geonamesid:    <http://sws.geonames.org/> .
+@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
+@prefix dbpedia:       <http://dbpedia.org/resource/> .
+@prefix con:           <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix muo:           <http://purl.oclc.org/NET/muo/muo#> .
+@prefix vs:            <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix frbr:          <http://purl.org/vocab/frbr/core#> .
+@prefix bibo:          <http://purl.org/ontology/bibo/> .
+@prefix doap:          <http://usefulinc.com/ns/doap#> .
+@prefix qb:            <http://purl.org/linked-data/cube#> .
+@prefix dgtwc:         <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix void:          <http://rdfs.org/ns/void#> .
+@prefix scovo:         <http://purl.org/NET/scovo#> .
+@prefix sioc:          <http://rdfs.org/sioc/ns#> .
+@prefix foaf:          <http://xmlns.com/foaf/0.1/> .
+@prefix ov:            <http://open.vocab.org/terms/> .
+@prefix conversion:    <http://purl.org/twc/vocab/conversion/> .
+@prefix :              <http://logd.tw.rpi.edu/source/nycopendata-socrata-com/dataset/catalog/version/2011-Oct-21/params/enhancement/1/> .
+
+<http://tw.rpi.edu/web/inside/machine/gemini#sym>
+   a foaf:OnlineAccount;
+   foaf:accountName "sym";
+   dcterms:isPartOf <http://tw.rpi.edu/web/inside/machine/gemini>;
+.
+
+#:a_bundle
+#   a conversion:ImplicitBundle;
+#   conversion:property_name "a_property"; # Can also be a URI, e.g. dcterms:title.
+#   #conversion:type_name     "My Class";   # Can also be a URI, e.g. foaf:Person.
+#.
+
+<http://logd.tw.rpi.edu/source/nycopendata-socrata-com/dataset/catalog/version/2011-Oct-21/conversion/enhancement/1>
+   a conversion:LayerDataset, void:Dataset;
+
+   conversion:base_uri           "http://logd.tw.rpi.edu"^^xsd:anyURI;
+   conversion:source_identifier  "nycopendata-socrata-com";
+   conversion:dataset_identifier "catalog";
+   conversion:version_identifier "2011-Oct-21";
+
+   a conversion:DatasetCatalog, conversion:MetaDataset;   #dataset catalog addition
+   dgtwc:catalog_title "Nycopendata.socrata.com (New York City, USA)" ;
+   dgtwc:catalog_homepage <http://nycopendata.socrata.com/> ;
+   dgtwc:catalog_country  dbpedia:United_States;
+
+   conversion:conversion_process [
+      a conversion:EnhancementConversionProcess;
+      conversion:enhancement_identifier "1";
+
+      dcterms:creator <http://tw.rpi.edu/web/inside/machine/gemini#sym>;
+      dcterms:created "2011-11-03T15:35:23-04:00"^^xsd:dateTime;
+
+      conversion:delimits_cell ",";
+      #conversion:delimits_cell "	"; # tab
+      #conversion:delimits_cell "|";   # pipe
+      #conversion:delimits_cell ",";   # comma
+
+      #conversion:interpret [
+      #   conversion:symbol        "";
+      #   conversion:interpretation conversion:null; 
+      #];
+      #conversion:enhance [
+      #   conversion:domain_template "tool_[r]";
+      #   conversion:domain_name     "Tool";
+      #];
+      #conversion:enhance [
+      #   conversion:class_name "Tool";
+      #   conversion:subclass_of <http://purl.org/...>;
+      #];
+      
+      conversion:enhance [
+      #  conversion:domain_template "dataset_[r]";
+         conversion:domain_name     "Dataset";
+      ];
+      conversion:enhance [
+         conversion:class_name "Dataset";
+         conversion:subclass_of conversion:CatalogedDataset; 
+      ];
+      
+      
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_title;
+         conversion:object    "Nycopendata.socrata.com (New York City, USA)" ;
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_subtitle;
+         conversion:object    ""; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_homepage;
+         conversion:object    <http://nycopendata.socrata.com/> ;
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation;
+         conversion:predicate dgtwc:catalog_country;
+         conversion:object    dbpedia:United_States;
+      ];
+      
+      
+      conversion:enhance [
+         ov:csvCol          1;
+         ov:csvHeader       "Index";
+         #conversion:label   "Index";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          2;
+         ov:csvHeader       "Name";
+         #conversion:label   "Name";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dcterms:title;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          3;
+         ov:csvHeader       "Name_URL";
+         #conversion:label   "Name_URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          4;
+         ov:csvHeader       "Popularity";
+         #conversion:label   "Popularity";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          5;
+         ov:csvHeader       "Type";
+         #conversion:label   "Type";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          6;
+         ov:csvHeader       "Author";
+         #conversion:label   "Author";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          7;
+         ov:csvHeader       "created";
+         #conversion:label   "created";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          8;
+         ov:csvHeader       "updated";
+         #conversion:label   "updated";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          9;
+         ov:csvHeader       "Description";
+         #conversion:label   "Description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dcterms:description;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          10;
+         ov:csvHeader       "Community Rating";
+         #conversion:label   "Community Rating";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          11;
+         ov:csvHeader       "Your Rating";
+         #conversion:label   "Your Rating";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          12;
+         ov:csvHeader       "Raters";
+         #conversion:label   "Raters";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          13;
+         ov:csvHeader       "Visits";
+         #conversion:label   "Visits";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          14;
+         ov:csvHeader       "Downloads";
+         #conversion:label   "Downloads";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          15;
+         ov:csvHeader       "Comments";
+         #conversion:label   "Comments";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          16;
+         ov:csvHeader       "Contributors";
+         #conversion:label   "Contributors";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          17;
+         ov:csvHeader       "Category";
+         #conversion:label   "Category";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dgtwc:category ;	#dataset catalog addition
+         conversion:subproperty_of dgtwc:categories ;
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         conversion:interpret [
+            conversion:symbol "(none)";
+            conversion:interpretation "n/a";
+         ];         
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          18;
+         ov:csvHeader       "Permissions";
+         #conversion:label   "Permissions";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          19;
+         ov:csvHeader       "Tags";
+         #conversion:label   "Tags";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dgtwc:keywords;
+
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         conversion:object_search [
+            conversion:regex     "\\s*([^,]+)";
+            conversion:predicate dcterms:subject;
+            conversion:object    "[>\\1<]";
+         ]; # https://github.com/timrdf/csv2rdf4lod-automation/wiki/conversion:object_search
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          20;
+         ov:csvHeader       "Permalink";
+         #conversion:label   "Permalink";
+         conversion:comment "";
+                  
+         conversion:range  rdfs:Resource;		
+         conversion:subproperty_of foaf:homepage;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol        "";
+            conversion:interpretation conversion:null; 
+         ]; 
+         conversion:interpret [
+            conversion:symbol "(none)";
+            conversion:interpretation conversion:null; 
+         ];         
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          21;
+         ov:csvHeader       "Short URL";
+         #conversion:label   "Short URL";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          22;
+         ov:csvHeader       "Data Provided By";
+         #conversion:label   "Data Provided By";
+         conversion:comment "";
+                  
+         conversion:range  rdfs:Resource;
+         conversion:subproperty_of dgtwc:agency ;	#dataset catalog addition
+         conversion:subproperty_of dcterms:contributor;
+         conversion:interpret [          
+            conversion:symbol        "";
+            conversion:interpretation conversion:null; 
+         ];                            
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          23;
+         ov:csvHeader       "Source Link";
+         #conversion:label   "Source Link";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          24;
+         ov:csvHeader       "Update Frequency";
+         #conversion:label   "Update Frequency";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          25;
+         ov:csvHeader       "symbol.height";
+         #conversion:label   "symbol.height";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          26;
+         ov:csvHeader       "symbol.url";
+         #conversion:label   "symbol.url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          27;
+         ov:csvHeader       "symbol.type";
+         #conversion:label   "symbol.type";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          28;
+         ov:csvHeader       "symbol.yoffset";
+         #conversion:label   "symbol.yoffset";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          29;
+         ov:csvHeader       "symbol.contentType";
+         #conversion:label   "symbol.contentType";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          30;
+         ov:csvHeader       "symbol.xoffset";
+         #conversion:label   "symbol.xoffset";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          31;
+         ov:csvHeader       "symbol.angle";
+         #conversion:label   "symbol.angle";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          32;
+         ov:csvHeader       "symbol.width";
+         #conversion:label   "symbol.width";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          33;
+         ov:csvHeader       "symbol.imageData";
+         #conversion:label   "symbol.imageData";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          34;
+         ov:csvHeader       "type";
+         #conversion:label   "type";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          35;
+         ov:csvHeader       "Source";
+         #conversion:label   "Source";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          36;
+         ov:csvHeader       "id";
+         #conversion:label   "id";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          37;
+         ov:csvHeader       "minScale";
+         #conversion:label   "minScale";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          38;
+         ov:csvHeader       "displayField";
+         #conversion:label   "displayField";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          39;
+         ov:csvHeader       "htmlPopupType";
+         #conversion:label   "htmlPopupType";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          40;
+         ov:csvHeader       "name";
+         #conversion:label   "name";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          41;
+         ov:csvHeader       "currentVersion";
+         #conversion:label   "currentVersion";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          42;
+         ov:csvHeader       "hasAttachments";
+         #conversion:label   "hasAttachments";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          43;
+         ov:csvHeader       "capabilities";
+         #conversion:label   "capabilities";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          44;
+         ov:csvHeader       "Spatial Reference wkid";
+         #conversion:label   "Spatial Reference wkid";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          45;
+         ov:csvHeader       "maxScale";
+         #conversion:label   "maxScale";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          46;
+         ov:csvHeader       "defaultVisibility";
+         #conversion:label   "defaultVisibility";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          47;
+         ov:csvHeader       "geometryType";
+         #conversion:label   "geometryType";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          48;
+         ov:csvHeader       "transparency";
+         #conversion:label   "transparency";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          49;
+         ov:csvHeader       "renderer.type";
+         #conversion:label   "renderer.type";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          50;
+         ov:csvHeader       "symbol.style";
+         #conversion:label   "symbol.style";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          51;
+         ov:csvHeader       "outline.type";
+         #conversion:label   "outline.type";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          52;
+         ov:csvHeader       "outline.width";
+         #conversion:label   "outline.width";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          53;
+         ov:csvHeader       "outline.style";
+         #conversion:label   "outline.style";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          54;
+         ov:csvHeader       "Resource Name";
+         #conversion:label   "Resource Name";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          55;
+         ov:csvHeader       "Row Identifier";
+         #conversion:label   "Row Identifier";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          56;
+         ov:csvHeader       "symbol.size";
+         #conversion:label   "symbol.size";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          57;
+         ov:csvHeader       "codedValues_1.code";
+         #conversion:label   "codedValues_1.code";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          58;
+         ov:csvHeader       "codedValues_1.name";
+         #conversion:label   "codedValues_1.name";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          59;
+         ov:csvHeader       "codedValues_2.code";
+         #conversion:label   "codedValues_2.code";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          60;
+         ov:csvHeader       "codedValues_2.name";
+         #conversion:label   "codedValues_2.name";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          61;
+         ov:csvHeader       "renderer.defaultLabel";
+         #conversion:label   "renderer.defaultLabel";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          62;
+         ov:csvHeader       "renderer.field1";
+         #conversion:label   "renderer.field1";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          63;
+         ov:csvHeader       "renderer.fieldDelimiter";
+         #conversion:label   "renderer.fieldDelimiter";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          64;
+         ov:csvHeader       "defaultSymbol.yoffset";
+         #conversion:label   "defaultSymbol.yoffset";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          65;
+         ov:csvHeader       "defaultSymbol.type";
+         #conversion:label   "defaultSymbol.type";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          66;
+         ov:csvHeader       "defaultSymbol.angle";
+         #conversion:label   "defaultSymbol.angle";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          67;
+         ov:csvHeader       "defaultSymbol.style";
+         #conversion:label   "defaultSymbol.style";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          68;
+         ov:csvHeader       "defaultSymbol.size";
+         #conversion:label   "defaultSymbol.size";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          69;
+         ov:csvHeader       "defaultSymbol.xoffset";
+         #conversion:label   "defaultSymbol.xoffset";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          70;
+         ov:csvHeader       "typeIdField";
+         #conversion:label   "typeIdField";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          71;
+         ov:csvHeader       "SUB_FEATURE_CODE.type";
+         #conversion:label   "SUB_FEATURE_CODE.type";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          72;
+         ov:csvHeader       "SUB_FEATURE_CODE.name";
+         #conversion:label   "SUB_FEATURE_CODE.name";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          73;
+         ov:csvHeader       "renderer.field2";
+         #conversion:label   "renderer.field2";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          74;
+         ov:csvHeader       "copyrightText";
+         #conversion:label   "copyrightText";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          75;
+         ov:csvHeader       "FEATURE_CODE.type";
+         #conversion:label   "FEATURE_CODE.type";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          76;
+         ov:csvHeader       "codedValues_3.name";
+         #conversion:label   "codedValues_3.name";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          77;
+         ov:csvHeader       "codedValues_3.code";
+         #conversion:label   "codedValues_3.code";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          78;
+         ov:csvHeader       "defaultSymbol.width";
+         #conversion:label   "defaultSymbol.width";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          79;
+         ov:csvHeader       "codedValues_6.code";
+         #conversion:label   "codedValues_6.code";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          80;
+         ov:csvHeader       "codedValues_4.name";
+         #conversion:label   "codedValues_4.name";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          81;
+         ov:csvHeader       "codedValues_5.code";
+         #conversion:label   "codedValues_5.code";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          82;
+         ov:csvHeader       "codedValues_4.code";
+         #conversion:label   "codedValues_4.code";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          83;
+         ov:csvHeader       "codedValues_6.name";
+         #conversion:label   "codedValues_6.name";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          84;
+         ov:csvHeader       "codedValues_5.name";
+         #conversion:label   "codedValues_5.name";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      #conversion:enhance [            
+      #   ov:csvRow 3,4,5;             
+      #   a conversion:ExampleResource;
+      #];                              
+   ];
+.

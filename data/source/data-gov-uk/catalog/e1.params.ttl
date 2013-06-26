@@ -1,0 +1,4209 @@
+@prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix todo:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix vann:          <http://purl.org/vocab/vann/> .
+@prefix skos:          <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:          <http://www.w3.org/2006/time#> .
+@prefix wgs:           <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geonames:      <http://www.geonames.org/ontology#> .
+@prefix geonamesid:    <http://sws.geonames.org/> .
+@prefix govtrackusgov: <http://www.rdfabout.com/rdf/usgov/geo/us/> .
+@prefix dbpedia:       <http://dbpedia.org/resource/> .
+@prefix con:           <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix muo:           <http://purl.oclc.org/NET/muo/muo#> .
+@prefix vs:            <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix frbr:          <http://purl.org/vocab/frbr/core#> .
+@prefix bibo:          <http://purl.org/ontology/bibo/> .
+@prefix doap:          <http://usefulinc.com/ns/doap#> .
+@prefix qb:            <http://purl.org/linked-data/cube#> .
+@prefix dgtwc:         <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix void:          <http://rdfs.org/ns/void#> .
+@prefix scovo:         <http://purl.org/NET/scovo#> .
+@prefix sioc:          <http://rdfs.org/sioc/ns#> .
+@prefix foaf:          <http://xmlns.com/foaf/0.1/> .
+@prefix ov:            <http://open.vocab.org/terms/> .
+@prefix conversion:    <http://purl.org/twc/vocab/conversion/> .
+@prefix :              <http://logd.tw.rpi.edu/source/data-gov-uk/dataset/catalog/version/2011-Aug-10/params/enhancement/1/> .
+
+<http://tw.rpi.edu/web/inside/machine/gemini#sym>
+   a foaf:OnlineAccount;
+   foaf:accountName "sym";
+   dcterms:isPartOf <http://tw.rpi.edu/web/inside/machine/gemini>;
+.
+
+#:a_bundle
+#   a conversion:ImplicitBundle;
+#   conversion:property_name "a_property"; # Can also be a URI, e.g. dcterms:title.
+#   #conversion:type_name     "My Class";   # Can also be a URI, e.g. foaf:Person.
+#.
+
+<http://logd.tw.rpi.edu/source/data-gov-uk/dataset/catalog/version/2011-Aug-10/conversion/enhancement/1>
+   a conversion:LayerDataset, void:Dataset;
+
+   conversion:base_uri           "http://logd.tw.rpi.edu"^^xsd:anyURI;
+   conversion:source_identifier  "data-gov-uk";
+   conversion:dataset_identifier "catalog";
+   conversion:version_identifier "2011-Aug-10";
+
+   a conversion:DatasetCatalog, conversion:MetaDataset;   #dataset catalog addition
+   dgtwc:catalog_title "Data.gov.uk (United Kingdom)" ;
+   dgtwc:catalog_homepage <http://data.gov.uk/data/dumps> ;
+   dgtwc:catalog_country  dbpedia:United_Kingdom;
+   dgtwc:catalog_subject "energy", "health" ;
+
+
+   conversion:conversion_process [
+      a conversion:EnhancementConversionProcess;
+      conversion:enhancement_identifier "1";
+
+      dcterms:creator <http://tw.rpi.edu/web/inside/machine/gemini#sym>;
+      dcterms:created "2011-08-31T18:52:37-04:00"^^xsd:dateTime;
+
+      conversion:delimits_cell ",";
+      #conversion:delimits_cell "	"; # tab
+      #conversion:delimits_cell "|";   # pipe
+      #conversion:delimits_cell ",";   # comma
+
+      #conversion:interpret [
+      #   conversion:symbol        "";
+      #   conversion:interpretation conversion:null; 
+      #];
+      #conversion:enhance [
+      #   conversion:domain_template "tool_[r]";
+      #   conversion:domain_name     "Tool";
+      #];
+      #conversion:enhance [
+      #   conversion:class_name "Tool";
+      #   conversion:subclass_of <http://purl.org/...>;
+      #];
+
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate rdf:type;
+         conversion:object    conversion:CatalogedDataset; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_subtitle;
+         conversion:object    ""; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_title;
+         conversion:object   "Data.gov.uk (United Kingdom)"; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_homepage;
+         conversion:object    <http://data.gov.uk/data/dumps>; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_country;
+         conversion:object    dbpedia:United_Kingdom ; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_subject;
+         conversion:object   "energy", "health";
+      ];
+
+
+      conversion:enhance [
+         ov:csvCol          1;
+         ov:csvHeader       "id";
+         #conversion:label   "id";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          2;
+         ov:csvHeader       "name";
+         #conversion:label   "name";
+         conversion:comment "";
+                  
+         conversion:range_template   "http://data.gov.uk/dataset/[.]";
+         conversion:range   rdfs:Resource;
+         conversion:subproperty_of  foaf:homepage;
+         conversion:interpret [          
+            conversion:symbol        "";
+            conversion:interpretation conversion:null; 
+         ];
+      ];
+      conversion:enhance [
+         ov:csvCol          3;
+         ov:csvHeader       "title";
+         #conversion:label   "title";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dcterms:title;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          4;
+         ov:csvHeader       "version";
+         #conversion:label   "version";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          5;
+         ov:csvHeader       "url";
+         #conversion:label   "url";
+         conversion:comment "";
+         conversion:range   todo:Literal;                  
+      ];
+      conversion:enhance [
+         ov:csvCol          6;
+         ov:csvHeader       "author";
+         #conversion:label   "author";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          7;
+         ov:csvHeader       "author_email";
+         #conversion:label   "author_email";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          8;
+         ov:csvHeader       "maintainer";
+         #conversion:label   "maintainer";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          9;
+         ov:csvHeader       "maintainer_email";
+         #conversion:label   "maintainer_email";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          10;
+         ov:csvHeader       "notes";
+         #conversion:label   "notes";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dcterms:description;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          11;
+         ov:csvHeader       "license_id";
+         #conversion:label   "license_id";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          12;
+         ov:csvHeader       "state";
+         #conversion:label   "state";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          13;
+         ov:csvHeader       "revision_id";
+         #conversion:label   "revision_id";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          14;
+         ov:csvHeader       "license";
+         #conversion:label   "license";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          15;
+         ov:csvHeader       "tags";
+         #conversion:label   "tags";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dgtwc:keywords;
+
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         conversion:object_search [
+            conversion:regex     "\\s*([^ ]+)";
+            conversion:predicate dcterms:subject;
+            conversion:object    "[>\\1<]";
+         ]; # https://github.com/timrdf/csv2rdf4lod-automation/wiki/conversion:object_search
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          16;
+         ov:csvHeader       "groups";
+         #conversion:label   "groups";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          17;
+         ov:csvHeader       "ratings_average";
+         #conversion:label   "ratings_average";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          18;
+         ov:csvHeader       "ratings_count";
+         #conversion:label   "ratings_count";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          19;
+         ov:csvHeader       "resources";
+         #conversion:label   "resources";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          20;
+         ov:csvHeader       "ckan_url";
+         #conversion:label   "ckan_url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          21;
+         ov:csvHeader       "relationships";
+         #conversion:label   "relationships";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          22;
+         ov:csvHeader       "metadata_modified";
+         #conversion:label   "metadata_modified";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          23;
+         ov:csvHeader       "metadata_created";
+         #conversion:label   "metadata_created";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          24;
+         ov:csvHeader       "notes_rendered";
+         #conversion:label   "notes_rendered";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          25;
+         ov:csvHeader       "geographic_coverage";
+         #conversion:label   "geographic_coverage";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          26;
+         ov:csvHeader       "date_released";
+         #conversion:label   "date_released";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          27;
+         ov:csvHeader       "openness_score";
+         #conversion:label   "openness_score";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          28;
+         ov:csvHeader       "temporal_coverage-from";
+         #conversion:label   "temporal_coverage-from";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          29;
+         ov:csvHeader       "temporal_granularity";
+         #conversion:label   "temporal_granularity";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          30;
+         ov:csvHeader       "date_updated";
+         #conversion:label   "date_updated";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          31;
+         ov:csvHeader       "published_via";
+         #conversion:label   "published_via";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          32;
+         ov:csvHeader       "mandate";
+         #conversion:label   "mandate";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          33;
+         ov:csvHeader       "precision";
+         #conversion:label   "precision";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          34;
+         ov:csvHeader       "geographic_granularity";
+         #conversion:label   "geographic_granularity";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          35;
+         ov:csvHeader       "published_by";
+         #conversion:label   "published_by";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          36;
+         ov:csvHeader       "taxonomy_url";
+         #conversion:label   "taxonomy_url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          37;
+         ov:csvHeader       "openness_score_last_checked";
+         #conversion:label   "openness_score_last_checked";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          38;
+         ov:csvHeader       "temporal_coverage-to";
+         #conversion:label   "temporal_coverage-to";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          39;
+         ov:csvHeader       "date_update_future";
+         #conversion:label   "date_update_future";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          40;
+         ov:csvHeader       "update_frequency";
+         #conversion:label   "update_frequency";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          41;
+         ov:csvHeader       "national_statistic";
+         #conversion:label   "national_statistic";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          42;
+         ov:csvHeader       "external_reference";
+         #conversion:label   "external_reference";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          43;
+         ov:csvHeader       "agency";
+         #conversion:label   "agency";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          44;
+         ov:csvHeader       "department";
+         #conversion:label   "department";
+         conversion:comment "";
+                  
+         conversion:range  rdfs:Resource;
+         conversion:subproperty_of dgtwc:agency ;	#dataset catalog addition
+         conversion:subproperty_of dcterms:contributor;
+         conversion:interpret [          
+            conversion:symbol        "";
+            conversion:interpretation conversion:null; 
+         ];                       
+         conversion:interpret [          
+            conversion:symbol        "{}";
+            conversion:interpretation conversion:null; 
+         ];                            
+              
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          45;
+         ov:csvHeader       "categories";
+         #conversion:label   "categories";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+         
+         conversion:subproperty_of dgtwc:category ;	#dataset catalog addition
+         conversion:subproperty_of dgtwc:categories ;
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+         
+         #Department of Health
+         conversion:interpret [
+            conversion:symbol "Not Av";
+            conversion:interpretation "n/a";
+         ];
+         
+         # 	Home Office
+         conversion:interpret [
+            conversion:symbol "N/A";
+            conversion:interpretation "n/a";
+         ];
+         conversion:interpret [
+            conversion:symbol "Not applicable";
+            conversion:interpretation "n/a";
+         ];
+         
+      ];
+      conversion:enhance [
+         ov:csvCol          46;
+         ov:csvHeader       "responsible-party";
+         #conversion:label   "responsible-party";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          47;
+         ov:csvHeader       "INSPIRE";
+         #conversion:label   "INSPIRE";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          48;
+         ov:csvHeader       "bbox-south-lat";
+         #conversion:label   "bbox-south-lat";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          49;
+         ov:csvHeader       "bbox-west-long";
+         #conversion:label   "bbox-west-long";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          50;
+         ov:csvHeader       "metadata-date";
+         #conversion:label   "metadata-date";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          51;
+         ov:csvHeader       "dataset-reference-date";
+         #conversion:label   "dataset-reference-date";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          52;
+         ov:csvHeader       "resource-type";
+         #conversion:label   "resource-type";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          53;
+         ov:csvHeader       "bbox-east-long";
+         #conversion:label   "bbox-east-long";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          54;
+         ov:csvHeader       "spatial-reference-system";
+         #conversion:label   "spatial-reference-system";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          55;
+         ov:csvHeader       "bbox-north-lat";
+         #conversion:label   "bbox-north-lat";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          56;
+         ov:csvHeader       "coupled-resource";
+         #conversion:label   "coupled-resource";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          57;
+         ov:csvHeader       "licence";
+         #conversion:label   "licence";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          58;
+         ov:csvHeader       "metadata-language";
+         #conversion:label   "metadata-language";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          59;
+         ov:csvHeader       "guid";
+         #conversion:label   "guid";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          60;
+         ov:csvHeader       "access_constraints";
+         #conversion:label   "access_constraints";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          61;
+         ov:csvHeader       "resource-0-url";
+         #conversion:label   "resource-0-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          62;
+         ov:csvHeader       "resource-0-format";
+         #conversion:label   "resource-0-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          63;
+         ov:csvHeader       "resource-0-description";
+         #conversion:label   "resource-0-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          64;
+         ov:csvHeader       "geographical_granularity";
+         #conversion:label   "geographical_granularity";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          65;
+         ov:csvHeader       "temporal_coverage_to";
+         #conversion:label   "temporal_coverage_to";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          66;
+         ov:csvHeader       "temporal_coverage_from";
+         #conversion:label   "temporal_coverage_from";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          67;
+         ov:csvHeader       "import_source";
+         #conversion:label   "import_source";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          68;
+         ov:csvHeader       "resource-1-url";
+         #conversion:label   "resource-1-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          69;
+         ov:csvHeader       "resource-1-format";
+         #conversion:label   "resource-1-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          70;
+         ov:csvHeader       "resource-1-description";
+         #conversion:label   "resource-1-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          71;
+         ov:csvHeader       "resource-2-url";
+         #conversion:label   "resource-2-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          72;
+         ov:csvHeader       "resource-2-format";
+         #conversion:label   "resource-2-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          73;
+         ov:csvHeader       "resource-2-description";
+         #conversion:label   "resource-2-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          74;
+         ov:csvHeader       "resource-3-url";
+         #conversion:label   "resource-3-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          75;
+         ov:csvHeader       "resource-3-format";
+         #conversion:label   "resource-3-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          76;
+         ov:csvHeader       "resource-3-description";
+         #conversion:label   "resource-3-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          77;
+         ov:csvHeader       "resource-4-url";
+         #conversion:label   "resource-4-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          78;
+         ov:csvHeader       "resource-4-format";
+         #conversion:label   "resource-4-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          79;
+         ov:csvHeader       "resource-4-description";
+         #conversion:label   "resource-4-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          80;
+         ov:csvHeader       "resource-5-url";
+         #conversion:label   "resource-5-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          81;
+         ov:csvHeader       "resource-5-format";
+         #conversion:label   "resource-5-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          82;
+         ov:csvHeader       "resource-5-description";
+         #conversion:label   "resource-5-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          83;
+         ov:csvHeader       "resource-6-url";
+         #conversion:label   "resource-6-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          84;
+         ov:csvHeader       "resource-6-format";
+         #conversion:label   "resource-6-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          85;
+         ov:csvHeader       "resource-6-description";
+         #conversion:label   "resource-6-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          86;
+         ov:csvHeader       "series";
+         #conversion:label   "series";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          87;
+         ov:csvHeader       "resource-7-url";
+         #conversion:label   "resource-7-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          88;
+         ov:csvHeader       "resource-7-format";
+         #conversion:label   "resource-7-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          89;
+         ov:csvHeader       "resource-7-description";
+         #conversion:label   "resource-7-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          90;
+         ov:csvHeader       "resource-8-url";
+         #conversion:label   "resource-8-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          91;
+         ov:csvHeader       "resource-8-format";
+         #conversion:label   "resource-8-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          92;
+         ov:csvHeader       "resource-8-description";
+         #conversion:label   "resource-8-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          93;
+         ov:csvHeader       "resource-9-url";
+         #conversion:label   "resource-9-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          94;
+         ov:csvHeader       "resource-9-format";
+         #conversion:label   "resource-9-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          95;
+         ov:csvHeader       "resource-9-description";
+         #conversion:label   "resource-9-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          96;
+         ov:csvHeader       "resource-10-url";
+         #conversion:label   "resource-10-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          97;
+         ov:csvHeader       "resource-10-format";
+         #conversion:label   "resource-10-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          98;
+         ov:csvHeader       "resource-10-description";
+         #conversion:label   "resource-10-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          99;
+         ov:csvHeader       "resource-11-url";
+         #conversion:label   "resource-11-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          100;
+         ov:csvHeader       "resource-11-format";
+         #conversion:label   "resource-11-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          101;
+         ov:csvHeader       "resource-11-description";
+         #conversion:label   "resource-11-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          102;
+         ov:csvHeader       "resource-12-url";
+         #conversion:label   "resource-12-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          103;
+         ov:csvHeader       "resource-12-format";
+         #conversion:label   "resource-12-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          104;
+         ov:csvHeader       "resource-12-description";
+         #conversion:label   "resource-12-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          105;
+         ov:csvHeader       "resource-13-url";
+         #conversion:label   "resource-13-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          106;
+         ov:csvHeader       "resource-13-format";
+         #conversion:label   "resource-13-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          107;
+         ov:csvHeader       "resource-13-description";
+         #conversion:label   "resource-13-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          108;
+         ov:csvHeader       "resource-14-url";
+         #conversion:label   "resource-14-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          109;
+         ov:csvHeader       "resource-14-format";
+         #conversion:label   "resource-14-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          110;
+         ov:csvHeader       "resource-14-description";
+         #conversion:label   "resource-14-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          111;
+         ov:csvHeader       "resource-15-url";
+         #conversion:label   "resource-15-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          112;
+         ov:csvHeader       "resource-15-format";
+         #conversion:label   "resource-15-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          113;
+         ov:csvHeader       "resource-15-description";
+         #conversion:label   "resource-15-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          114;
+         ov:csvHeader       "resource-16-url";
+         #conversion:label   "resource-16-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          115;
+         ov:csvHeader       "resource-16-format";
+         #conversion:label   "resource-16-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          116;
+         ov:csvHeader       "resource-16-description";
+         #conversion:label   "resource-16-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          117;
+         ov:csvHeader       "resource-17-url";
+         #conversion:label   "resource-17-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          118;
+         ov:csvHeader       "resource-17-format";
+         #conversion:label   "resource-17-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          119;
+         ov:csvHeader       "resource-17-description";
+         #conversion:label   "resource-17-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          120;
+         ov:csvHeader       "resource-18-url";
+         #conversion:label   "resource-18-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          121;
+         ov:csvHeader       "resource-18-format";
+         #conversion:label   "resource-18-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          122;
+         ov:csvHeader       "resource-18-description";
+         #conversion:label   "resource-18-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          123;
+         ov:csvHeader       "resource-19-url";
+         #conversion:label   "resource-19-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          124;
+         ov:csvHeader       "resource-19-format";
+         #conversion:label   "resource-19-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          125;
+         ov:csvHeader       "resource-19-description";
+         #conversion:label   "resource-19-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          126;
+         ov:csvHeader       "resource-20-url";
+         #conversion:label   "resource-20-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          127;
+         ov:csvHeader       "resource-20-format";
+         #conversion:label   "resource-20-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          128;
+         ov:csvHeader       "resource-20-description";
+         #conversion:label   "resource-20-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          129;
+         ov:csvHeader       "resource-21-url";
+         #conversion:label   "resource-21-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          130;
+         ov:csvHeader       "resource-21-format";
+         #conversion:label   "resource-21-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          131;
+         ov:csvHeader       "resource-21-description";
+         #conversion:label   "resource-21-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          132;
+         ov:csvHeader       "resource-22-url";
+         #conversion:label   "resource-22-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          133;
+         ov:csvHeader       "resource-22-format";
+         #conversion:label   "resource-22-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          134;
+         ov:csvHeader       "resource-22-description";
+         #conversion:label   "resource-22-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          135;
+         ov:csvHeader       "resource-23-url";
+         #conversion:label   "resource-23-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          136;
+         ov:csvHeader       "resource-23-format";
+         #conversion:label   "resource-23-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          137;
+         ov:csvHeader       "resource-23-description";
+         #conversion:label   "resource-23-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          138;
+         ov:csvHeader       "resource-24-url";
+         #conversion:label   "resource-24-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          139;
+         ov:csvHeader       "resource-24-format";
+         #conversion:label   "resource-24-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          140;
+         ov:csvHeader       "resource-24-description";
+         #conversion:label   "resource-24-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          141;
+         ov:csvHeader       "resource-25-url";
+         #conversion:label   "resource-25-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          142;
+         ov:csvHeader       "resource-25-format";
+         #conversion:label   "resource-25-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          143;
+         ov:csvHeader       "resource-25-description";
+         #conversion:label   "resource-25-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          144;
+         ov:csvHeader       "resource-26-url";
+         #conversion:label   "resource-26-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          145;
+         ov:csvHeader       "resource-26-format";
+         #conversion:label   "resource-26-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          146;
+         ov:csvHeader       "resource-26-description";
+         #conversion:label   "resource-26-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          147;
+         ov:csvHeader       "resource-27-url";
+         #conversion:label   "resource-27-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          148;
+         ov:csvHeader       "resource-27-format";
+         #conversion:label   "resource-27-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          149;
+         ov:csvHeader       "resource-27-description";
+         #conversion:label   "resource-27-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          150;
+         ov:csvHeader       "resource-28-url";
+         #conversion:label   "resource-28-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          151;
+         ov:csvHeader       "resource-28-format";
+         #conversion:label   "resource-28-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          152;
+         ov:csvHeader       "resource-28-description";
+         #conversion:label   "resource-28-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          153;
+         ov:csvHeader       "resource-29-url";
+         #conversion:label   "resource-29-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          154;
+         ov:csvHeader       "resource-29-format";
+         #conversion:label   "resource-29-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          155;
+         ov:csvHeader       "resource-29-description";
+         #conversion:label   "resource-29-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          156;
+         ov:csvHeader       "resource-30-url";
+         #conversion:label   "resource-30-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          157;
+         ov:csvHeader       "resource-30-format";
+         #conversion:label   "resource-30-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          158;
+         ov:csvHeader       "resource-30-description";
+         #conversion:label   "resource-30-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          159;
+         ov:csvHeader       "resource-31-url";
+         #conversion:label   "resource-31-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          160;
+         ov:csvHeader       "resource-31-format";
+         #conversion:label   "resource-31-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          161;
+         ov:csvHeader       "resource-31-description";
+         #conversion:label   "resource-31-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          162;
+         ov:csvHeader       "resource-32-url";
+         #conversion:label   "resource-32-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          163;
+         ov:csvHeader       "resource-32-format";
+         #conversion:label   "resource-32-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          164;
+         ov:csvHeader       "resource-32-description";
+         #conversion:label   "resource-32-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          165;
+         ov:csvHeader       "resource-33-url";
+         #conversion:label   "resource-33-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          166;
+         ov:csvHeader       "resource-33-format";
+         #conversion:label   "resource-33-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          167;
+         ov:csvHeader       "resource-33-description";
+         #conversion:label   "resource-33-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          168;
+         ov:csvHeader       "resource-34-url";
+         #conversion:label   "resource-34-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          169;
+         ov:csvHeader       "resource-34-format";
+         #conversion:label   "resource-34-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          170;
+         ov:csvHeader       "resource-34-description";
+         #conversion:label   "resource-34-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          171;
+         ov:csvHeader       "resource-35-url";
+         #conversion:label   "resource-35-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          172;
+         ov:csvHeader       "resource-35-format";
+         #conversion:label   "resource-35-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          173;
+         ov:csvHeader       "resource-35-description";
+         #conversion:label   "resource-35-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          174;
+         ov:csvHeader       "resource-36-url";
+         #conversion:label   "resource-36-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          175;
+         ov:csvHeader       "resource-36-format";
+         #conversion:label   "resource-36-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          176;
+         ov:csvHeader       "resource-36-description";
+         #conversion:label   "resource-36-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          177;
+         ov:csvHeader       "resource-37-url";
+         #conversion:label   "resource-37-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          178;
+         ov:csvHeader       "resource-37-format";
+         #conversion:label   "resource-37-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          179;
+         ov:csvHeader       "resource-37-description";
+         #conversion:label   "resource-37-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          180;
+         ov:csvHeader       "resource-38-url";
+         #conversion:label   "resource-38-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          181;
+         ov:csvHeader       "resource-38-format";
+         #conversion:label   "resource-38-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          182;
+         ov:csvHeader       "resource-38-description";
+         #conversion:label   "resource-38-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          183;
+         ov:csvHeader       "resource-39-url";
+         #conversion:label   "resource-39-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          184;
+         ov:csvHeader       "resource-39-format";
+         #conversion:label   "resource-39-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          185;
+         ov:csvHeader       "resource-39-description";
+         #conversion:label   "resource-39-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          186;
+         ov:csvHeader       "resource-40-url";
+         #conversion:label   "resource-40-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          187;
+         ov:csvHeader       "resource-40-format";
+         #conversion:label   "resource-40-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          188;
+         ov:csvHeader       "resource-40-description";
+         #conversion:label   "resource-40-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          189;
+         ov:csvHeader       "resource-41-url";
+         #conversion:label   "resource-41-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          190;
+         ov:csvHeader       "resource-41-format";
+         #conversion:label   "resource-41-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          191;
+         ov:csvHeader       "resource-41-description";
+         #conversion:label   "resource-41-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          192;
+         ov:csvHeader       "resource-42-url";
+         #conversion:label   "resource-42-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          193;
+         ov:csvHeader       "resource-42-format";
+         #conversion:label   "resource-42-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          194;
+         ov:csvHeader       "resource-42-description";
+         #conversion:label   "resource-42-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          195;
+         ov:csvHeader       "resource-43-url";
+         #conversion:label   "resource-43-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          196;
+         ov:csvHeader       "resource-43-format";
+         #conversion:label   "resource-43-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          197;
+         ov:csvHeader       "resource-43-description";
+         #conversion:label   "resource-43-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          198;
+         ov:csvHeader       "resource-44-url";
+         #conversion:label   "resource-44-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          199;
+         ov:csvHeader       "resource-44-format";
+         #conversion:label   "resource-44-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          200;
+         ov:csvHeader       "resource-44-description";
+         #conversion:label   "resource-44-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          201;
+         ov:csvHeader       "resource-45-url";
+         #conversion:label   "resource-45-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          202;
+         ov:csvHeader       "resource-45-format";
+         #conversion:label   "resource-45-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          203;
+         ov:csvHeader       "resource-45-description";
+         #conversion:label   "resource-45-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          204;
+         ov:csvHeader       "resource-46-url";
+         #conversion:label   "resource-46-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          205;
+         ov:csvHeader       "resource-46-format";
+         #conversion:label   "resource-46-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          206;
+         ov:csvHeader       "resource-46-description";
+         #conversion:label   "resource-46-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          207;
+         ov:csvHeader       "resource-47-url";
+         #conversion:label   "resource-47-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          208;
+         ov:csvHeader       "resource-47-format";
+         #conversion:label   "resource-47-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          209;
+         ov:csvHeader       "resource-47-description";
+         #conversion:label   "resource-47-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          210;
+         ov:csvHeader       "resource-48-url";
+         #conversion:label   "resource-48-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          211;
+         ov:csvHeader       "resource-48-format";
+         #conversion:label   "resource-48-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          212;
+         ov:csvHeader       "resource-48-description";
+         #conversion:label   "resource-48-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          213;
+         ov:csvHeader       "resource-49-url";
+         #conversion:label   "resource-49-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          214;
+         ov:csvHeader       "resource-49-format";
+         #conversion:label   "resource-49-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          215;
+         ov:csvHeader       "resource-49-description";
+         #conversion:label   "resource-49-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          216;
+         ov:csvHeader       "resource-50-url";
+         #conversion:label   "resource-50-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          217;
+         ov:csvHeader       "resource-50-format";
+         #conversion:label   "resource-50-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          218;
+         ov:csvHeader       "resource-50-description";
+         #conversion:label   "resource-50-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          219;
+         ov:csvHeader       "resource-51-url";
+         #conversion:label   "resource-51-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          220;
+         ov:csvHeader       "resource-51-format";
+         #conversion:label   "resource-51-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          221;
+         ov:csvHeader       "resource-51-description";
+         #conversion:label   "resource-51-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          222;
+         ov:csvHeader       "resource-52-url";
+         #conversion:label   "resource-52-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          223;
+         ov:csvHeader       "resource-52-format";
+         #conversion:label   "resource-52-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          224;
+         ov:csvHeader       "resource-52-description";
+         #conversion:label   "resource-52-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          225;
+         ov:csvHeader       "resource-53-url";
+         #conversion:label   "resource-53-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          226;
+         ov:csvHeader       "resource-53-format";
+         #conversion:label   "resource-53-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          227;
+         ov:csvHeader       "resource-53-description";
+         #conversion:label   "resource-53-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          228;
+         ov:csvHeader       "resource-54-url";
+         #conversion:label   "resource-54-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          229;
+         ov:csvHeader       "resource-54-format";
+         #conversion:label   "resource-54-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          230;
+         ov:csvHeader       "resource-54-description";
+         #conversion:label   "resource-54-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          231;
+         ov:csvHeader       "resource-55-url";
+         #conversion:label   "resource-55-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          232;
+         ov:csvHeader       "resource-55-format";
+         #conversion:label   "resource-55-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          233;
+         ov:csvHeader       "resource-55-description";
+         #conversion:label   "resource-55-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          234;
+         ov:csvHeader       "resource-56-url";
+         #conversion:label   "resource-56-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          235;
+         ov:csvHeader       "resource-56-format";
+         #conversion:label   "resource-56-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          236;
+         ov:csvHeader       "resource-56-description";
+         #conversion:label   "resource-56-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          237;
+         ov:csvHeader       "resource-57-url";
+         #conversion:label   "resource-57-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          238;
+         ov:csvHeader       "resource-57-format";
+         #conversion:label   "resource-57-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          239;
+         ov:csvHeader       "resource-57-description";
+         #conversion:label   "resource-57-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          240;
+         ov:csvHeader       "resource-58-url";
+         #conversion:label   "resource-58-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          241;
+         ov:csvHeader       "resource-58-format";
+         #conversion:label   "resource-58-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          242;
+         ov:csvHeader       "resource-58-description";
+         #conversion:label   "resource-58-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          243;
+         ov:csvHeader       "resource-59-url";
+         #conversion:label   "resource-59-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          244;
+         ov:csvHeader       "resource-59-format";
+         #conversion:label   "resource-59-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          245;
+         ov:csvHeader       "resource-59-description";
+         #conversion:label   "resource-59-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          246;
+         ov:csvHeader       "resource-60-url";
+         #conversion:label   "resource-60-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          247;
+         ov:csvHeader       "resource-60-format";
+         #conversion:label   "resource-60-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          248;
+         ov:csvHeader       "resource-60-description";
+         #conversion:label   "resource-60-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          249;
+         ov:csvHeader       "resource-61-url";
+         #conversion:label   "resource-61-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          250;
+         ov:csvHeader       "resource-61-format";
+         #conversion:label   "resource-61-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          251;
+         ov:csvHeader       "resource-61-description";
+         #conversion:label   "resource-61-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          252;
+         ov:csvHeader       "resource-62-url";
+         #conversion:label   "resource-62-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          253;
+         ov:csvHeader       "resource-62-format";
+         #conversion:label   "resource-62-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          254;
+         ov:csvHeader       "resource-62-description";
+         #conversion:label   "resource-62-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          255;
+         ov:csvHeader       "resource-63-url";
+         #conversion:label   "resource-63-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          256;
+         ov:csvHeader       "resource-63-format";
+         #conversion:label   "resource-63-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          257;
+         ov:csvHeader       "resource-63-description";
+         #conversion:label   "resource-63-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          258;
+         ov:csvHeader       "resource-64-url";
+         #conversion:label   "resource-64-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          259;
+         ov:csvHeader       "resource-64-format";
+         #conversion:label   "resource-64-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          260;
+         ov:csvHeader       "resource-64-description";
+         #conversion:label   "resource-64-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          261;
+         ov:csvHeader       "resource-65-url";
+         #conversion:label   "resource-65-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          262;
+         ov:csvHeader       "resource-65-format";
+         #conversion:label   "resource-65-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          263;
+         ov:csvHeader       "resource-65-description";
+         #conversion:label   "resource-65-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          264;
+         ov:csvHeader       "resource-66-url";
+         #conversion:label   "resource-66-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          265;
+         ov:csvHeader       "resource-66-format";
+         #conversion:label   "resource-66-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          266;
+         ov:csvHeader       "resource-66-description";
+         #conversion:label   "resource-66-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          267;
+         ov:csvHeader       "resource-67-url";
+         #conversion:label   "resource-67-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          268;
+         ov:csvHeader       "resource-67-format";
+         #conversion:label   "resource-67-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          269;
+         ov:csvHeader       "resource-67-description";
+         #conversion:label   "resource-67-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          270;
+         ov:csvHeader       "resource-68-url";
+         #conversion:label   "resource-68-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          271;
+         ov:csvHeader       "resource-68-format";
+         #conversion:label   "resource-68-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          272;
+         ov:csvHeader       "resource-68-description";
+         #conversion:label   "resource-68-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          273;
+         ov:csvHeader       "resource-69-url";
+         #conversion:label   "resource-69-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          274;
+         ov:csvHeader       "resource-69-format";
+         #conversion:label   "resource-69-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          275;
+         ov:csvHeader       "resource-69-description";
+         #conversion:label   "resource-69-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          276;
+         ov:csvHeader       "resource-70-url";
+         #conversion:label   "resource-70-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          277;
+         ov:csvHeader       "resource-70-format";
+         #conversion:label   "resource-70-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          278;
+         ov:csvHeader       "resource-70-description";
+         #conversion:label   "resource-70-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          279;
+         ov:csvHeader       "resource-71-url";
+         #conversion:label   "resource-71-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          280;
+         ov:csvHeader       "resource-71-format";
+         #conversion:label   "resource-71-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          281;
+         ov:csvHeader       "resource-71-description";
+         #conversion:label   "resource-71-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          282;
+         ov:csvHeader       "resource-72-url";
+         #conversion:label   "resource-72-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          283;
+         ov:csvHeader       "resource-72-format";
+         #conversion:label   "resource-72-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          284;
+         ov:csvHeader       "resource-72-description";
+         #conversion:label   "resource-72-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          285;
+         ov:csvHeader       "resource-73-url";
+         #conversion:label   "resource-73-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          286;
+         ov:csvHeader       "resource-73-format";
+         #conversion:label   "resource-73-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          287;
+         ov:csvHeader       "resource-73-description";
+         #conversion:label   "resource-73-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          288;
+         ov:csvHeader       "resource-74-url";
+         #conversion:label   "resource-74-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          289;
+         ov:csvHeader       "resource-74-format";
+         #conversion:label   "resource-74-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          290;
+         ov:csvHeader       "resource-74-description";
+         #conversion:label   "resource-74-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          291;
+         ov:csvHeader       "resource-75-url";
+         #conversion:label   "resource-75-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          292;
+         ov:csvHeader       "resource-75-format";
+         #conversion:label   "resource-75-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          293;
+         ov:csvHeader       "resource-75-description";
+         #conversion:label   "resource-75-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          294;
+         ov:csvHeader       "resource-76-url";
+         #conversion:label   "resource-76-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          295;
+         ov:csvHeader       "resource-76-format";
+         #conversion:label   "resource-76-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          296;
+         ov:csvHeader       "resource-76-description";
+         #conversion:label   "resource-76-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          297;
+         ov:csvHeader       "resource-77-url";
+         #conversion:label   "resource-77-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          298;
+         ov:csvHeader       "resource-77-format";
+         #conversion:label   "resource-77-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          299;
+         ov:csvHeader       "resource-77-description";
+         #conversion:label   "resource-77-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          300;
+         ov:csvHeader       "resource-78-url";
+         #conversion:label   "resource-78-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          301;
+         ov:csvHeader       "resource-78-format";
+         #conversion:label   "resource-78-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          302;
+         ov:csvHeader       "resource-78-description";
+         #conversion:label   "resource-78-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          303;
+         ov:csvHeader       "resource-79-url";
+         #conversion:label   "resource-79-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          304;
+         ov:csvHeader       "resource-79-format";
+         #conversion:label   "resource-79-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          305;
+         ov:csvHeader       "resource-79-description";
+         #conversion:label   "resource-79-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          306;
+         ov:csvHeader       "resource-80-url";
+         #conversion:label   "resource-80-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          307;
+         ov:csvHeader       "resource-80-format";
+         #conversion:label   "resource-80-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          308;
+         ov:csvHeader       "resource-80-description";
+         #conversion:label   "resource-80-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          309;
+         ov:csvHeader       "resource-81-url";
+         #conversion:label   "resource-81-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          310;
+         ov:csvHeader       "resource-81-format";
+         #conversion:label   "resource-81-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          311;
+         ov:csvHeader       "resource-81-description";
+         #conversion:label   "resource-81-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          312;
+         ov:csvHeader       "resource-82-url";
+         #conversion:label   "resource-82-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          313;
+         ov:csvHeader       "resource-82-format";
+         #conversion:label   "resource-82-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          314;
+         ov:csvHeader       "resource-82-description";
+         #conversion:label   "resource-82-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          315;
+         ov:csvHeader       "resource-83-url";
+         #conversion:label   "resource-83-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          316;
+         ov:csvHeader       "resource-83-format";
+         #conversion:label   "resource-83-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          317;
+         ov:csvHeader       "resource-83-description";
+         #conversion:label   "resource-83-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          318;
+         ov:csvHeader       "resource-84-url";
+         #conversion:label   "resource-84-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          319;
+         ov:csvHeader       "resource-84-format";
+         #conversion:label   "resource-84-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          320;
+         ov:csvHeader       "resource-84-description";
+         #conversion:label   "resource-84-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          321;
+         ov:csvHeader       "resource-85-url";
+         #conversion:label   "resource-85-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          322;
+         ov:csvHeader       "resource-85-format";
+         #conversion:label   "resource-85-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          323;
+         ov:csvHeader       "resource-85-description";
+         #conversion:label   "resource-85-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          324;
+         ov:csvHeader       "resource-86-url";
+         #conversion:label   "resource-86-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          325;
+         ov:csvHeader       "resource-86-format";
+         #conversion:label   "resource-86-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          326;
+         ov:csvHeader       "resource-86-description";
+         #conversion:label   "resource-86-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          327;
+         ov:csvHeader       "resource-87-url";
+         #conversion:label   "resource-87-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          328;
+         ov:csvHeader       "resource-87-format";
+         #conversion:label   "resource-87-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          329;
+         ov:csvHeader       "resource-87-description";
+         #conversion:label   "resource-87-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          330;
+         ov:csvHeader       "resource-88-url";
+         #conversion:label   "resource-88-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          331;
+         ov:csvHeader       "resource-88-format";
+         #conversion:label   "resource-88-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          332;
+         ov:csvHeader       "resource-88-description";
+         #conversion:label   "resource-88-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          333;
+         ov:csvHeader       "resource-89-url";
+         #conversion:label   "resource-89-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          334;
+         ov:csvHeader       "resource-89-format";
+         #conversion:label   "resource-89-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          335;
+         ov:csvHeader       "resource-89-description";
+         #conversion:label   "resource-89-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          336;
+         ov:csvHeader       "resource-90-url";
+         #conversion:label   "resource-90-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          337;
+         ov:csvHeader       "resource-90-format";
+         #conversion:label   "resource-90-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          338;
+         ov:csvHeader       "resource-90-description";
+         #conversion:label   "resource-90-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          339;
+         ov:csvHeader       "resource-91-url";
+         #conversion:label   "resource-91-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          340;
+         ov:csvHeader       "resource-91-format";
+         #conversion:label   "resource-91-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          341;
+         ov:csvHeader       "resource-91-description";
+         #conversion:label   "resource-91-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          342;
+         ov:csvHeader       "resource-92-url";
+         #conversion:label   "resource-92-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          343;
+         ov:csvHeader       "resource-92-format";
+         #conversion:label   "resource-92-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          344;
+         ov:csvHeader       "resource-92-description";
+         #conversion:label   "resource-92-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          345;
+         ov:csvHeader       "resource-93-url";
+         #conversion:label   "resource-93-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          346;
+         ov:csvHeader       "resource-93-format";
+         #conversion:label   "resource-93-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          347;
+         ov:csvHeader       "resource-93-description";
+         #conversion:label   "resource-93-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          348;
+         ov:csvHeader       "resource-94-url";
+         #conversion:label   "resource-94-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          349;
+         ov:csvHeader       "resource-94-format";
+         #conversion:label   "resource-94-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          350;
+         ov:csvHeader       "resource-94-description";
+         #conversion:label   "resource-94-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          351;
+         ov:csvHeader       "resource-95-url";
+         #conversion:label   "resource-95-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          352;
+         ov:csvHeader       "resource-95-format";
+         #conversion:label   "resource-95-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          353;
+         ov:csvHeader       "resource-95-description";
+         #conversion:label   "resource-95-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          354;
+         ov:csvHeader       "resource-96-url";
+         #conversion:label   "resource-96-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          355;
+         ov:csvHeader       "resource-96-format";
+         #conversion:label   "resource-96-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          356;
+         ov:csvHeader       "resource-96-description";
+         #conversion:label   "resource-96-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          357;
+         ov:csvHeader       "resource-97-url";
+         #conversion:label   "resource-97-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          358;
+         ov:csvHeader       "resource-97-format";
+         #conversion:label   "resource-97-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          359;
+         ov:csvHeader       "resource-97-description";
+         #conversion:label   "resource-97-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          360;
+         ov:csvHeader       "resource-98-url";
+         #conversion:label   "resource-98-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          361;
+         ov:csvHeader       "resource-98-format";
+         #conversion:label   "resource-98-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          362;
+         ov:csvHeader       "resource-98-description";
+         #conversion:label   "resource-98-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          363;
+         ov:csvHeader       "resource-99-url";
+         #conversion:label   "resource-99-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          364;
+         ov:csvHeader       "resource-99-format";
+         #conversion:label   "resource-99-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          365;
+         ov:csvHeader       "resource-99-description";
+         #conversion:label   "resource-99-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          366;
+         ov:csvHeader       "resource-100-url";
+         #conversion:label   "resource-100-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          367;
+         ov:csvHeader       "resource-100-format";
+         #conversion:label   "resource-100-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          368;
+         ov:csvHeader       "resource-100-description";
+         #conversion:label   "resource-100-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          369;
+         ov:csvHeader       "resource-101-url";
+         #conversion:label   "resource-101-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          370;
+         ov:csvHeader       "resource-101-format";
+         #conversion:label   "resource-101-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          371;
+         ov:csvHeader       "resource-101-description";
+         #conversion:label   "resource-101-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          372;
+         ov:csvHeader       "resource-102-url";
+         #conversion:label   "resource-102-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          373;
+         ov:csvHeader       "resource-102-format";
+         #conversion:label   "resource-102-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          374;
+         ov:csvHeader       "resource-102-description";
+         #conversion:label   "resource-102-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          375;
+         ov:csvHeader       "resource-103-url";
+         #conversion:label   "resource-103-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          376;
+         ov:csvHeader       "resource-103-format";
+         #conversion:label   "resource-103-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          377;
+         ov:csvHeader       "resource-103-description";
+         #conversion:label   "resource-103-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          378;
+         ov:csvHeader       "update_frequency ";
+         #conversion:label   "update_frequency ";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          379;
+         ov:csvHeader       "temporal_coverage_to ";
+         #conversion:label   "temporal_coverage_to ";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          380;
+         ov:csvHeader       "date_released ";
+         #conversion:label   "date_released ";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          381;
+         ov:csvHeader       "temporal_coverage_from ";
+         #conversion:label   "temporal_coverage_from ";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          382;
+         ov:csvHeader       "resource-104-url";
+         #conversion:label   "resource-104-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          383;
+         ov:csvHeader       "resource-104-format";
+         #conversion:label   "resource-104-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          384;
+         ov:csvHeader       "resource-104-description";
+         #conversion:label   "resource-104-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          385;
+         ov:csvHeader       "resource-105-url";
+         #conversion:label   "resource-105-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          386;
+         ov:csvHeader       "resource-105-format";
+         #conversion:label   "resource-105-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          387;
+         ov:csvHeader       "resource-105-description";
+         #conversion:label   "resource-105-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          388;
+         ov:csvHeader       "resource-106-url";
+         #conversion:label   "resource-106-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          389;
+         ov:csvHeader       "resource-106-format";
+         #conversion:label   "resource-106-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          390;
+         ov:csvHeader       "resource-106-description";
+         #conversion:label   "resource-106-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          391;
+         ov:csvHeader       "resource-107-url";
+         #conversion:label   "resource-107-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          392;
+         ov:csvHeader       "resource-107-format";
+         #conversion:label   "resource-107-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          393;
+         ov:csvHeader       "resource-107-description";
+         #conversion:label   "resource-107-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          394;
+         ov:csvHeader       "resource-108-url";
+         #conversion:label   "resource-108-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          395;
+         ov:csvHeader       "resource-108-format";
+         #conversion:label   "resource-108-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          396;
+         ov:csvHeader       "resource-108-description";
+         #conversion:label   "resource-108-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          397;
+         ov:csvHeader       "resource-109-url";
+         #conversion:label   "resource-109-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          398;
+         ov:csvHeader       "resource-109-format";
+         #conversion:label   "resource-109-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          399;
+         ov:csvHeader       "resource-109-description";
+         #conversion:label   "resource-109-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          400;
+         ov:csvHeader       "resource-110-url";
+         #conversion:label   "resource-110-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          401;
+         ov:csvHeader       "resource-110-format";
+         #conversion:label   "resource-110-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          402;
+         ov:csvHeader       "resource-110-description";
+         #conversion:label   "resource-110-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          403;
+         ov:csvHeader       "resource-111-url";
+         #conversion:label   "resource-111-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          404;
+         ov:csvHeader       "resource-111-format";
+         #conversion:label   "resource-111-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          405;
+         ov:csvHeader       "resource-111-description";
+         #conversion:label   "resource-111-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          406;
+         ov:csvHeader       "resource-112-url";
+         #conversion:label   "resource-112-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          407;
+         ov:csvHeader       "resource-112-format";
+         #conversion:label   "resource-112-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          408;
+         ov:csvHeader       "resource-112-description";
+         #conversion:label   "resource-112-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          409;
+         ov:csvHeader       "resource-113-url";
+         #conversion:label   "resource-113-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          410;
+         ov:csvHeader       "resource-113-format";
+         #conversion:label   "resource-113-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          411;
+         ov:csvHeader       "resource-113-description";
+         #conversion:label   "resource-113-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          412;
+         ov:csvHeader       "resource-114-url";
+         #conversion:label   "resource-114-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          413;
+         ov:csvHeader       "resource-114-format";
+         #conversion:label   "resource-114-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          414;
+         ov:csvHeader       "resource-114-description";
+         #conversion:label   "resource-114-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          415;
+         ov:csvHeader       "resource-115-url";
+         #conversion:label   "resource-115-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          416;
+         ov:csvHeader       "resource-115-format";
+         #conversion:label   "resource-115-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          417;
+         ov:csvHeader       "resource-115-description";
+         #conversion:label   "resource-115-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          418;
+         ov:csvHeader       "resource-116-url";
+         #conversion:label   "resource-116-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          419;
+         ov:csvHeader       "resource-116-format";
+         #conversion:label   "resource-116-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          420;
+         ov:csvHeader       "resource-116-description";
+         #conversion:label   "resource-116-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          421;
+         ov:csvHeader       "resource-117-url";
+         #conversion:label   "resource-117-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          422;
+         ov:csvHeader       "resource-117-format";
+         #conversion:label   "resource-117-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          423;
+         ov:csvHeader       "resource-117-description";
+         #conversion:label   "resource-117-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          424;
+         ov:csvHeader       "resource-118-url";
+         #conversion:label   "resource-118-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          425;
+         ov:csvHeader       "resource-118-format";
+         #conversion:label   "resource-118-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          426;
+         ov:csvHeader       "resource-118-description";
+         #conversion:label   "resource-118-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          427;
+         ov:csvHeader       "resource-119-url";
+         #conversion:label   "resource-119-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          428;
+         ov:csvHeader       "resource-119-format";
+         #conversion:label   "resource-119-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          429;
+         ov:csvHeader       "resource-119-description";
+         #conversion:label   "resource-119-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          430;
+         ov:csvHeader       "resource-120-url";
+         #conversion:label   "resource-120-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          431;
+         ov:csvHeader       "resource-120-format";
+         #conversion:label   "resource-120-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          432;
+         ov:csvHeader       "resource-120-description";
+         #conversion:label   "resource-120-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          433;
+         ov:csvHeader       "resource-121-url";
+         #conversion:label   "resource-121-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          434;
+         ov:csvHeader       "resource-121-format";
+         #conversion:label   "resource-121-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          435;
+         ov:csvHeader       "resource-121-description";
+         #conversion:label   "resource-121-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          436;
+         ov:csvHeader       "resource-122-url";
+         #conversion:label   "resource-122-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          437;
+         ov:csvHeader       "resource-122-format";
+         #conversion:label   "resource-122-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          438;
+         ov:csvHeader       "resource-122-description";
+         #conversion:label   "resource-122-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          439;
+         ov:csvHeader       "resource-123-url";
+         #conversion:label   "resource-123-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          440;
+         ov:csvHeader       "resource-123-format";
+         #conversion:label   "resource-123-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          441;
+         ov:csvHeader       "resource-123-description";
+         #conversion:label   "resource-123-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          442;
+         ov:csvHeader       "resource-124-url";
+         #conversion:label   "resource-124-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          443;
+         ov:csvHeader       "resource-124-format";
+         #conversion:label   "resource-124-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          444;
+         ov:csvHeader       "resource-124-description";
+         #conversion:label   "resource-124-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          445;
+         ov:csvHeader       "resource-125-url";
+         #conversion:label   "resource-125-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          446;
+         ov:csvHeader       "resource-125-format";
+         #conversion:label   "resource-125-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          447;
+         ov:csvHeader       "resource-125-description";
+         #conversion:label   "resource-125-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          448;
+         ov:csvHeader       "resource-126-url";
+         #conversion:label   "resource-126-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          449;
+         ov:csvHeader       "resource-126-format";
+         #conversion:label   "resource-126-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          450;
+         ov:csvHeader       "resource-126-description";
+         #conversion:label   "resource-126-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          451;
+         ov:csvHeader       "resource-127-url";
+         #conversion:label   "resource-127-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          452;
+         ov:csvHeader       "resource-127-format";
+         #conversion:label   "resource-127-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          453;
+         ov:csvHeader       "resource-127-description";
+         #conversion:label   "resource-127-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          454;
+         ov:csvHeader       "resource-128-url";
+         #conversion:label   "resource-128-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          455;
+         ov:csvHeader       "resource-128-format";
+         #conversion:label   "resource-128-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          456;
+         ov:csvHeader       "resource-128-description";
+         #conversion:label   "resource-128-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          457;
+         ov:csvHeader       "resource-129-url";
+         #conversion:label   "resource-129-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          458;
+         ov:csvHeader       "resource-129-format";
+         #conversion:label   "resource-129-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          459;
+         ov:csvHeader       "resource-129-description";
+         #conversion:label   "resource-129-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          460;
+         ov:csvHeader       "resource-130-url";
+         #conversion:label   "resource-130-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          461;
+         ov:csvHeader       "resource-130-format";
+         #conversion:label   "resource-130-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          462;
+         ov:csvHeader       "resource-130-description";
+         #conversion:label   "resource-130-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          463;
+         ov:csvHeader       "resource-131-url";
+         #conversion:label   "resource-131-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          464;
+         ov:csvHeader       "resource-131-format";
+         #conversion:label   "resource-131-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          465;
+         ov:csvHeader       "resource-131-description";
+         #conversion:label   "resource-131-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          466;
+         ov:csvHeader       "resource-132-url";
+         #conversion:label   "resource-132-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          467;
+         ov:csvHeader       "resource-132-format";
+         #conversion:label   "resource-132-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          468;
+         ov:csvHeader       "resource-132-description";
+         #conversion:label   "resource-132-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          469;
+         ov:csvHeader       "resource-133-url";
+         #conversion:label   "resource-133-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          470;
+         ov:csvHeader       "resource-133-format";
+         #conversion:label   "resource-133-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          471;
+         ov:csvHeader       "resource-133-description";
+         #conversion:label   "resource-133-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          472;
+         ov:csvHeader       "resource-134-url";
+         #conversion:label   "resource-134-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          473;
+         ov:csvHeader       "resource-134-format";
+         #conversion:label   "resource-134-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          474;
+         ov:csvHeader       "resource-134-description";
+         #conversion:label   "resource-134-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          475;
+         ov:csvHeader       "resource-135-url";
+         #conversion:label   "resource-135-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          476;
+         ov:csvHeader       "resource-135-format";
+         #conversion:label   "resource-135-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          477;
+         ov:csvHeader       "resource-135-description";
+         #conversion:label   "resource-135-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          478;
+         ov:csvHeader       "resource-136-url";
+         #conversion:label   "resource-136-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          479;
+         ov:csvHeader       "resource-136-format";
+         #conversion:label   "resource-136-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          480;
+         ov:csvHeader       "resource-136-description";
+         #conversion:label   "resource-136-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          481;
+         ov:csvHeader       "resource-137-url";
+         #conversion:label   "resource-137-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          482;
+         ov:csvHeader       "resource-137-format";
+         #conversion:label   "resource-137-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          483;
+         ov:csvHeader       "resource-137-description";
+         #conversion:label   "resource-137-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          484;
+         ov:csvHeader       "resource-138-url";
+         #conversion:label   "resource-138-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          485;
+         ov:csvHeader       "resource-138-format";
+         #conversion:label   "resource-138-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          486;
+         ov:csvHeader       "resource-138-description";
+         #conversion:label   "resource-138-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          487;
+         ov:csvHeader       "resource-139-url";
+         #conversion:label   "resource-139-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          488;
+         ov:csvHeader       "resource-139-format";
+         #conversion:label   "resource-139-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          489;
+         ov:csvHeader       "resource-139-description";
+         #conversion:label   "resource-139-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          490;
+         ov:csvHeader       "resource-140-url";
+         #conversion:label   "resource-140-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          491;
+         ov:csvHeader       "resource-140-format";
+         #conversion:label   "resource-140-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          492;
+         ov:csvHeader       "resource-140-description";
+         #conversion:label   "resource-140-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          493;
+         ov:csvHeader       "resource-141-url";
+         #conversion:label   "resource-141-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          494;
+         ov:csvHeader       "resource-141-format";
+         #conversion:label   "resource-141-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          495;
+         ov:csvHeader       "resource-141-description";
+         #conversion:label   "resource-141-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          496;
+         ov:csvHeader       "resource-142-url";
+         #conversion:label   "resource-142-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          497;
+         ov:csvHeader       "resource-142-format";
+         #conversion:label   "resource-142-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          498;
+         ov:csvHeader       "resource-142-description";
+         #conversion:label   "resource-142-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          499;
+         ov:csvHeader       "resource-143-url";
+         #conversion:label   "resource-143-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          500;
+         ov:csvHeader       "resource-143-format";
+         #conversion:label   "resource-143-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          501;
+         ov:csvHeader       "resource-143-description";
+         #conversion:label   "resource-143-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          502;
+         ov:csvHeader       "resource-144-url";
+         #conversion:label   "resource-144-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          503;
+         ov:csvHeader       "resource-144-format";
+         #conversion:label   "resource-144-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          504;
+         ov:csvHeader       "resource-144-description";
+         #conversion:label   "resource-144-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          505;
+         ov:csvHeader       "resource-145-url";
+         #conversion:label   "resource-145-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          506;
+         ov:csvHeader       "resource-145-format";
+         #conversion:label   "resource-145-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          507;
+         ov:csvHeader       "resource-145-description";
+         #conversion:label   "resource-145-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          508;
+         ov:csvHeader       "resource-146-url";
+         #conversion:label   "resource-146-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          509;
+         ov:csvHeader       "resource-146-format";
+         #conversion:label   "resource-146-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          510;
+         ov:csvHeader       "resource-146-description";
+         #conversion:label   "resource-146-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          511;
+         ov:csvHeader       "resource-147-url";
+         #conversion:label   "resource-147-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          512;
+         ov:csvHeader       "resource-147-format";
+         #conversion:label   "resource-147-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          513;
+         ov:csvHeader       "resource-147-description";
+         #conversion:label   "resource-147-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          514;
+         ov:csvHeader       "resource-148-url";
+         #conversion:label   "resource-148-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          515;
+         ov:csvHeader       "resource-148-format";
+         #conversion:label   "resource-148-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          516;
+         ov:csvHeader       "resource-148-description";
+         #conversion:label   "resource-148-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          517;
+         ov:csvHeader       "resource-149-url";
+         #conversion:label   "resource-149-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          518;
+         ov:csvHeader       "resource-149-format";
+         #conversion:label   "resource-149-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          519;
+         ov:csvHeader       "resource-149-description";
+         #conversion:label   "resource-149-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          520;
+         ov:csvHeader       "licence_url";
+         #conversion:label   "licence_url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          521;
+         ov:csvHeader       "resource-150-url";
+         #conversion:label   "resource-150-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          522;
+         ov:csvHeader       "resource-150-format";
+         #conversion:label   "resource-150-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          523;
+         ov:csvHeader       "resource-150-description";
+         #conversion:label   "resource-150-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          524;
+         ov:csvHeader       "resource-151-url";
+         #conversion:label   "resource-151-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          525;
+         ov:csvHeader       "resource-151-format";
+         #conversion:label   "resource-151-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          526;
+         ov:csvHeader       "resource-151-description";
+         #conversion:label   "resource-151-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          527;
+         ov:csvHeader       "resource-152-url";
+         #conversion:label   "resource-152-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          528;
+         ov:csvHeader       "resource-152-format";
+         #conversion:label   "resource-152-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          529;
+         ov:csvHeader       "resource-152-description";
+         #conversion:label   "resource-152-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          530;
+         ov:csvHeader       "resource-153-url";
+         #conversion:label   "resource-153-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          531;
+         ov:csvHeader       "resource-153-format";
+         #conversion:label   "resource-153-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          532;
+         ov:csvHeader       "resource-153-description";
+         #conversion:label   "resource-153-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          533;
+         ov:csvHeader       "resource-154-url";
+         #conversion:label   "resource-154-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          534;
+         ov:csvHeader       "resource-154-format";
+         #conversion:label   "resource-154-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          535;
+         ov:csvHeader       "resource-154-description";
+         #conversion:label   "resource-154-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          536;
+         ov:csvHeader       "resource-155-url";
+         #conversion:label   "resource-155-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          537;
+         ov:csvHeader       "resource-155-format";
+         #conversion:label   "resource-155-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          538;
+         ov:csvHeader       "resource-155-description";
+         #conversion:label   "resource-155-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          539;
+         ov:csvHeader       "resource-156-url";
+         #conversion:label   "resource-156-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          540;
+         ov:csvHeader       "resource-156-format";
+         #conversion:label   "resource-156-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          541;
+         ov:csvHeader       "resource-156-description";
+         #conversion:label   "resource-156-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          542;
+         ov:csvHeader       "resource-157-url";
+         #conversion:label   "resource-157-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          543;
+         ov:csvHeader       "resource-157-format";
+         #conversion:label   "resource-157-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          544;
+         ov:csvHeader       "resource-157-description";
+         #conversion:label   "resource-157-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          545;
+         ov:csvHeader       "resource-158-url";
+         #conversion:label   "resource-158-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          546;
+         ov:csvHeader       "resource-158-format";
+         #conversion:label   "resource-158-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          547;
+         ov:csvHeader       "resource-158-description";
+         #conversion:label   "resource-158-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          548;
+         ov:csvHeader       "resource-159-url";
+         #conversion:label   "resource-159-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          549;
+         ov:csvHeader       "resource-159-format";
+         #conversion:label   "resource-159-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          550;
+         ov:csvHeader       "resource-159-description";
+         #conversion:label   "resource-159-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          551;
+         ov:csvHeader       "resource-160-url";
+         #conversion:label   "resource-160-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          552;
+         ov:csvHeader       "resource-160-format";
+         #conversion:label   "resource-160-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          553;
+         ov:csvHeader       "resource-160-description";
+         #conversion:label   "resource-160-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          554;
+         ov:csvHeader       "resource-161-url";
+         #conversion:label   "resource-161-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          555;
+         ov:csvHeader       "resource-161-format";
+         #conversion:label   "resource-161-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          556;
+         ov:csvHeader       "resource-161-description";
+         #conversion:label   "resource-161-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          557;
+         ov:csvHeader       "resource-162-url";
+         #conversion:label   "resource-162-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          558;
+         ov:csvHeader       "resource-162-format";
+         #conversion:label   "resource-162-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          559;
+         ov:csvHeader       "resource-162-description";
+         #conversion:label   "resource-162-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          560;
+         ov:csvHeader       "resource-163-url";
+         #conversion:label   "resource-163-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          561;
+         ov:csvHeader       "resource-163-format";
+         #conversion:label   "resource-163-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          562;
+         ov:csvHeader       "resource-163-description";
+         #conversion:label   "resource-163-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          563;
+         ov:csvHeader       "resource-164-url";
+         #conversion:label   "resource-164-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          564;
+         ov:csvHeader       "resource-164-format";
+         #conversion:label   "resource-164-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          565;
+         ov:csvHeader       "resource-164-description";
+         #conversion:label   "resource-164-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          566;
+         ov:csvHeader       "resource-165-url";
+         #conversion:label   "resource-165-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          567;
+         ov:csvHeader       "resource-165-format";
+         #conversion:label   "resource-165-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          568;
+         ov:csvHeader       "resource-165-description";
+         #conversion:label   "resource-165-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          569;
+         ov:csvHeader       "resource-166-url";
+         #conversion:label   "resource-166-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          570;
+         ov:csvHeader       "resource-166-format";
+         #conversion:label   "resource-166-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          571;
+         ov:csvHeader       "resource-166-description";
+         #conversion:label   "resource-166-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          572;
+         ov:csvHeader       "resource-167-url";
+         #conversion:label   "resource-167-url";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          573;
+         ov:csvHeader       "resource-167-format";
+         #conversion:label   "resource-167-format";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      conversion:enhance [
+         ov:csvCol          574;
+         ov:csvHeader       "resource-167-description";
+         #conversion:label   "resource-167-description";
+         conversion:comment "";
+         conversion:range   todo:Literal;
+      ];
+      #conversion:enhance [            
+      #   ov:csvRow 3,4,5;             
+      #   a conversion:ExampleResource;
+      #];                              
+   ];
+.

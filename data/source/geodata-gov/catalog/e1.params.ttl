@@ -1,0 +1,195 @@
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix todo:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:    <http://purl.org/dc/terms/> .
+@prefix vann:       <http://purl.org/vocab/vann/> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf:       <http://xmlns.com/foaf/0.1/> .
+@prefix wgs:        <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix scovo:      <http://purl.org/NET/scovo#> .
+@prefix ov:         <http://open.vocab.org/terms/> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix geo:        <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix :           <http://logd.tw.rpi.edu/source/geodata-gov/dataset/catalog/version/2010-Dec-02/params/enhancement/1/> .
+@prefix dgtwc:      <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#> .	 #dataset catalog addition
+@prefix dbpedia:       <http://dbpedia.org/resource/> .
+
+:lower a conversion:ImplicitBundle ;
+	conversion:property_name "lower_corner" ;
+	conversion:type_name "Point" ;
+    .
+
+:upper a conversion:ImplicitBundle ;
+	conversion:property_name "upper_corner" ;
+	conversion:type_name "Point" ;
+    .
+
+:dataset a void:Dataset;
+   conversion:base_uri           "http://logd.tw.rpi.edu"^^xsd:anyURI;
+   conversion:source_identifier  "geodata-gov";
+   conversion:dataset_identifier "catalog";
+   conversion:dataset_version    "2010-Dec-02";
+
+
+   a conversion:DatasetCatalog, conversion:MetaDataset;   #dataset catalog addition
+   dgtwc:catalog_title "Data.gov" ;
+   dgtwc:catalog_homepage <http://www.data.gov/catalog/geodata> ;
+   dgtwc:catalog_country  dbpedia:United_States ;
+
+
+   conversion:conversion_process [
+      a conversion:RawConversionProcess;
+      conversion:enhancement_identifier "1";
+      conversion:enhance [
+         conversion:class_name "Point" ;
+         conversion:subclass_of geo:Point ;
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate rdf:type;
+         conversion:object    conversion:CatalogedDataset; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_subtitle;
+         conversion:object    "Geodata Catalog"; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_title;
+         conversion:object    "Data.gov"; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_homepage;
+         conversion:object    <http://www.data.gov/catalog/geodata>; 
+      ];
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:catalog_country;
+         conversion:object    dbpedia:United_States ; 
+      ];
+      
+      conversion:enhance [
+         a conversion:SubjectAnnotation; # NOTE: This is NOT a column; it is the row. see https://github.com/timrdf/csv2rdf4lod-automation/issues#issue/82
+         conversion:predicate dgtwc:download_format;
+         conversion:object    "Zipped Files (XML+SHP)" ; 
+      ];
+
+      conversion:enhance [
+         ov:csvCol         1;
+         ov:csvHeader     "ID";
+         conversion:label "ID";
+         conversion:range  rdfs:Literal;
+      #   conversion:domain_name "Geo Dataset";
+
+      #   conversion:subproperty_of dcterms:identifier;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+
+      ];
+      conversion:enhance [
+         ov:csvCol         2;
+         ov:csvHeader     "Publisher";
+         conversion:label "Publisher";
+
+
+         conversion:subproperty_of dgtwc:agency ;	#dataset catalog addition
+         conversion:range  rdfs:Resource;
+         conversion:subproperty_of dcterms:contributor;
+         conversion:interpret [          
+            conversion:symbol        "";
+            conversion:interpretation conversion:null; 
+         ];                            
+
+      ];
+      conversion:enhance [
+         ov:csvCol         3;
+         ov:csvHeader     "Title";
+         conversion:label "Title";
+         conversion:range  rdfs:Literal;
+
+         conversion:subproperty_of dcterms:title;	#dataset catalog addition
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+
+      ];
+      conversion:enhance [
+         ov:csvCol         4;
+         ov:csvHeader     "Subject";
+         conversion:label "Subject";
+         conversion:range  rdfs:Literal;
+
+
+         conversion:subproperty_of dgtwc:category ;	#dataset catalog addition
+         conversion:subproperty_of dgtwc:categories ;	
+         conversion:interpret [
+            conversion:symbol "";
+            conversion:interpretation "n/a";
+         ];
+      ];
+
+      conversion:enhance [
+         ov:csvCol         5;
+         ov:csvHeader     "Lower Longitude";
+         conversion:label "Lower Longitude";
+         conversion:range  xsd:double;
+         conversion:bundled_by :lower;
+         conversion:subproperty_of geo:long;
+      ];
+      conversion:enhance [
+         ov:csvCol         6;
+         ov:csvHeader     "Lower Latitude";
+         conversion:label "Lower Latitude";
+         conversion:range  xsd:double;
+         conversion:bundled_by :lower;
+         conversion:subproperty_of geo:lat;
+      ];
+      conversion:enhance [
+         ov:csvCol         7;
+         ov:csvHeader     "Upper Longitude";
+         conversion:label "Upper Longitude";
+         conversion:range  xsd:double;
+         conversion:bundled_by :upper;
+         conversion:subproperty_of geo:long;
+      ];
+      conversion:enhance [
+         ov:csvCol         8;
+         ov:csvHeader     "Upper Latitude";
+         conversion:label "Upper Latitude";
+         conversion:range  xsd:double;
+         conversion:bundled_by :upper;
+         conversion:subproperty_of geo:lat;
+      ];
+      conversion:enhance [
+         ov:csvCol         9;
+         ov:csvHeader     "Document";
+         conversion:label "Document";
+         
+         conversion:range  rdfs:Resource;
+
+         conversion:subproperty_of foaf:homepage;	#dataset catalog addition
+         conversion:interpret [          
+            conversion:symbol        "";
+            conversion:interpretation conversion:null; 
+         ];                            
+      ];
+      conversion:enhance [
+         ov:csvCol         10;
+         ov:csvHeader     "Onlink";
+         conversion:label "Onlink";
+         conversion:interpret [                        # Added by lebot.
+   	    conversion:symbol "";                      # 
+      	    conversion:interpretation conversion:null; #
+         ];                                            #
+
+         conversion:range  rdfs:Resource;
+      ];
+   ];
+.

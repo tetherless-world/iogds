@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/en-openei-org/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "en-openei-org";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_8ea93e49-85e8-4ab4-a2b1-dfdaa8cf7709;
+.
+
+:download_8ea93e49-85e8-4ab4-a2b1-dfdaa8cf7709
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/en-openei-org/catalog/version/2011-Jun-27/manual/en.openei.org.csv>;
+.
+
+<dataset/8ea93e49-85e8-4ab4-a2b1-dfdaa8cf7709>
+   a dcat:Dataset;
+   dcat:distribution :download_8ea93e49-85e8-4ab4-a2b1-dfdaa8cf7709;
+.

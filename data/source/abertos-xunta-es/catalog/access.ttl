@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/abertos-xunta-es/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "abertos-xunta-es";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_a05fe373-65ef-43e5-aca9-9c143ff6db55;
+.
+
+:download_a05fe373-65ef-43e5-aca9-9c143ff6db55
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/abertos-xunta-es/catalog/version/2012-Apr-06/manual/abertos.xunta.es.csv>;
+.
+
+<dataset/a05fe373-65ef-43e5-aca9-9c143ff6db55>
+   a dcat:Dataset;
+   dcat:distribution :download_a05fe373-65ef-43e5-aca9-9c143ff6db55;
+.

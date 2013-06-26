@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/data-govt-nz/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "data-govt-nz";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_653767f4-8f09-4f95-89c3-5d3acfb560c9;
+.
+
+:download_653767f4-8f09-4f95-89c3-5d3acfb560c9
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-govt-nz/catalog/version/2011-Dec-06/manual/data.govt.nz.csv>;
+.
+
+<dataset/653767f4-8f09-4f95-89c3-5d3acfb560c9>
+   a dcat:Dataset;
+   dcat:distribution :download_653767f4-8f09-4f95-89c3-5d3acfb560c9;
+.

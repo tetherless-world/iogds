@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/data-lacub-fr/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "data-lacub-fr";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_390f4e0b-44ed-4194-99d2-7936dd0271e5;
+.
+
+:download_390f4e0b-44ed-4194-99d2-7936dd0271e5
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-lacub-fr/catalog/version/2012-Feb-14/manual/data.lacub.fr.csv>;
+.
+
+<dataset/390f4e0b-44ed-4194-99d2-7936dd0271e5>
+   a dcat:Dataset;
+   dcat:distribution :download_390f4e0b-44ed-4194-99d2-7936dd0271e5;
+.

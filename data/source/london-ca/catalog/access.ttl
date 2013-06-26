@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/london-ca/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "london-ca";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_9f77e48c-b633-49c0-8068-b87655a62e1d;
+.
+
+:download_9f77e48c-b633-49c0-8068-b87655a62e1d
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/london-ca/catalog/version/2011-Sep-13/manual/london.ca.csv>;
+.
+
+<dataset/9f77e48c-b633-49c0-8068-b87655a62e1d>
+   a dcat:Dataset;
+   dcat:distribution :download_9f77e48c-b633-49c0-8068-b87655a62e1d;
+.

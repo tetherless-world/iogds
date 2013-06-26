@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/dati-gov-it/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "dati-gov-it";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_b17aa326-36bd-4b54-836d-3f26b7b577f4;
+.
+
+:download_b17aa326-36bd-4b54-836d-3f26b7b577f4
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/dati-gov-it/catalog/version/2011-Oct-20/manual/dati.gov.it.csv>;
+.
+
+<dataset/b17aa326-36bd-4b54-836d-3f26b7b577f4>
+   a dcat:Dataset;
+   dcat:distribution :download_b17aa326-36bd-4b54-836d-3f26b7b577f4;
+.

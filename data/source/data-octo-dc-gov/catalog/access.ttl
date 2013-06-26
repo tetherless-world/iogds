@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/data-octo-dc-gov/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "data-octo-dc-gov";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_06529c45-7b43-488f-8410-6ec70fa35c27;
+.
+
+:download_06529c45-7b43-488f-8410-6ec70fa35c27
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/data-octo-dc-gov/catalog/version/2011-Sep-14/manual/data.octo.dc.gov.csv>;
+.
+
+<dataset/06529c45-7b43-488f-8410-6ec70fa35c27>
+   a dcat:Dataset;
+   dcat:distribution :download_06529c45-7b43-488f-8410-6ec70fa35c27;
+.

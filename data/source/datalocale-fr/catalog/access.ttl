@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/datalocale-fr/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "datalocale-fr";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_131948d2-318d-4e57-8a05-b411b25fee01;
+.
+
+:download_131948d2-318d-4e57-8a05-b411b25fee01
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datalocale-fr/catalog/version/2011-Sep-13/manual/datalocale.fr.csv>;
+.
+
+<dataset/131948d2-318d-4e57-8a05-b411b25fee01>
+   a dcat:Dataset;
+   dcat:distribution :download_131948d2-318d-4e57-8a05-b411b25fee01;
+.

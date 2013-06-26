@@ -1,0 +1,24 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://iogds.tw.rpi.edu/id/> .
+
+<http://iogds.tw.rpi.edu/source/datosabiertos-jcyl-es/dataset/catalog>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "datosabiertos-jcyl-es";
+   conversion:dataset_identifier "catalog";
+   prov:wasDerivedFrom :download_1186d55c-100f-43aa-8a04-f703fd3c0ab8;
+.
+
+:download_1186d55c-100f-43aa-8a04-f703fd3c0ab8
+   a dcat:Distribution;
+   dcat:downloadURL <https://scm.escience.rpi.edu/svn/public/logd-csv2rdf4lod/data/source/datosabiertos-jcyl-es/catalog/version/2012-Apr-06/manual/datosabiertos.jcyl.es.csv>;
+.
+
+<dataset/1186d55c-100f-43aa-8a04-f703fd3c0ab8>
+   a dcat:Dataset;
+   dcat:distribution :download_1186d55c-100f-43aa-8a04-f703fd3c0ab8;
+.
