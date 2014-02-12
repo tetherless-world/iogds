@@ -77,10 +77,10 @@
       #   conversion:symbol        "";
       #   conversion:interpretation conversion:null; 
       #];
-      #conversion:enhance [
-      #   conversion:domain_template "thing_[r]";
-      #   conversion:domain_name     "Thing";
-      #];
+      conversion:enhance [
+         conversion:domain_template "[/sdv]publication/[r]";
+         conversion:domain_name     <http://www.aktors.org/ontology/portal#Publication>;
+      ];
       #conversion:enhance [
       #   conversion:class_name "Thing";
       #   conversion:subclass_of <http://purl.org/...>;
@@ -90,36 +90,31 @@
          ov:csvHeader       "Boeing/Pitt";
          #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "Boeing/Pitt";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property dcterms:creator;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
-         #conversion:range_name  "Thing";
+         conversion:range_template  "[/sd]agent/[.]";
+         conversion:range   foaf:Agent;
       ];
       conversion:enhance [
          ov:csvCol          2;
          ov:csvHeader       "Impact of precision of Bayesian network parameters on accuracy of medical diagnostic systems";
          #conversion:bundled_by [ ov:csvCol 1 ];
-         #conversion:label   "Impact of precision of Bayesian network parameters on accuracy of medical diagnostic systems";
-         #conversion:equivalent_property dcterms:identifier;
+         #conversion:eg   "Impact of precision of Bayesian network parameters on accuracy of medical diagnostic systems";
+         conversion:equivalent_property dcterms:title;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
-         #conversion:range_name  "Thing";
+         conversion:range   rdfs:Literal;
       ];
       conversion:enhance [
          ov:csvCol          3;
          ov:csvHeader       "http://www.ncbi.nlm.nih.gov/pubmed/23466438";
          #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "http://www.ncbi.nlm.nih.gov/pubmed/23466438";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property rdfs:seeAlso;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
-         #conversion:range_name  "Thing";
+         conversion:range   rdfs:Resource;
       ];
       #conversion:enhance [
       #   ov:csvRow 3,4,5;
