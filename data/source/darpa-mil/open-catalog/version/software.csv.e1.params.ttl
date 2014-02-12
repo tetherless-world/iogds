@@ -38,12 +38,19 @@
 @prefix :              <http://iogds.tw.rpi.edu/source/darpa-mil/dataset/open-catalog/version/2014-Feb-04/params/enhancement/1/> .
 
 
-#:a_bundle
-#   a conversion:ImplicitBundle;
-#   conversion:property_name "a_property"; # Can also be a URI, e.g. dcterms:title.
-#   conversion:name_template "[/sd]company/[#2]/[r]";
-#   #conversion:type_name     "My Class";   # Can also be a URI, e.g. foaf:Person.
-#.
+:repository_bundle
+   a conversion:ImplicitBundle;
+   conversion:property_name doap:repository;
+   conversion:name_template "[/sdv]software/[r]/repository";
+   conversion:type_name     doap:Repository;
+.
+
+:stats_bundle
+   a conversion:ImplicitBundle;
+   conversion:property_name prov:hadDerivation;
+   conversion:name_template "[/sdv]software/[r]/stats";
+   conversion:type_name     dcat:Dataset;
+.
 
 <http://iogds.tw.rpi.edu/source/darpa-mil/dataset/open-catalog/version/2014-Feb-04/conversion/enhancement/1>
    a conversion:LayerDataset, void:Dataset;
@@ -73,14 +80,14 @@
       #conversion:delimits_cell "|";   # pipe
       #conversion:delimits_cell ",";   # comma
 
-      #conversion:interpret [
-      #   conversion:symbol        "";
-      #   conversion:interpretation conversion:null; 
-      #];
-      #conversion:enhance [
-      #   conversion:domain_template "thing_[r]";
-      #   conversion:domain_name     "Thing";
-      #];
+      conversion:interpret [
+         conversion:symbol        "";
+         conversion:interpretation conversion:null; 
+      ];
+      conversion:enhance [
+         conversion:domain_template "[/sdv]software/[r]";
+         conversion:domain_name     doap:Software;
+      ];
       #conversion:enhance [
       #   conversion:class_name "Thing";
       #   conversion:subclass_of <http://purl.org/...>;
@@ -88,25 +95,24 @@
       conversion:enhance [
          ov:csvCol          1;
          ov:csvHeader       "Aptima Inc.";
-         #conversion:bundled_by [ ov:csvCol 1 ];
+         conversion:bundled_by [ ov:csvCol 2 ];
          #conversion:label   "Aptima Inc.";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property dcterms:creator;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
          #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
-         #conversion:range_name  "Thing";
+         conversion:range   org:Organization;
       ];
       conversion:enhance [
          ov:csvCol          2;
          ov:csvHeader       "https://github.com/Aptima/pattern-matching";
          #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "https://github.com/Aptima/pattern-matching";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property prov:specializationOf;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
          #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
+         conversion:range   doap:Software;
          #conversion:range_name  "Thing";
       ];
       conversion:enhance [
@@ -114,24 +120,21 @@
          ov:csvHeader       "Network Query by Example";
          #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "Network Query by Example";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property dcterms:title;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
-         #conversion:range_name  "Thing";
+         conversion:range   rdfs:Literal;
       ];
       conversion:enhance [
          ov:csvCol          4;
          ov:csvHeader       "Analytics";
          #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "Analytics";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property dcterms:subject;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
-         #conversion:range_name  "Thing";
+         conversion:range_template  "[/sd]xdata/category/[.]";
+         conversion:range   skos:Concept;
       ];
       conversion:enhance [
          ov:csvCol          5;
@@ -140,6 +143,10 @@
          #conversion:label   "2014-07";
          #conversion:equivalent_property dcterms:identifier;
          #conversion:subproperty_of      dcterms:identifier;
+         conversion:interpret [
+            conversion:regex          "^2014.*";
+            conversion:interpretation "";
+         ];
          conversion:comment "";
          #conversion:range_template  "[/sd]thing[.]";
          conversion:range   todo:Literal;
@@ -148,50 +155,45 @@
       conversion:enhance [
          ov:csvCol          6;
          ov:csvHeader       "https://github.com/Aptima/pattern-matching.git";
-         #conversion:bundled_by [ ov:csvCol 1 ];
-         #conversion:label   "https://github.com/Aptima/pattern-matching.git";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:bundled_by :repository_bundle;
+         conversion:equivalent_property doap:location;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
-         #conversion:range_name  "Thing";
+         conversion:range   todo:Resource;
       ];
       conversion:enhance [
          ov:csvCol          7;
          ov:csvHeader       "http://www.darpa.mil/OpenCatalog/stats/pattern-matching/index.html";
-         #conversion:bundled_by [ ov:csvCol 1 ];
+         conversion:bundled_by :stats_bundle;
          #conversion:label   "http://www.darpa.mil/OpenCatalog/stats/pattern-matching/index.html";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property foaf:homepage;
          #conversion:subproperty_of      dcterms:identifier;
+         conversion:inverse_of prov:wasDerivedFrom;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
-         #conversion:range_name  "Thing";
+         conversion:range   dcat:Dataset;
       ];
       conversion:enhance [
          ov:csvCol          8;
          ov:csvHeader       "Hadoop MapReduce-over-Hive based implementation of network query by example utilizing attributed network pattern matching.";
          #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "Hadoop MapReduce-over-Hive based implementation of network query by example utilizing attributed network pattern matching.";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property dcterms:description;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
-         #conversion:range_name  "Thing";
+         conversion:range   rdfs:Literal;
       ];
       conversion:enhance [
          ov:csvCol          9;
          ov:csvHeader       "ALv2";
          #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "ALv2";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property dcterms:license;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
-         #conversion:range_name  "Thing";
+         conversion:delimits_object ",\\s*";
+
+         conversion:range_template  "http://provenanceweb.org/id/license/[.]";
+         conversion:range   <http://creativecommons.org/ns#License>;
       ];
       #conversion:enhance [
       #   ov:csvRow 3,4,5;
