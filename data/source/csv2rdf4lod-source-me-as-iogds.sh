@@ -5,6 +5,7 @@
 
 source /home/iogds/prizms/iogds/data/source/csv2rdf4lod-source-me-for-iogds.sh
 source /home/iogds/prizms/iogds/data/source/csv2rdf4lod-source-me-credentials.sh
+source /home/iogds/prizms/iogds/data/source/csv2rdf4lod-source-me-on-iogds.sh
 export CSV2RDF4LOD_CONVERT_DATA_ROOT="/home/iogds/prizms/iogds/data/source"
 export CSV2RDF4LOD_PUBLISH_VARWWW_DUMP_FILES="true"
 export CSV2RDF4LOD_PUBLISH_VARWWW_ROOT="/var/www"
