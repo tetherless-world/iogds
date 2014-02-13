@@ -86,7 +86,7 @@
       ];
       conversion:enhance [
          conversion:domain_template "[/sdv]software/[r]";
-         conversion:domain_name     doap:Software;
+         conversion:domain_name     doap:Project;
       ];
       #conversion:enhance [
       #   conversion:class_name "Thing";
@@ -112,7 +112,7 @@
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
          #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   doap:Software;
+         conversion:range   doap:Project;
          #conversion:range_name  "Thing";
       ];
       conversion:enhance [
@@ -168,7 +168,6 @@
          #conversion:label   "http://www.darpa.mil/OpenCatalog/stats/pattern-matching/index.html";
          conversion:equivalent_property foaf:homepage;
          #conversion:subproperty_of      dcterms:identifier;
-         conversion:inverse_of prov:wasDerivedFrom;
          conversion:comment "";
          conversion:range   dcat:Dataset;
       ];
